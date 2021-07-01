@@ -9,21 +9,47 @@
 /* Begin PBXBuildFile section */
 		5378B3BF268DD58500622ECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3BE268DD58500622ECD /* AppDelegate.swift */; };
 		5378B3C1268DD58500622ECD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3C0268DD58500622ECD /* SceneDelegate.swift */; };
-		5378B3C3268DD58500622ECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3C2268DD58500622ECD /* ViewController.swift */; };
-		5378B3C6268DD58500622ECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3C4268DD58500622ECD /* Main.storyboard */; };
 		5378B3C8268DD58600622ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3C7268DD58600622ECD /* Assets.xcassets */; };
 		5378B3CB268DD58600622ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3C9268DD58600622ECD /* LaunchScreen.storyboard */; };
+		5378B3D8268DD69500622ECD /* TrackCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3D3268DD69500622ECD /* TrackCollectionHeaderView.swift */; };
+		5378B3D9268DD69500622ECD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3D4268DD69500622ECD /* HomeViewController.swift */; };
+		5378B3DA268DD69500622ECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3D5268DD69500622ECD /* Main.storyboard */; };
+		5378B3DB268DD69500622ECD /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3D7268DD69500622ECD /* TrackCollectionViewCell.swift */; };
+		5378B3E0268DD69A00622ECD /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3DD268DD69A00622ECD /* Player.storyboard */; };
+		5378B3E1268DD69A00622ECD /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3DE268DD69A00622ECD /* PlayerViewController.swift */; };
+		5378B3E2268DD69A00622ECD /* SimplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3DF268DD69A00622ECD /* SimplePlayer.swift */; };
+		5378B3E5268DD6A900622ECD /* DefaultStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3E4268DD6A900622ECD /* DefaultStyle.swift */; };
+		5378B3EA268DD6AF00622ECD /* Extension+AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3E7268DD6AF00622ECD /* Extension+AVPlayerItem.swift */; };
+		5378B3EB268DD6AF00622ECD /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3E8268DD6AF00622ECD /* Track.swift */; };
+		5378B3EC268DD6AF00622ECD /* TrackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3E9268DD6AF00622ECD /* TrackManager.swift */; };
+		5378B3F2268DD87A00622ECD /* when the leaves start falling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3EE268DD87A00622ECD /* when the leaves start falling.mp3 */; };
+		5378B3F3268DD87A00622ECD /* valentin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3EF268DD87A00622ECD /* valentin.mp3 */; };
+		5378B3F4268DD87A00622ECD /* [ asleep ].mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3F0268DD87A00622ECD /* [ asleep ].mp3 */; };
+		5378B3F5268DD87A00622ECD /* always you.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3F1268DD87A00622ECD /* always you.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5378B3BB268DD58500622ECD /* MusicPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5378B3BE268DD58500622ECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5378B3C0268DD58500622ECD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5378B3C2268DD58500622ECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5378B3C5268DD58500622ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5378B3C7268DD58600622ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5378B3CA268DD58600622ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5378B3CC268DD58600622ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5378B3D3268DD69500622ECD /* TrackCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCollectionHeaderView.swift; sourceTree = "<group>"; };
+		5378B3D4268DD69500622ECD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5378B3D6268DD69500622ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5378B3D7268DD69500622ECD /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
+		5378B3DD268DD69A00622ECD /* Player.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
+		5378B3DE268DD69A00622ECD /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		5378B3DF268DD69A00622ECD /* SimplePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePlayer.swift; sourceTree = "<group>"; };
+		5378B3E4268DD6A900622ECD /* DefaultStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultStyle.swift; sourceTree = "<group>"; };
+		5378B3E7268DD6AF00622ECD /* Extension+AVPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+AVPlayerItem.swift"; sourceTree = "<group>"; };
+		5378B3E8268DD6AF00622ECD /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		5378B3E9268DD6AF00622ECD /* TrackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackManager.swift; sourceTree = "<group>"; };
+		5378B3EE268DD87A00622ECD /* when the leaves start falling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "when the leaves start falling.mp3"; sourceTree = "<group>"; };
+		5378B3EF268DD87A00622ECD /* valentin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = valentin.mp3; sourceTree = "<group>"; };
+		5378B3F0268DD87A00622ECD /* [ asleep ].mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "[ asleep ].mp3"; sourceTree = "<group>"; };
+		5378B3F1268DD87A00622ECD /* always you.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "always you.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +82,68 @@
 		5378B3BD268DD58500622ECD /* MusicPlay */ = {
 			isa = PBXGroup;
 			children = (
+				5378B3D2268DD69500622ECD /* HomeView */,
+				5378B3E3268DD6A900622ECD /* Style */,
+				5378B3E6268DD6AF00622ECD /* Track */,
+				5378B3DC268DD69A00622ECD /* Player */,
+				5378B3ED268DD87A00622ECD /* Resources */,
 				5378B3BE268DD58500622ECD /* AppDelegate.swift */,
 				5378B3C0268DD58500622ECD /* SceneDelegate.swift */,
-				5378B3C2268DD58500622ECD /* ViewController.swift */,
-				5378B3C4268DD58500622ECD /* Main.storyboard */,
 				5378B3C7268DD58600622ECD /* Assets.xcassets */,
 				5378B3C9268DD58600622ECD /* LaunchScreen.storyboard */,
 				5378B3CC268DD58600622ECD /* Info.plist */,
 			);
 			path = MusicPlay;
+			sourceTree = "<group>";
+		};
+		5378B3D2268DD69500622ECD /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				5378B3D3268DD69500622ECD /* TrackCollectionHeaderView.swift */,
+				5378B3D4268DD69500622ECD /* HomeViewController.swift */,
+				5378B3D5268DD69500622ECD /* Main.storyboard */,
+				5378B3D7268DD69500622ECD /* TrackCollectionViewCell.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		5378B3DC268DD69A00622ECD /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				5378B3DD268DD69A00622ECD /* Player.storyboard */,
+				5378B3DE268DD69A00622ECD /* PlayerViewController.swift */,
+				5378B3DF268DD69A00622ECD /* SimplePlayer.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		5378B3E3268DD6A900622ECD /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				5378B3E4268DD6A900622ECD /* DefaultStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		5378B3E6268DD6AF00622ECD /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				5378B3E7268DD6AF00622ECD /* Extension+AVPlayerItem.swift */,
+				5378B3E8268DD6AF00622ECD /* Track.swift */,
+				5378B3E9268DD6AF00622ECD /* TrackManager.swift */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		5378B3ED268DD87A00622ECD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5378B3EE268DD87A00622ECD /* when the leaves start falling.mp3 */,
+				5378B3EF268DD87A00622ECD /* valentin.mp3 */,
+				5378B3F0268DD87A00622ECD /* [ asleep ].mp3 */,
+				5378B3F1268DD87A00622ECD /* always you.mp3 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +203,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5378B3DA268DD69500622ECD /* Main.storyboard in Resources */,
+				5378B3E0268DD69A00622ECD /* Player.storyboard in Resources */,
+				5378B3F5268DD87A00622ECD /* always you.mp3 in Resources */,
+				5378B3F2268DD87A00622ECD /* when the leaves start falling.mp3 in Resources */,
 				5378B3CB268DD58600622ECD /* LaunchScreen.storyboard in Resources */,
+				5378B3F4268DD87A00622ECD /* [ asleep ].mp3 in Resources */,
 				5378B3C8268DD58600622ECD /* Assets.xcassets in Resources */,
-				5378B3C6268DD58500622ECD /* Main.storyboard in Resources */,
+				5378B3F3268DD87A00622ECD /* valentin.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,29 +221,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5378B3C3268DD58500622ECD /* ViewController.swift in Sources */,
+				5378B3D9268DD69500622ECD /* HomeViewController.swift in Sources */,
+				5378B3EC268DD6AF00622ECD /* TrackManager.swift in Sources */,
+				5378B3EB268DD6AF00622ECD /* Track.swift in Sources */,
+				5378B3EA268DD6AF00622ECD /* Extension+AVPlayerItem.swift in Sources */,
 				5378B3BF268DD58500622ECD /* AppDelegate.swift in Sources */,
+				5378B3E1268DD69A00622ECD /* PlayerViewController.swift in Sources */,
+				5378B3E5268DD6A900622ECD /* DefaultStyle.swift in Sources */,
+				5378B3E2268DD69A00622ECD /* SimplePlayer.swift in Sources */,
 				5378B3C1268DD58500622ECD /* SceneDelegate.swift in Sources */,
+				5378B3DB268DD69500622ECD /* TrackCollectionViewCell.swift in Sources */,
+				5378B3D8268DD69500622ECD /* TrackCollectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5378B3C4268DD58500622ECD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5378B3C5268DD58500622ECD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5378B3C9268DD58600622ECD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5378B3CA268DD58600622ECD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5378B3D5268DD69500622ECD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5378B3D6268DD69500622ECD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
