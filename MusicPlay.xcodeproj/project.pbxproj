@@ -50,6 +50,12 @@
 		5378B3EF268DD87A00622ECD /* valentin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = valentin.mp3; sourceTree = "<group>"; };
 		5378B3F0268DD87A00622ECD /* [ asleep ].mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "[ asleep ].mp3"; sourceTree = "<group>"; };
 		5378B3F1268DD87A00622ECD /* always you.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "always you.mp3"; sourceTree = "<group>"; };
+		5378B3F7268DDDC300622ECD /* HomeViewController.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = HomeViewController.md; sourceTree = "<group>"; };
+		5378B3F8268DDDED00622ECD /* TrackCollectionHeaderView.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TrackCollectionHeaderView.md; sourceTree = "<group>"; };
+		5378B3F9268DDDFD00622ECD /* TrackCollectionViewCell.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TrackCollectionViewCell.md; sourceTree = "<group>"; };
+		5378B3FA268DDE1C00622ECD /* TrackManager.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TrackManager.md; sourceTree = "<group>"; };
+		5378B3FB268DDE3300622ECD /* PlayerViewController.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PlayerViewController.md; sourceTree = "<group>"; };
+		5378B3FC268DDE4100622ECD /* SimplePlayer.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SimplePlayer.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,12 @@
 		5378B3F6268DDD7B00622ECD /* Explanation */ = {
 			isa = PBXGroup;
 			children = (
+				5378B3F7268DDDC300622ECD /* HomeViewController.md */,
+				5378B3F8268DDDED00622ECD /* TrackCollectionHeaderView.md */,
+				5378B3F9268DDDFD00622ECD /* TrackCollectionViewCell.md */,
+				5378B3FA268DDE1C00622ECD /* TrackManager.md */,
+				5378B3FB268DDE3300622ECD /* PlayerViewController.md */,
+				5378B3FC268DDE4100622ECD /* SimplePlayer.md */,
 			);
 			path = Explanation;
 			sourceTree = "<group>";
