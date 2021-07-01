@@ -5,7 +5,7 @@
 ### 셀의 표현
 - dequeueReusableCell 함수로 cell을 재사용하고 TrackCollectionViewCell에서 정의한 updateUI를 이용하여 cell을 최신화
 ### 헤더뷰 표현
-
+- ㅇㅇㅇㅇㅇ
 ## UICollectionViewDelegate
 ### 클릭했을때의 처리
 - 곡을 클릭하면 PlayerView를 띄움
