@@ -74,7 +74,6 @@
 		5378B3B2268DD58500622ECD = {
 			isa = PBXGroup;
 			children = (
-				5378B3F6268DDD7B00622ECD /* Explanation */,
 				5378B3BD268DD58500622ECD /* MusicPlay */,
 				5378B3BC268DD58500622ECD /* Products */,
 			);
@@ -91,6 +90,7 @@
 		5378B3BD268DD58500622ECD /* MusicPlay */ = {
 			isa = PBXGroup;
 			children = (
+				5378B3F6268DDD7B00622ECD /* Explanation */,
 				5378B3D2268DD69500622ECD /* HomeView */,
 				5378B3E3268DD6A900622ECD /* Style */,
 				5378B3E6268DD6AF00622ECD /* Track */,
