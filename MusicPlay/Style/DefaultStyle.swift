@@ -1,9 +1,8 @@
 //
 //  DefaultStyle.swift
-//  AppleMusicStApp
+//  MusicPlayer
 //
-//  Created by joonwon lee on 2020/03/15.
-//  Copyright © 2020 com.joonwon. All rights reserved.
+//  Created by 안종표 on 2021/06/28.
 //
 
 import UIKit
