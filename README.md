@@ -4,6 +4,7 @@
 - AVFoundation FrameWork
 - Singleton Pattern
 - CollectionView
+- DelegateFlowLayout
 - Bundle
 - metadata
 - map, compactmap
@@ -11,7 +12,7 @@
 - DarkMode
 
 ## [Section 1] [Protocol](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/HomeViewController.md)
-- 
+- DataSource, Delegate, DelegateFlowLayout을 사용하여 CollectionView의 프로토콜을 정의
 ## [Section 2] [CollectionViewCell](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/TrackCollectionViewCell.md)
 - 
 ## [Section 3] [TrackManager](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/TrackCollectionViewCell.md)
