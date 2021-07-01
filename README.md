@@ -10,12 +10,15 @@
 - Dictionary grouping
 - DarkMode
 
-## [Section 1] [Protocol]
-## [Section 2] [CollectionViewCell]
-## [Section 3] [채팅 목록](https://github.com/JongPyoAhn/InhaChatBot/blob/main/Explanation/Section_3/Section3.md)
+## [Section 1] [Protocol](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/HomeViewController.md)
 - 
-## [Section 4] 계정 확인
-
-## [Section 5] 관리자에게 메시지
-
-## [Section 6] 왓슨 어시스턴트 API
+## [Section 2] [CollectionViewCell](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/TrackCollectionViewCell.md)
+- 
+## [Section 3] [TrackManager](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/TrackCollectionViewCell.md)
+- 
+## [Section 4] [TrackCollectionHearderView](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/TrackCollectionHeaderView.md)
+- 
+## [Section 5] [SimplePlayer](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/SimplePlayer.md)
+- 
+## [Section 6] [PlayerViewController](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/PlayerViewController.md)
+- 
