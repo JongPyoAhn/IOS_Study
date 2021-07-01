@@ -66,6 +66,7 @@
 		5378B3B2268DD58500622ECD = {
 			isa = PBXGroup;
 			children = (
+				5378B3F6268DDD7B00622ECD /* Explanation */,
 				5378B3BD268DD58500622ECD /* MusicPlay */,
 				5378B3BC268DD58500622ECD /* Products */,
 			);
@@ -144,6 +145,13 @@
 				5378B3F1268DD87A00622ECD /* always you.mp3 */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		5378B3F6268DDD7B00622ECD /* Explanation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Explanation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
