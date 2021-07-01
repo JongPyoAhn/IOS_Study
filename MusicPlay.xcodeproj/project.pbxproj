@@ -26,7 +26,6 @@
 		5378B3F3268DD87A00622ECD /* valentin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3EF268DD87A00622ECD /* valentin.mp3 */; };
 		5378B3F4268DD87A00622ECD /* [ asleep ].mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3F0268DD87A00622ECD /* [ asleep ].mp3 */; };
 		5378B3F5268DD87A00622ECD /* always you.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5378B3F1268DD87A00622ECD /* always you.mp3 */; };
-		5378B3FE268DDEDF00622ECD /* dd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5378B3FD268DDEDF00622ECD /* dd.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +56,6 @@
 		5378B3FA268DDE1C00622ECD /* TrackManager.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TrackManager.md; sourceTree = "<group>"; };
 		5378B3FB268DDE3300622ECD /* PlayerViewController.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PlayerViewController.md; sourceTree = "<group>"; };
 		5378B3FC268DDE4100622ECD /* SimplePlayer.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SimplePlayer.md; sourceTree = "<group>"; };
-		5378B3FD268DDEDF00622ECD /* dd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +162,6 @@
 				5378B3FA268DDE1C00622ECD /* TrackManager.md */,
 				5378B3FB268DDE3300622ECD /* PlayerViewController.md */,
 				5378B3FC268DDE4100622ECD /* SimplePlayer.md */,
-				5378B3FD268DDEDF00622ECD /* dd.swift */,
 			);
 			path = Explanation;
 			sourceTree = "<group>";
@@ -251,7 +248,6 @@
 				5378B3BF268DD58500622ECD /* AppDelegate.swift in Sources */,
 				5378B3E1268DD69A00622ECD /* PlayerViewController.swift in Sources */,
 				5378B3E5268DD6A900622ECD /* DefaultStyle.swift in Sources */,
-				5378B3FE268DDEDF00622ECD /* dd.swift in Sources */,
 				5378B3E2268DD69A00622ECD /* SimplePlayer.swift in Sources */,
 				5378B3C1268DD58500622ECD /* SceneDelegate.swift in Sources */,
 				5378B3DB268DD69500622ECD /* TrackCollectionViewCell.swift in Sources */,
