@@ -1,6 +1,6 @@
 //
 //  BOJ3052.swift
-//  
+//  배열
 //
 //  Created by 안종표 on 2021/07/02.
 //
@@ -15,3 +15,5 @@ while i < 10 {
     i = i + 1
 }
 print(s.count)
+
+
