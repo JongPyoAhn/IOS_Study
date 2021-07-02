@@ -1,4 +1,12 @@
-import UIKit
+//
+//  BOJ3052.swift
+//  
+//
+//  Created by 안종표 on 2021/07/02.
+//
+
+import Foundation
+
 var s: Set<Int> = []
 var i = 0
 var count = 0
