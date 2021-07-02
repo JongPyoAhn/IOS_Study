@@ -13,7 +13,7 @@
         trackThumbnail.layer.cornerRadius = 4
         trackArtist.textColor = UIColor.systemGray2
     }
-    ```
+  ```
 ## 구성될 셀마다의 곡정보를 업데이트 해주기
     ```swift
     func updateUI(item: Track?) {
