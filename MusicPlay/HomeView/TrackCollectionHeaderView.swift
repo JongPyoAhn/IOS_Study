@@ -27,7 +27,6 @@ class TrackCollectionHeaderView: UICollectionReusableView {
         guard let track = item.convertToTrack() else {return}
         thumbnailImageView.image = track.artwork
         self.descriptionLabel.text = "Today's Pick is \(track.artist)'s Album - \(track.albumName), Let'Listen"
-        
     }
     
     @IBAction func cardTapped(_ sender: UIButton) {

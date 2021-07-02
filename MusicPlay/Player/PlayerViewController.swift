@@ -47,7 +47,7 @@ class PlayerViewController: UIViewController {
         // TODO: 뷰나갈때 처리 > 심플플레이어
         simplePlayer.pause()
         simplePlayer.replaceCurrentItem(with: nil)
-        
+    
     }
     
     @IBAction func beginDrag(_ sender: UISlider) {
@@ -85,9 +85,6 @@ extension PlayerViewController {
         thumbnailImageView.image = track.artwork
         titleLabel.text = track.title
         artistLabel.text = track.artist
-        
-        
-        
     }
     
     func updateTintColor() {
