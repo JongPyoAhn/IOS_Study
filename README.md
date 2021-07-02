@@ -15,7 +15,7 @@
 - DataSource, Delegate, DelegateFlowLayout을 사용하여 CollectionView의 프로토콜을 정의
 ## [Section 2] [TrackCollectionViewCell](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/TrackCollectionViewCell.md)
 - 트랙에서 음악의 목록을 표현하는 셀로 DataSource에서 셀을 표현하고 재사용 하기 위해 생성
-## [Section 3] [TrackManager](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/TrackCollectionViewCell.md)
+## [Section 3] [TrackManager](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/TrackManager.md)
 - 트랙로드 등 트랙을 관리하는데 필요한 메서드들을 정의
 ## [Section 4] [TrackCollectionHearderView](https://github.com/JongPyoAhn/MusicPlay/blob/main/Explanation/TrackCollectionHeaderView.md)
 - 헤더뷰의 구성요소와 헤더뷰를 표현하기위한 메서드들을 정의
