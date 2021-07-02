@@ -23,3 +23,11 @@
   ```swift
   present(playerVC, animated: true, completion: nil)
   ```
+## UICollectionViewDelegateFlowLayout
+### 셀의 사이즈를 설정
+- CGFloat이란? double과 float을 cpu 아키텍처에 따라서 알아서 조정해주는것.(실수타입)
+- CGSize란? width와 height를 저장할 수 있는 타입
+- 스토리보드에 있는 너비를 불러오는 방법
+  ```swift
+  collectionView.bounds.width
+  ```
