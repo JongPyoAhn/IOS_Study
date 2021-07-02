@@ -20,3 +20,60 @@ import AVFoundation
   var todaysTrack: AVPlayerItem?
  ```
 
+## 트랙 로드하기
+- [Bundle](https://developer.apple.com/documentation/foundation/bundle)
+  - 갖고 있는 자원(앱안에 있는것들)을 불러올때 사용한다고 생각하면 될듯하다.
+  - forResourcesWithExtension는 확장자를 뜻한다.
+  ```swift
+  let urls = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: nil) ?? []
+  ```
+- [map](https://developer.apple.com/documentation/swift/array/3017522-map)
+  - 클로저안에 주어진 요소를 배열의 형태로 저장가능하게 리턴해준다고 보면된다.
+  - 현재는 URL타입의 urls를 매핑하여 AVPlayerItem의 배열형태로 리턴(urls에 있는 url을 가져와서 매개변수로 AVPlayerItem에 넣은거임)
+  ```swift
+  let items = urls.map {
+            url in
+            return AVPlayerItem(url:url)
+        }
+  ```
+  
+## 인덱스에 맞는 트랙 로드하기
+  ```swift
+  func track(at index: Int) -> Track? {
+        let playerItem = tracks[index]
+        let track = playerItem.convertToTrack()
+        return track
+    }
+   ```
+
+## 앨범 로드하기
+- 트랙의 배열을 받아서 하나의 앨범으로 로드하는 메소드임(가수한명이 앨범낼때 한번에 여러곡 내니까)
+- [compactMap](https://developer.apple.com/documentation/swift/sequence/2950916-compactmap)
+  - nil이 아닌 것들을 배열의 형태로 리턴해준다고 보면 된다.
+  ```swift
+  let trackList: [Track] = tracks.compactMap{ $0.convertToTrack()}
+  ```
+- [Ditionary Grouping](https://developer.apple.com/documentation/swift/dictionary/3127163-init)
+  - grouping에는 그룹화 하고싶은 배열을 넣고, by에는 기준(?)을 적어주면 된다.
+  - 아래에서는 trackList를 그룹화하기 위해서 trackList에 있는 track의 albumName으로 그룹화 했다. (트랙의 albumName이 같은거끼리 묶는다고 보면됨)
+  ```swift
+  let albumDics = Dictionary(grouping: trackList, by: { (track) in
+            track.albumName 
+            })
+  ```
+- Dictionary의 일반적인 생성
+  - 널리 사용되는 Dictionary의 생성 방법이다.
+  ```swift
+  for (key, value) in albumDics{
+            let title = key
+            let tracks = value
+            let album = Album(title: title, tracks: tracks)
+            albums.append(album)
+        }
+   ```
+   
+## 오늘의 트랙 랜덤으로 선택
+  - 배열의 [randomElement()](https://developer.apple.com/documentation/swift/array/2994747-randomelement)를 사용하여 트랙중 랜덤한것을 리턴하도록 하였다. 
+  ```swift
+  self.todaysTrack = self.tracks.randomElement()
+  ```
