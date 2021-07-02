@@ -1,6 +1,6 @@
 # IOS 뮤직플레이어
 다양한 방면의 IOS를 경험해보고자 연습한 음악재생 프로젝트입니다.
-## 알게된 기술 및 정의
+## 습득한 기술 및 정의
 - AVFoundation FrameWork
 - Singleton Pattern
 - CollectionView
