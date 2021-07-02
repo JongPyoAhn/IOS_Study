@@ -1,5 +1,5 @@
 #  TrackManager
-## ** AVFoundation FrameWork사용 **
+## **AVFoundation FrameWork사용**
 - 미디어에 관련된 필요객체들을 가진 공구함정도로 생각하면 될듯.
 - 주로 재생과 관련된 기능을 구현할 때 사용
 ```swift
