@@ -3,7 +3,7 @@
 //  배열
 //
 //  Created by 안종표 on 2021/07/02.
-//
+//  Set을 쓸줄아는지 묻는 문제
 
 import Foundation
 
