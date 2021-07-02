@@ -23,3 +23,5 @@
         trackArtist.text = track.artist
     }
    ```
+ 얻어가는 것 : awakeFromNib(), cell 마다 다른곳에서 데이터를 가저와서 넣고싶다면 위의 updateUI()와 같은 함수를 정의해서 데이터를 가져와서 표현하는 곳(ViewController)에서 사용하면 된다.
+ 
