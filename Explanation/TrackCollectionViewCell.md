@@ -15,11 +15,11 @@
     }
   ```
 ## 구성될 셀마다의 곡정보를 업데이트 해주기
-    
-    func updateUI(item: Track?) {
+   ```swift
+   func updateUI(item: Track?) {
         guard let track = item else {return }
         trackThumbnail.image = track.artwork
         trackTitle.text = track.title
         trackArtist.text = track.artist
     }
-   
+   ```
