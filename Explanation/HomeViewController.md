@@ -9,7 +9,7 @@
 ## UICollectionViewDelegate
 ### 클릭했을때의 처리
 - 곡을 클릭하면 PlayerView를 띄움
-- ** 스토리보드를 불러오는 방법 **
+- **스토리보드를 불러오는 방법**
   1. init()함수를 사용해서 필요한 스토리보드를 가져옴
   ```swift
   let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
