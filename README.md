@@ -3,7 +3,11 @@
 ## 습득한 기술 및 정의
 - Codable
 - CollectionView Section
-- 
+- mutating
+- Equatable
+- Json
+- FileManager
+- KeyBoard Control
 ## [Section 1] [Protocol](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/Protocol.md)
 - DataSource의 Section, CustomCell, ReusableView와 DelegateFlowLayOut 사용
 ## [Section 2] [Todo](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/Todo.md)
