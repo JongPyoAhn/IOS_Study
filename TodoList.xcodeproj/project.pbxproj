@@ -28,6 +28,11 @@
 		537E17CD26928AD700E79D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		537E17D326928B1C00E79D8B /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		537E17D526928B4500E79D8B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		538002F52693F1B50092BEB1 /* Protocol.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Protocol.md; sourceTree = "<group>"; };
+		538002F62693F1C80092BEB1 /* Todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Todo.md; sourceTree = "<group>"; };
+		538002F72693F1D60092BEB1 /* TodoManager.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TodoManager.md; sourceTree = "<group>"; };
+		538002F82693F1E20092BEB1 /* Storage.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Storage.md; sourceTree = "<group>"; };
+		538002F92693F1F20092BEB1 /* TodoListViewController.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TodoListViewController.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 		537E17B326928AD700E79D8B = {
 			isa = PBXGroup;
 			children = (
+				538002F42693F1830092BEB1 /* Explanation */,
 				537E17BE26928AD700E79D8B /* TodoList */,
 				537E17BD26928AD700E79D8B /* Products */,
 			);
@@ -71,6 +77,18 @@
 				537E17CD26928AD700E79D8B /* Info.plist */,
 			);
 			path = TodoList;
+			sourceTree = "<group>";
+		};
+		538002F42693F1830092BEB1 /* Explanation */ = {
+			isa = PBXGroup;
+			children = (
+				538002F52693F1B50092BEB1 /* Protocol.md */,
+				538002F62693F1C80092BEB1 /* Todo.md */,
+				538002F72693F1D60092BEB1 /* TodoManager.md */,
+				538002F82693F1E20092BEB1 /* Storage.md */,
+				538002F92693F1F20092BEB1 /* TodoListViewController.md */,
+			);
+			path = Explanation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
