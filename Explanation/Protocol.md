@@ -17,7 +17,7 @@
         }
  ```
 3. 커스텀 셀
-  ```swift
+ ```swift
   guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoListCell", for: indexPath) as? TodoListCell else {
             return UICollectionViewCell()
         }
@@ -38,4 +38,14 @@
             self.collectionView.reloadData()
         }
         return cell
-    ```
+  ```
+## UICollectionViewDelegateFlowLayout
+1. 사이즈 계산
+  ```swift
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // TODO: 사이즈 계산하기
+        let width: CGFloat = collectionView.bounds.width
+        let height: CGFloat = 50
+        return CGSize(width: width, height: height)
+    }
+  ```
