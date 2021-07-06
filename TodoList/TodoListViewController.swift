@@ -28,7 +28,17 @@ class TodoListViewController: UIViewController {
         
         // TODO: 데이터 불러오기
         todoListViewModel.loadTasks()
+        
+        //데이터 쓰기 테스트코드
+//        let todo = TodoManager.shared.createTodo(detail: "Corona Fuck", isToday: true)
+//        Storage.saveTodo(todo, fileName: "test.json")
     }
+    
+    //데이터 읽기 테스트 코드
+//    override func viewDidAppear(_ animated: Bool) {
+//        let todo = Storage.restoreTodo("test.json")
+//        print(todo)
+//    }
     
     @IBAction func isTodayButtonTapped(_ sender: Any) {
         // TODO: 투데이 버튼 토글 작업
@@ -156,13 +166,19 @@ class TodoListCell: UICollectionViewCell {
     
     func reset() {
         // TODO: reset로직 구현
-        
+        descriptionLabel.alpha = 1
+        deleteButton.isHidden = false
+        showStrikeThrough(false)
     }
     
     @IBAction func checkButtonTapped(_ sender: Any) {
         // TODO: checkButton 처리
-        
-
+        checkButton.isSelected = !checkButton.isSelected
+        let isDone = checkButton.isSelected
+        showStrikeThrough(isDone)
+        descriptionLabel.alpha = isDone ? 0.2 : 1
+        deleteButton.isHidden = !isDone
+        doneButtonTapHandler?(isDone)
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
