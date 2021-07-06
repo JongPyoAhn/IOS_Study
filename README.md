@@ -8,6 +8,8 @@
 - Json
 - FileManager
 - KeyBoard Control
+- enum
+- CaseIterable
 ## [Section 1] [Protocol](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/Protocol.md)
 - DataSource의 Section, CustomCell, ReusableView와 DelegateFlowLayOut 사용
 ## [Section 2] [Todo](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/Todo.md)
