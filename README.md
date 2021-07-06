@@ -10,7 +10,7 @@
 - KeyBoard Control
 ## [Section 1] [Protocol](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/Protocol.md)
 - DataSource의 Section, CustomCell, ReusableView와 DelegateFlowLayOut 사용
-## [Section 2] [Todo](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/Todo.md)
+## [Section 2] 
 - Todo의 구조체 정리
 ## [Section 3] [TodoManager](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/TodoManager.md)
 - Todo구조체를 관리함, ViewModel이 TodoManager 사용
