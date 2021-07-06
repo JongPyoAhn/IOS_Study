@@ -1,7 +1,9 @@
 # TodoList
 - 다양한 방면의 IOS를 경험해보고자 연습한 TodoList 프로젝트입니다.
 ## 습득한 기술 및 정의
-
+- Codable
+- CollectionView Section
+- 
 ## [Section 1] [Protocol](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/Protocol.md)
 - DataSource의 Section, CustomCell, ReusableView와 DelegateFlowLayOut 사용
 ## [Section 2] [Todo](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/Todo.md)
