@@ -52,3 +52,33 @@ static func store<T: Encodable>(_ obj: T, to directory: Directory, as fileName: 
         }
     }
 ```
+## 불러오기
+- 위에 저장하기와 매우매우매우 비슷하다.
+- **decode()** 에는 유감스럽게도 type을 받는데 사용할때 말그대로 타입을 넣어주면된다. 예를들어 Todo 객체의 배열이라면 [Todo].self 이런식으로..
+        1. appendingComponent로 경로추가<br/>
+        2. 경로상에 파일존재여부<br/>
+        3. 파일 상세경로 저장<br/>
+        4. decoder선언<br/>
+        5. decode<br/>
+        6. 결과리턴<br/>
+```swift
+static func retrive<T: Decodable>(_ fileName: String, from directory: Directory, as type: T.Type) -> T? {
+        let url = directory.url.appendingPathComponent(fileName, isDirectory: false)
+        //파일이 존재하는지
+        guard FileManager.default.fileExists(atPath: url.path) else { return nil }
+        //파일 상세경로 저장
+        guard let data = FileManager.default.contents(atPath: url.path) else { return nil }
+        
+        let decoder = JSONDecoder()
+        
+        do {
+            let model = try decoder.decode(type, from: data)
+            return model
+        } catch let error {
+            print("---> Failed to decode msg: \(error.localizedDescription)")
+            return nil
+        }
+    }
+```
+## remove와 clear
+- 위에 껀 호기심에 뭔가 재밌어서 알아본거고 이건 그냥 갖다쓰는걸로 ㅎ
