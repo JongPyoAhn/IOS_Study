@@ -26,3 +26,20 @@ if noti.name == UIResponder.keyboardWillShowNotification {
 NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView), name: UIResponder.keyboardWillShowNotification, object: nil)
 NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView), name: UIResponder.keyboardWillHideNotification, object: nil)
 ```
+
+## Completion Handler
+- 아래와 같이 2개가 작성됬는데 굳이 IBAction으로 안한이유는.. 셀이 업데이트 된 후에 필요한 작업이라서 그런거 같다.
+```swift
+cell.doneButtonTapHandler = { isDone in
+            todo.isDone = isDone
+            self.todoListModel.updateTodo(todo)
+            self.collectionView.reloadData()
+        }        
+```
+
+```swift
+cell.deleteButtonTapHandler = {
+            self.todoListModel.deleteTodo(todo)
+            self.collectionView.reloadData()
+        }
+```
