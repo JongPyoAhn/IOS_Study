@@ -6,7 +6,7 @@
 - Hyper Text Transfer Protocol
 - 서버와 클라이언트간의 다양한 데이터 전달목적으로 만들어진 통신규약
 1) HTTP의 동작방식
-  1. App -> Server (Request)
+  <\t>1. App -> Server (Request)
   2. App <- Server (Response)
   3. 클라이언트가 요청을 보내면 서버가 응답하는 방식임
 
