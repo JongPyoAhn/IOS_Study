@@ -26,8 +26,8 @@
       - content-Type이란? 어떤 포맷의 데이터가 전달될 것이냐를 표시해 주는것.</br>
       ex) text/html, application/Json, image/png, Video/mpeg 등
 
-### HLS(HTTP Live Streaming)
-  1. HTTP를 이용한 동영상 스트리밍 방법
+  ### HLS(HTTP Live Streaming)
+    1. HTTP를 이용한 동영상 스트리밍 방법
     
 ## Concurrency
 
