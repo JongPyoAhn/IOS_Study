@@ -21,7 +21,7 @@
     1. URL 통해서 Request 보낼 때
       - Header와 Body로 나누어 보냄
     2. URL 통해서 Response 받을 때
-      - Header에는 상태코드(Status code)가 같이 내려옴
+      - Header에는 상태코드(Status code)가 같이 내려옴</br>
       - Body에는 실제 사이트를 그려주기 위한 HTTP content가 옴.</br>
       - content-Type이란? 어떤 포맷의 데이터가 전달될 것이냐를 표시해 주는것.</br>
       ex) text/html, application/Json, image/png, Video/mpeg 등
