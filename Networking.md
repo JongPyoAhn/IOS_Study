@@ -85,6 +85,8 @@
         ```
     4. 두 개의 Queue 같이 쓰기
       - 예를 들면, 이미지 다운받아서 결과에 따라 UI를 업데이트 하는작업
+      - 아래 코드는 글로벌 큐에서 background task를 하는것이다.
+      - 이미지를 서버로부터 다운받고 그 밑에 mainQueue가 실행됨
         ```swift
         DispatchQueue.global(qos: .background).async {
           let image = downloadImageFromServer()
@@ -93,9 +95,24 @@
           }
         } 
         ```
-      
+        
   ### sync(동기) & Async(비동기)
-  
+   - **sync** : 앞에 작업이 끝나고 다음 일 시작
+   - **Async** : 앞에 작업이 끝나지 않았음에도 다음 일 시작
+   - 대부분의 경우에는 **Async** 를 사용한다.
+   - 아래의 코드를 봄
+    ```swift
+    DispatchQueue.global(qos: .background).async {
+      for i in 0...5 {
+        print("😍 \(i)") 
+      }
+    }
+    DispatchQueue.global(qos: .background).async {
+      for i in 0...5{
+        print("😭 \(i)")
+      }
+    }
+    ```
 <hr/>
 
 ## URLSession
