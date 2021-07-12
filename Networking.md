@@ -28,7 +28,13 @@
 
   ### HLS(HTTP Live Streaming)
     1. HTTP를 이용한 동영상 스트리밍 방법
-    
+  
+  ### HTTP툴 실습
+    - **Postman**
+     - workspaces-> Myworkspace -> + -> GET설정 -> www.google.com -> send
+      - 여기서 나온게 html document이고 이걸 렌더링하면 홈페이지 모습이 나온다.
+     - Itunes Search API
+      - https://itunes.apple.com/search?media=music&entity=musicVideo&term=Gd
 ## Concurrency
 
 ## GCD
