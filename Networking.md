@@ -72,18 +72,17 @@
         3. default : 2보다 덜 중요<br/>
         4. utility : 수초 ~ 수분 걸리는 작업(네트워킹, 파일 불러오기)<br/>
         5. bakcground : 사용자 인식에 관계없는 작업(영상 다운로드 등)<br/>
-      ```swift
-      DispatchQueue.global(qos: .background).async {}  
-      ```
+            ```swift
+            DispatchQueue.global(qos: .background).async {}  
+            ```
     
     3. CustomQueue<br/>
       - 앞서 말한 2개는 시스템에서 제공하는거임<br/>
       - 가끔 우리가 직접 생성해서 관리해야한다.<br/>
-      ```swift
-      let concurrentQueue = DispatchQueue(label: "concurrent", qos: .background, attributes: .concurrent)
-      
-      let serialQueue = DispatchQueue(label: "serial", qos: .background)
-      ```
+        ```swift
+        let concurrentQueue = DispatchQueue(label: "concurrent", qos: .background, attributes: .concurrent)
+        let serialQueue = DispatchQueue(label: "serial", qos: .background)
+        ```
 
 <hr/>
 
