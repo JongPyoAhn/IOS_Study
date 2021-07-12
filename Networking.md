@@ -83,7 +83,19 @@
         let concurrentQueue = DispatchQueue(label: "concurrent", qos: .background, attributes: .concurrent)
         let serialQueue = DispatchQueue(label: "serial", qos: .background)
         ```
-
+    4. 두 개의 Queue 같이 쓰기
+      - 예를 들면, 이미지 다운받아서 결과에 따라 UI를 업데이트 하는작업
+        ```swift
+        DispatchQueue.global(qos: .background).async {
+          let image = downloadImageFromServer()
+          DispatchQueue.main.async {
+            self.imageview.image = image
+          }
+        } 
+        ```
+      
+  ### sync(동기) & Async(비동기)
+  
 <hr/>
 
 ## URLSession
