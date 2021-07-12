@@ -79,9 +79,9 @@
     3. CustomQueue<br/>
       - 앞서 말한 2개는 시스템에서 제공하는거임<br/>
       - 가끔 우리가 직접 생성해서 관리해야한다.<br/>
-      
       ```swift
-      
+      let concurrentQueue = DispatchQueue(label: "concurrent", qos: .background, attributes: .concurrent)
+      let serialQueue = DispatchQueue(label: "serial", qos: .background)
       ```
 
 <hr/>
