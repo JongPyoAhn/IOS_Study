@@ -146,4 +146,4 @@
     1. URLSessionDataTask: Response데이터 메모리상에서 처리 (간단한 작업시 사용, BackgroundSession지원x)
     2. URLSessionUploadTask: 파일 업로드시 편한 requestBody 제공
     3. URLSessionDownloadTask
-    4. 
+    
