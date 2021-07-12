@@ -100,19 +100,34 @@
    - **sync** : 앞에 작업이 끝나고 다음 일 시작
    - **Async** : 앞에 작업이 끝나지 않았음에도 다음 일 시작
    - 대부분의 경우에는 **Async** 를 사용한다.
-   - 아래의 코드를 봄
+   - 아래의 코드를 출력해보면 하트가 끝나기전에 우는표정이 먼저 끝난다. 그 이유는 하트보다 우는표정이 **qos** 가 높고 **Async** 이기 때문에 굳이 위에꺼 먼저 하지 않는 것이다.
     ```swift
+    //Async 예제
     DispatchQueue.global(qos: .background).async {
       for i in 0...5 {
         print("😍 \(i)") 
       }
     }
-    DispatchQueue.global(qos: .background).async {
+    DispatchQueue.global(qos: .userInteractive).async {
       for i in 0...5{
         print("😭 \(i)")
       }
     }
     ```
+  - 아래의 코드를 보면 **sync** 를 사용하여 앞에 작업이 다 끝나야지만 뒤에 작업을 수행한다.
+   ```swift
+   //sync 예제
+    DispatchQueue.global(qos: .background).sync {
+      for i in 0...10 {
+        print("😍 \(i)") 
+      }
+    }
+    DispatchQueue.global(qos: .userInteractive).async {
+      for i in 0...10{
+        print("😭 \(i)")
+      }
+    }
+   ```
 <hr/>
 
 ## URLSession
