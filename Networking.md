@@ -131,3 +131,19 @@
 <hr/>
 
 ## URLSession
+- IOS에서 네트워킹을 할 때에는 URLSession을 통해서 한다.
+
+  ### URLSession API 사용
+    1. URLSessionConfigration -> URLSession -> URLSessionTask(이걸 통해서 서버와의 통신을 하는것)
+    2. URLSessionConfigration -> URLSession -> Delegate(네트워킹 중간과정 확인가능)
+    
+  ### URLSessionConfiguration
+    1. default : 기본 통신
+    2. Ephemeral : cookie, cache 같은거 저장하지 않게 할 때 사용
+    3. Background : 콘텐츠 다운로드, 업로드
+
+  ### URLSessionTask
+    1. URLSessionDataTask: Response데이터 메모리상에서 처리 (간단한 작업시 사용, BackgroundSession지원x)
+    2. URLSessionUploadTask: 파일 업로드시 편한 requestBody 제공
+    3. URLSessionDownloadTask
+    4. 
