@@ -34,7 +34,15 @@
       - 여기서 나온게 html document이고 이걸 렌더링하면 홈페이지 모습이 나온다.
      - Itunes Search API
       - https://itunes.apple.com/search?media=music&entity=musicVideo&term=Gd
-## Concurrency
+## Concurrency(동시성)
+- 한번에 여러개 일을 수행
+- App이 보통 하는 일
+  1. 사용자 Interaction처리 (작업1) : 메인스레드에서 처리 (메인 스레드는 사용자 인터랙션 처리, 뷰 표시하는 역할)
+  2. 네트워킹 (작업2)
+  3. 백그라운드에서 파일 다운로드 (작업3)
+  4. 파일 저장하고 읽기 (작업4)
+  - 이러한 작업들을 Thread라고 함.
+  - 스레드(작업)1번 조금하고 2번조금하고 3번하고 ... 이걸 엄청빠르게 진행 이렇게 해야 결과적으로 동시에 일을 수행하는 효과를 가져온다.
 
 ## GCD
 
