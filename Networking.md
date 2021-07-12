@@ -56,22 +56,33 @@
 - DispatchQueue를 사용
 
   ### DisPatchQueue의 타입
-    1. MainQueue
-      - MainThread에서 작동하는 Queue
-      - 사용자 Interaction, 뷰 처리
-    2. GlobalQueue
-      - 시스템에 의해 관리됨
-      - Qos(Quality Of Service) 클래스에 의해 우선순위가 표현됨
-       - Qos 우선순위
-        1. userInteraction : 바로 수행되어야 할 작업
-        2. userInitiated: 거의 바로 수행
-        3. default : 2보다 덜 중요
-        4. utility : 수초 ~ 수분 걸리는 작업(네트워킹, 파일 불러오기)
-        5. bakcground : 사용자 인식에 관계없는 작업(영상 다운로드 등)
-    3. CustomQueue
-      - 앞서 말한 2개는 시스템에서 제공하는거임
-      - 가끔 우리가 직접 생성해서 관리해야한다.
+    1. MainQueue<br/>
+      - MainThread에서 작동하는 Queue<br/>
+      - 사용자 Interaction, 뷰 처리<br/>
+        ```swift
+        DispatchQueue.main.async {}
+        ```
       
+    2. GlobalQueue
+      - 시스템에 의해 관리됨<br/>
+      - Qos(Quality Of Service) 클래스에 의해 우선순위가 표현됨<br/>
+       - Qos 우선순위<br/>
+        1. userInteraction : 바로 수행되어야 할 작업<br/>
+        2. userInitiated: 거의 바로 수행<br/>
+        3. default : 2보다 덜 중요<br/>
+        4. utility : 수초 ~ 수분 걸리는 작업(네트워킹, 파일 불러오기)<br/>
+        5. bakcground : 사용자 인식에 관계없는 작업(영상 다운로드 등)<br/>
+      ```swift
+      DispatchQueue.global(qos: .background).async {}  
+      ```
+      
+    3. CustomQueue<br/>
+      - 앞서 말한 2개는 시스템에서 제공하는거임<br/>
+      - 가끔 우리가 직접 생성해서 관리해야한다.<br/>
+      
+      ```swift
+      
+      ```
 
 <hr/>
 
