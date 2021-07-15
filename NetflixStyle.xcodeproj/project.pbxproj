@@ -19,6 +19,7 @@
 		53889644269E5C4D00899216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53889642269E5C4D00899216 /* Main.storyboard */; };
 		53889646269E5C7000899216 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53889645269E5C7000899216 /* Player.storyboard */; };
 		538896F4269FBA7400899216 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 538896F3269FBA7400899216 /* Kingfisher */; };
+		538896F6269FC79F00899216 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538896F5269FC79F00899216 /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		53889640269E5B5E00899216 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		53889643269E5C4D00899216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53889645269E5C7000899216 /* Player.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
+		538896F5269FC79F00899216 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				5388963E269E5B5700899216 /* RecommendListViewController.swift */,
 				53889638269E5B4D00899216 /* HomeViewController.swift */,
 				5388963C269E5B5400899216 /* PlayerViewController.swift */,
+				538896F5269FC79F00899216 /* PlayerView.swift */,
 				53889628269E5A9400899216 /* Assets.xcassets */,
 				5388962A269E5A9400899216 /* LaunchScreen.storyboard */,
 				5388962D269E5A9400899216 /* Info.plist */,
@@ -164,6 +167,7 @@
 				53889639269E5B4D00899216 /* HomeViewController.swift in Sources */,
 				53889637269E5B4A00899216 /* AppTabbarController.swift in Sources */,
 				53889641269E5B5E00899216 /* SearchViewController.swift in Sources */,
+				538896F6269FC79F00899216 /* PlayerView.swift in Sources */,
 				5388963F269E5B5700899216 /* RecommendListViewController.swift in Sources */,
 				5388963D269E5B5400899216 /* PlayerViewController.swift in Sources */,
 				53889620269E5A9300899216 /* AppDelegate.swift in Sources */,
