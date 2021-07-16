@@ -8,9 +8,19 @@
   // ...
   let termQuery = URLQueryItem(name: "term", value: term)
   // ...
-  let movies = searchAPI.parseMovies(resultData)
-  completion(movies)
   ```
+  
+  - 이 부분에서 크랙이 한번 발생했는데.. MainThreadChecker가 체크해줬다.
+  - 발생한 이유는 reloadData()의 경우 UI를 처리하는 Thread에서 불려야하는데 엉뚱한 네트워크 Thread에서 쓰이고 있기 때문..!!
+  - 네트워크는 느려터진 쓰레드..  **메인이 아닌 다른 스레드를 통해 결과 Data를 UI로 업데이트 시켜야 하는경우에는 Thread를 넘나들어야됨**
+  ```swift
+  DispatchQueue.main.async {
+                self.movies = movies
+                self.resultCollectionView.reloadData()
+            }
+  ```
+  
+  
   
   - parseMovies는 data(JSon형태)가 저장되있는 resultData를 Response구조체에 알맞게 decode하는 함수이다.
   ```swift
