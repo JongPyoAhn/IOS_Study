@@ -132,7 +132,7 @@ class searchAPI{
                 completion([])
                 return
             }
-            let string = String(data: resultData, encoding: .utf8)!
+//            let string = String(data: resultData, encoding: .utf8)!
             let movies = searchAPI.parseMovies(resultData)
             completion(movies)
             print("---> result : \(movies.count) --> 첫번째꺼 제목 : \(movies.first?.title)")
