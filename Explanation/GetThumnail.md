@@ -13,12 +13,10 @@
     //아래코드가 핵심
     cell.movieThumnail.kf.setImage(with: url) 
   ```
-  - (여기서는 1번 사용함)
-    
 
 ## 외부코드 가져다 쓰기
-방법 1. SPM(SwiftPackageManager)
-방법 2. CocoaPod
+방법 1. SPM(SwiftPackageManager)<br/>
+방법 2. CocoaPod<br/>
 방법 3. Carthage
   ### 여기서는 SPM을 사용했다.
   1. File
