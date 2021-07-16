@@ -37,6 +37,8 @@
 		53889643269E5C4D00899216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53889645269E5C7000899216 /* Player.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
 		538896F5269FC79F00899216 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		5388970D26A10EC100899216 /* SearchBar.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SearchBar.md; sourceTree = "<group>"; };
+		5388970E26A10ED300899216 /* SearchAPI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SearchAPI.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		53889613269E5A9300899216 = {
 			isa = PBXGroup;
 			children = (
+				5388970C26A10E9A00899216 /* Explanation */,
 				5388961E269E5A9300899216 /* NetflixStyle */,
 				5388961D269E5A9300899216 /* Products */,
 			);
@@ -85,6 +88,15 @@
 				5388962D269E5A9400899216 /* Info.plist */,
 			);
 			path = NetflixStyle;
+			sourceTree = "<group>";
+		};
+		5388970C26A10E9A00899216 /* Explanation */ = {
+			isa = PBXGroup;
+			children = (
+				5388970D26A10EC100899216 /* SearchBar.md */,
+				5388970E26A10ED300899216 /* SearchAPI.md */,
+			);
+			path = Explanation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
