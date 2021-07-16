@@ -40,7 +40,6 @@
 		5388970D26A10EC100899216 /* SearchBar.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SearchBar.md; sourceTree = "<group>"; };
 		5388970E26A10ED300899216 /* SearchAPI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SearchAPI.md; sourceTree = "<group>"; };
 		5388970F26A1179B00899216 /* GetThumnail.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GetThumnail.md; sourceTree = "<group>"; };
-		5388971026A11C2D00899216 /* Player and 가로로구현.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Player and 가로로구현.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +97,6 @@
 				5388970D26A10EC100899216 /* SearchBar.md */,
 				5388970E26A10ED300899216 /* SearchAPI.md */,
 				5388970F26A1179B00899216 /* GetThumnail.md */,
-				5388971026A11C2D00899216 /* Player and 가로로구현.md */,
 			);
 			path = Explanation;
 			sourceTree = "<group>";

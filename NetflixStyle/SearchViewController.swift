@@ -40,8 +40,6 @@ extension SearchViewController: UICollectionViewDataSource {
         // 방법 3. Carthage
         let url = URL(string: movie.thumnailPath)
         cell.movieThumnail.kf.setImage(with: url)
-        
-        
         return cell
     }
     
