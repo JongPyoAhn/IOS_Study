@@ -47,8 +47,6 @@ extension ViewController {
         let customer2 = Customer(id: "\(Customer.id)", name: "Dele", books: books)
         Customer.id += 1
         let customer3 = Customer(id: "\(Customer.id)", name: "Kane", books: books)
-        
-       
         db.child("customers").child(customer1.id).setValue(customer1.toDictionary)
         db.child("customers").child(customer2.id).setValue(customer2.toDictionary)
         db.child("customers").child(customer3.id).setValue(customer3.toDictionary)
