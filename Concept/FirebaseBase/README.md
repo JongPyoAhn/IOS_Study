@@ -32,7 +32,7 @@
   ```swift
   db.child("customers").child(customer1.id).setValue(customer1.toDictionary)
   ```
-## 2. Json파싱
+## 2. Read(Json파싱)
 - snapshot -> Json -> Json파싱(Decode)
   ```swift
    let data = try JSONSerialization.data(withJSONObject: snapshot.value, options: []) //snapshot -> Json
