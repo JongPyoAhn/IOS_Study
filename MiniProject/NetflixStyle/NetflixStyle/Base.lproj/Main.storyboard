@@ -247,16 +247,66 @@
             <objects>
                 <viewController id="Blf-Or-i5j" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ce7-Bh-AkS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auR-YS-a4I">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1473"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbj-gp-aGH">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ar-6l-Hqi">
+                                                <rect key="frame" x="8" y="0.0" width="398" height="272"/>
+                                                <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="272" id="zq8-RS-nOg"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q5M-4Y-wLK">
+                                                <rect key="frame" x="0.0" y="326" width="398" height="600"/>
+                                                <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="600" id="B1X-Oe-xcH"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="q5M-4Y-wLK" firstAttribute="leading" secondItem="Dbj-gp-aGH" secondAttribute="leading" id="7K1-7Y-Y6K"/>
+                                            <constraint firstItem="4Ar-6l-Hqi" firstAttribute="leading" secondItem="Dbj-gp-aGH" secondAttribute="leading" constant="8" id="TkY-0y-D7A"/>
+                                            <constraint firstItem="q5M-4Y-wLK" firstAttribute="top" secondItem="4Ar-6l-Hqi" secondAttribute="bottom" constant="54" id="W1I-qE-F3a"/>
+                                            <constraint firstItem="4Ar-6l-Hqi" firstAttribute="top" secondItem="Dbj-gp-aGH" secondAttribute="top" id="YRN-ho-IUR"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Ar-6l-Hqi" secondAttribute="trailing" constant="8" id="lch-D5-r6M"/>
+                                            <constraint firstAttribute="trailing" secondItem="q5M-4Y-wLK" secondAttribute="trailing" constant="16" id="qpZ-ZA-ehJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Dbj-gp-aGH" secondAttribute="trailing" id="5Eg-Sq-Id0"/>
+                                    <constraint firstItem="Dbj-gp-aGH" firstAttribute="leading" secondItem="auR-YS-a4I" secondAttribute="leading" id="ORf-8N-Wgy"/>
+                                    <constraint firstItem="Dbj-gp-aGH" firstAttribute="top" secondItem="auR-YS-a4I" secondAttribute="top" id="TSV-zR-qNt"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dbj-gp-aGH" secondAttribute="bottom" id="kiH-fY-6oJ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cEW-rw-DWC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dbj-gp-aGH" firstAttribute="width" secondItem="ce7-Bh-AkS" secondAttribute="width" id="057-64-qE7"/>
+                            <constraint firstItem="auR-YS-a4I" firstAttribute="top" secondItem="cEW-rw-DWC" secondAttribute="top" id="6J5-dt-AOF"/>
+                            <constraint firstItem="auR-YS-a4I" firstAttribute="leading" secondItem="cEW-rw-DWC" secondAttribute="leading" id="Nna-A9-mPh"/>
+                            <constraint firstItem="cEW-rw-DWC" firstAttribute="bottom" secondItem="auR-YS-a4I" secondAttribute="bottom" id="PYk-8i-jnF"/>
+                            <constraint firstItem="cEW-rw-DWC" firstAttribute="trailing" secondItem="auR-YS-a4I" secondAttribute="trailing" id="hVu-qK-YTQ"/>
+                            <constraint firstItem="Dbj-gp-aGH" firstAttribute="height" secondItem="ce7-Bh-AkS" secondAttribute="height" priority="250" id="m47-nB-rtn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="공개예정" image="play.rectangle.fill" catalog="system" id="pxU-OE-cdZ"/>
+                    <size key="freeformSize" width="414" height="1600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J18-X4-5SI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3001" y="990"/>
+            <point key="canvasLocation" x="3000.0000000000005" y="989.73214285714278"/>
         </scene>
         <!--더보기-->
         <scene sceneID="Lca-zO-Qyt">
