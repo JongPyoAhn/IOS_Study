@@ -22,17 +22,76 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="num of customer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lU3-KX-Dv9">
+                                <rect key="frame" x="109" y="172" width="183" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmj-rW-mx7">
+                                <rect key="frame" x="150" y="236" width="114" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pzO-Dc-AUA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soR-WH-rdx">
+                                <rect key="frame" x="163" y="341" width="89" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="readCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bt4-R0-IoY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4no-Vo-oWR">
+                                <rect key="frame" x="144" y="462" width="127" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zrn-HQ-j4e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4D-Sd-7MV">
+                                <rect key="frame" x="152" y="556" width="111" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5s-kL-AmF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4no-Vo-oWR" secondAttribute="trailing" constant="143" id="4fn-u2-kIx"/>
+                            <constraint firstItem="lU3-KX-Dv9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="5Zf-Gt-Yk5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="soR-WH-rdx" secondAttribute="trailing" constant="162" id="8C2-Is-ADQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bQ4-Oz-rvQ" secondAttribute="trailing" constant="80" id="Blj-el-oMy"/>
+                            <constraint firstItem="4no-Vo-oWR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="418" id="Df9-BH-1SR"/>
+                            <constraint firstItem="mmj-rW-mx7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="192" id="DkD-Ih-a4s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mmj-rW-mx7" secondAttribute="trailing" constant="150" id="EXg-Gn-c6G"/>
+                            <constraint firstItem="soR-WH-rdx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="KoQ-xV-U61"/>
+                            <constraint firstItem="4no-Vo-oWR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="LNa-fU-Tfq"/>
                             <constraint firstItem="bQ4-Oz-rvQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="Mvl-C7-Ewi"/>
+                            <constraint firstItem="N4D-Sd-7MV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="ODT-4d-1vd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N4D-Sd-7MV" secondAttribute="trailing" constant="151" id="Pvf-ag-Wyg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mmj-rW-mx7" secondAttribute="bottom" constant="566" id="R8t-79-gVs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lU3-KX-Dv9" secondAttribute="trailing" constant="120" id="Sko-qJ-zCb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4no-Vo-oWR" secondAttribute="bottom" constant="340" id="XFt-kU-CZi"/>
                             <constraint firstItem="bQ4-Oz-rvQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="ddO-wM-dF3"/>
+                            <constraint firstItem="mmj-rW-mx7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="elK-ES-DyI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lU3-KX-Dv9" secondAttribute="bottom" constant="669" id="et6-yK-PvH"/>
+                            <constraint firstItem="N4D-Sd-7MV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="512" id="f0w-tm-auL"/>
+                            <constraint firstItem="lU3-KX-Dv9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="iQT-zT-oqn"/>
+                            <constraint firstItem="soR-WH-rdx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="297" id="mpd-z0-qc3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N4D-Sd-7MV" secondAttribute="bottom" constant="246" id="pV0-QS-eBT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="soR-WH-rdx" secondAttribute="bottom" constant="461" id="w0I-3j-BWC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="firstData" destination="bQ4-Oz-rvQ" id="Alt-Bg-wJr"/>
+                        <outlet property="numberOfCustomers" destination="lU3-KX-Dv9" id="bsZ-gX-oNe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
