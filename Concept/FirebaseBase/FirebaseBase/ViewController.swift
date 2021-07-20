@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         customers[0].name = "min"
         
         let dictValue = customers.map{$0.toDictionary}
+        print("\(dictValue)")
         db.updateChildValues(["customers":dictValue])
     }
     @IBAction func deleteCustomer(_ sender: Any) {
