@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41683363759B2E78060190FC /* Pods_NetflixStyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A8253DD69A810EB20583F8 /* Pods_NetflixStyle.framework */; };
 		53889620269E5A9300899216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5388961F269E5A9300899216 /* AppDelegate.swift */; };
 		53889622269E5A9300899216 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889621269E5A9300899216 /* SceneDelegate.swift */; };
 		53889629269E5A9400899216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53889628269E5A9400899216 /* Assets.xcassets */; };
@@ -18,12 +19,15 @@
 		53889641269E5B5E00899216 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53889640269E5B5E00899216 /* SearchViewController.swift */; };
 		53889644269E5C4D00899216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53889642269E5C4D00899216 /* Main.storyboard */; };
 		53889646269E5C7000899216 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53889645269E5C7000899216 /* Player.storyboard */; };
-		538896F4269FBA7400899216 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 538896F3269FBA7400899216 /* Kingfisher */; };
+		538896F4269FBA7400899216 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 538896F3269FBA7400899216 /* SwiftPackageProductDependency */; };
 		538896F6269FC79F00899216 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538896F5269FC79F00899216 /* PlayerView.swift */; };
 		53CB6EA626A79EDB002C182B /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB6EA526A79EDB002C182B /* UpcomingViewController.swift */; };
+		53CB6EA926A7A597002C182B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53CB6EA826A7A597002C182B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		195F51F582F45167173C816A /* Pods-NetflixStyle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetflixStyle.debug.xcconfig"; path = "Target Support Files/Pods-NetflixStyle/Pods-NetflixStyle.debug.xcconfig"; sourceTree = "<group>"; };
+		47A8253DD69A810EB20583F8 /* Pods_NetflixStyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetflixStyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5388961C269E5A9300899216 /* NetflixStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5388961F269E5A9300899216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53889621269E5A9300899216 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		5388970E26A10ED300899216 /* SearchAPI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SearchAPI.md; sourceTree = "<group>"; };
 		5388970F26A1179B00899216 /* GetThumnail.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GetThumnail.md; sourceTree = "<group>"; };
 		53CB6EA526A79EDB002C182B /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
+		53CB6EA826A7A597002C182B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DD677402343A1D06BC5A7CAB /* Pods-NetflixStyle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetflixStyle.release.xcconfig"; path = "Target Support Files/Pods-NetflixStyle/Pods-NetflixStyle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				538896F4269FBA7400899216 /* Kingfisher in Frameworks */,
+				538896F4269FBA7400899216 /* BuildFile in Frameworks */,
+				41683363759B2E78060190FC /* Pods_NetflixStyle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +69,8 @@
 				5388970C26A10E9A00899216 /* Explanation */,
 				5388961E269E5A9300899216 /* NetflixStyle */,
 				5388961D269E5A9300899216 /* Products */,
+				BA03DB16820E038A55D415FE /* Pods */,
+				5CEA05CDFA722D6BD3BEB39A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +93,7 @@
 				53889645269E5C7000899216 /* Player.storyboard */,
 				538896F5269FC79F00899216 /* PlayerView.swift */,
 				53889628269E5A9400899216 /* Assets.xcassets */,
+				53CB6EA826A7A597002C182B /* GoogleService-Info.plist */,
 				5388962A269E5A9400899216 /* LaunchScreen.storyboard */,
 				5388962D269E5A9400899216 /* Info.plist */,
 			);
@@ -112,6 +122,24 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		5CEA05CDFA722D6BD3BEB39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47A8253DD69A810EB20583F8 /* Pods_NetflixStyle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA03DB16820E038A55D415FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				195F51F582F45167173C816A /* Pods-NetflixStyle.debug.xcconfig */,
+				DD677402343A1D06BC5A7CAB /* Pods-NetflixStyle.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53889630269E5A9400899216 /* Build configuration list for PBXNativeTarget "NetflixStyle" */;
 			buildPhases = (
+				FCD4AA90745289C88AE6F7B4 /* [CP] Check Pods Manifest.lock */,
 				53889618269E5A9300899216 /* Sources */,
 				53889619269E5A9300899216 /* Frameworks */,
 				5388961A269E5A9300899216 /* Resources */,
+				56533BFE07DF005C58C6A1D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,7 +159,7 @@
 			);
 			name = NetflixStyle;
 			packageProductDependencies = (
-				538896F3269FBA7400899216 /* Kingfisher */,
+				538896F3269FBA7400899216 /* SwiftPackageProductDependency */,
 			);
 			productName = NetflixStyle;
 			productReference = 5388961C269E5A9300899216 /* NetflixStyle.app */;
@@ -159,7 +189,7 @@
 			);
 			mainGroup = 53889613269E5A9300899216;
 			packageReferences = (
-				538896F2269FBA7400899216 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				538896F2269FBA7400899216 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 5388961D269E5A9300899216 /* Products */;
 			projectDirPath = "";
@@ -177,12 +207,55 @@
 			files = (
 				5388962C269E5A9400899216 /* LaunchScreen.storyboard in Resources */,
 				53889646269E5C7000899216 /* Player.storyboard in Resources */,
+				53CB6EA926A7A597002C182B /* GoogleService-Info.plist in Resources */,
 				53889629269E5A9400899216 /* Assets.xcassets in Resources */,
 				53889644269E5C4D00899216 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56533BFE07DF005C58C6A1D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetflixStyle/Pods-NetflixStyle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetflixStyle/Pods-NetflixStyle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NetflixStyle/Pods-NetflixStyle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCD4AA90745289C88AE6F7B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetflixStyle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53889618269E5A9300899216 /* Sources */ = {
@@ -341,6 +414,7 @@
 		};
 		53889631269E5A9400899216 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195F51F582F45167173C816A /* Pods-NetflixStyle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -360,6 +434,7 @@
 		};
 		53889632269E5A9400899216 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD677402343A1D06BC5A7CAB /* Pods-NetflixStyle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -401,7 +476,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		538896F2269FBA7400899216 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		538896F2269FBA7400899216 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
@@ -412,9 +487,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		538896F3269FBA7400899216 /* Kingfisher */ = {
+		538896F3269FBA7400899216 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 538896F2269FBA7400899216 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 538896F2269FBA7400899216 /* RemoteSwiftPackageReference */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
