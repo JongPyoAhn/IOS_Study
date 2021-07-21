@@ -245,7 +245,7 @@
         <!--공개예정-->
         <scene sceneID="ryf-ci-vYK">
             <objects>
-                <viewController id="Blf-Or-i5j" sceneMemberID="viewController">
+                <viewController id="Blf-Or-i5j" customClass="UpcomingViewController" customModule="NetflixStyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ce7-Bh-AkS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,7 +271,7 @@
                                                             <constraint firstAttribute="height" constant="200" id="7Ov-nN-9jR"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="Hh8-uK-lQO" kind="embed" id="OOa-cZ-bkV"/>
+                                                            <segue destination="Hh8-uK-lQO" kind="embed" identifier="award" id="OOa-cZ-bkV"/>
                                                         </connections>
                                                     </containerView>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4k-uk-Sl9">
@@ -280,7 +280,7 @@
                                                             <constraint firstAttribute="height" constant="200" id="X9g-rZ-VnJ"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="hwk-cL-u8q" kind="embed" id="nLM-Mb-acs"/>
+                                                            <segue destination="hwk-cL-u8q" kind="embed" identifier="hot" id="nLM-Mb-acs"/>
                                                         </connections>
                                                     </containerView>
                                                 </subviews>
