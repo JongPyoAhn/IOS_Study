@@ -56,9 +56,6 @@ extension HistoryViewController: UITableViewDataSource {
     
     
 }
-extension HistoryViewController: UITableViewDelegate {
-    
-}
 
 class historyCell: UITableViewCell {
     @IBOutlet weak var searchTerm: UILabel!
