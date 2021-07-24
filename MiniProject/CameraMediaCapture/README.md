@@ -111,5 +111,17 @@
     
     }
   ```
+## 8. PhotoData가 내려온걸 Delegate의 PhotoOutput함수에서 확인가능
+  ```swift
+  extension CameraViewController: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        guard error == nil else {return}
+        guard let imageData = photo.fileDataRepresentation() else {return}
+        guard let image = UIImage(data: imageData) else {return}
+        self.savePhotoLibrary(image: image)
+        
+    }
+}
 
+  ```
 
