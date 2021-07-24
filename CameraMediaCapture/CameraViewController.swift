@@ -13,7 +13,7 @@ class CameraViewController: UIViewController {
     // TODO: 초기 설정 1
     
     let captureSession = AVCaptureSession()
-//    var videoDeviceInput = AVCaptureDeviceInput(device: <#T##AVCaptureDevice#>)
+    var videoDeviceInput: AVCaptureDeviceInput!
     let photoOutput = AVCapturePhotoOutput()
     
     let sessionQueue = DispatchQueue(label: "session Queue")
@@ -58,15 +58,60 @@ class CameraViewController: UIViewController {
     
     @IBAction func switchCamera(sender: Any) {
         // TODO: 카메라는 1개 이상이어야함
-        
+        guard videoDeviceDiscoverySession.devices.count > 1 else {return}
         
         // TODO: 반대 카메라 찾아서 재설정
-        
+        sessionQueue.async {
+            let currentVideoDevice = self.videoDeviceInput.device
+            let currentPosition = currentVideoDevice.position
+            let isFront = currentPosition == .front
+            let preferredPosition:AVCaptureDevice.Position = isFront ? .back : .front
+            
+            let device = self.videoDeviceDiscoverySession.devices
+            var newVideoDevice: AVCaptureDevice?
+            newVideoDevice = device.first(where: {device in
+                return preferredPosition == device.position
+            })
+            
+            //update capture session
+            if let newDevice = newVideoDevice {
+                do{
+                    let videoDeviceInput = try AVCaptureDeviceInput(device: newDevice)
+                    self.captureSession.beginConfiguration()
+                    self.captureSession.removeInput(self.videoDeviceInput)
+                    
+                    //add new device input
+                    if self.captureSession.canAddInput(videoDeviceInput){
+                        self.captureSession.addInput(videoDeviceInput)
+                        self.videoDeviceInput = videoDeviceInput
+                    }else {
+                        self.captureSession.addInput(videoDeviceInput)
+                    }
+                    self.captureSession.commitConfiguration()
+                    DispatchQueue.main.async {
+                        self.updateSwitchCameraIcon(position: preferredPosition)
+                    }
+                    
+                    
+                }catch let error {
+                    print("\(error.localizedDescription)")
+                }
+            }
+        }
     }
     
     func updateSwitchCameraIcon(position: AVCaptureDevice.Position) {
         // TODO: Update ICON
-        
+        switch position {
+        case .front:
+            let image = #imageLiteral(resourceName: "ic_camera_front")
+            switchButton.setImage(image, for: .normal)
+        case .back:
+            let image = #imageLiteral(resourceName: "ic_camera_rear")
+            switchButton.setImage(image, for: .normal)
+        default:
+            break
+        }
         
     }
     
