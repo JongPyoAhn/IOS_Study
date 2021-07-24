@@ -17,7 +17,7 @@ class CameraViewController: UIViewController {
     let photoOutput = AVCapturePhotoOutput()
     
     let sessionQueue = DispatchQueue(label: "session Queue")
-    let videoDeviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [ .builtInDualCamera, .builtInWideAngleCamera, .builtInTripleCamera], mediaType: .video, position: .back)
+    let videoDeviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [ .builtInDualCamera, .builtInWideAngleCamera, .builtInTripleCamera], mediaType: .video, position: .unspecified)
     
     
     @IBOutlet weak var photoLibraryButton: UIButton!
@@ -117,16 +117,40 @@ class CameraViewController: UIViewController {
     
     @IBAction func capturePhoto(_ sender: UIButton) {
         // TODO: photoOutput의 capturePhoto 메소드
-
+        //orientation
+        //photooutput
+        
+        let videoPreviewLayerOrientation = self.previewView.videoPreviewLayer.connection?.videoOrientation
+        sessionQueue.async {
+            //사진에 대한 오리엔테이션을 커넥션을 통해서 설정해준것.
+            let connection = self.photoOutput.connection(with: .video)
+            connection?.videoOrientation = videoPreviewLayerOrientation!
+            
+            //캡처세션에 요청
+            let setting = AVCapturePhotoSettings()
+            self.photoOutput.capturePhoto(with: setting, delegate: self)
+            
+        }
 
     }
     
     
     func savePhotoLibrary(image: UIImage) {
         // TODO: capture한 이미지 포토라이브러리에 저장
+        PHPhotoLibrary.requestAuthorization{ status in
+            if status == .authorized{//저장
+                PHPhotoLibrary.shared().performChanges({PHAssetChangeRequest.creationRequestForAsset(from: image)}, completionHandler: {
+                    (success, error) in
+                    print("---> 이미지 저장완료 했나? \(success)")
+                })
+                }else{//다시요청
+                print("---> 권한을 아직 받지 못함.")
+            }
+    
+        }
+    
     }
 }
-
 
 extension CameraViewController {
     // MARK: - Setup session and preview
@@ -151,6 +175,7 @@ extension CameraViewController {
             let videoDeviceInput = try AVCaptureDeviceInput(device: camera)
             if captureSession.canAddInput(videoDeviceInput){
                 captureSession.addInput(videoDeviceInput)
+                self.videoDeviceInput = videoDeviceInput
             }else {
                 captureSession.commitConfiguration()
                 return
@@ -196,7 +221,10 @@ extension CameraViewController {
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         // TODO: capturePhoto delegate method 구현
-        
+        guard error == nil else {return}
+        guard let imageData = photo.fileDataRepresentation() else {return}
+        guard let image = UIImage(data: imageData) else {return}
+        self.savePhotoLibrary(image: image)
         
     }
 }
