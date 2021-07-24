@@ -13,11 +13,11 @@ class CameraViewController: UIViewController {
     // TODO: 초기 설정 1
     
     let captureSession = AVCaptureSession()
-    var videoDeviceInput = AVCaptureDeviceInput(device: <#T##AVCaptureDevice#>)
+//    var videoDeviceInput = AVCaptureDeviceInput(device: <#T##AVCaptureDevice#>)
     let photoOutput = AVCapturePhotoOutput()
     
     let sessionQueue = DispatchQueue(label: "session Queue")
-    let videoDeviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [ .builtInDualCamera, .builtInWideAngleCamera, .builtInTripleCamera], mediaType: .video, position: .unspecified)
+    let videoDeviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [ .builtInDualCamera, .builtInWideAngleCamera, .builtInTripleCamera], mediaType: .video, position: .back)
     
     
     @IBOutlet weak var photoLibraryButton: UIButton!
@@ -96,9 +96,32 @@ extension CameraViewController {
         captureSession.sessionPreset = .photo
         captureSession.beginConfiguration()
         
+        //add video input
         
+        guard let camera = videoDeviceDiscoverySession.devices.first else {
+            captureSession.commitConfiguration()
+            return
+        }
+        do{
+            let videoDeviceInput = try AVCaptureDeviceInput(device: camera)
+            if captureSession.canAddInput(videoDeviceInput){
+                captureSession.addInput(videoDeviceInput)
+            }else {
+                captureSession.commitConfiguration()
+                return
+            }
+        }catch let error {
+            print("\(error.localizedDescription)")
+        }
         
-
+        //add photo output
+        photoOutput.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
+        if captureSession.canAddOutput(photoOutput){
+            captureSession.addOutput(photoOutput)
+        }else{
+            captureSession.commitConfiguration()
+            return
+        }
         
         captureSession.commitConfiguration()
     }
@@ -107,12 +130,21 @@ extension CameraViewController {
     
     func startSession() {
         // TODO: session Start
-
+        sessionQueue.async {
+            //캡쳐세션이 진행중이냐? 아닌경우에만 러닝
+            if !self.captureSession.isRunning {
+                self.captureSession.startRunning()
+            }
+        }
     }
     
     func stopSession() {
         // TODO: session Stop
-        
+        sessionQueue.async {
+            if self.captureSession.isRunning{
+                self.captureSession.stopRunning()
+            }
+        }
     }
 }
 
