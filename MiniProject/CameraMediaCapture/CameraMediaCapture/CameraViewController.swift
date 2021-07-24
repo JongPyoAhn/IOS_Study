@@ -10,7 +10,6 @@ import AVFoundation
 import Photos
 
 class CameraViewController: UIViewController {
-    // TODO: 초기 설정 1
     
     let captureSession = AVCaptureSession()
     var videoDeviceInput: AVCaptureDeviceInput!
@@ -33,7 +32,7 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         previewView.session = captureSession
-        // TODO: 초기 설정 2
+        
         sessionQueue.async {
             self.setupSession()
             self.startSession()
@@ -101,7 +100,6 @@ class CameraViewController: UIViewController {
     }
     
     func updateSwitchCameraIcon(position: AVCaptureDevice.Position) {
-        // TODO: Update ICON
         switch position {
         case .front:
             let image = #imageLiteral(resourceName: "ic_camera_front")
@@ -116,7 +114,6 @@ class CameraViewController: UIViewController {
     }
     
     @IBAction func capturePhoto(_ sender: UIButton) {
-        // TODO: photoOutput의 capturePhoto 메소드
         //orientation
         //photooutput
         
@@ -136,7 +133,6 @@ class CameraViewController: UIViewController {
     
     
     func savePhotoLibrary(image: UIImage) {
-        // TODO: capture한 이미지 포토라이브러리에 저장
         PHPhotoLibrary.requestAuthorization{ status in
             if status == .authorized{//저장
                 PHPhotoLibrary.shared().performChanges({PHAssetChangeRequest.creationRequestForAsset(from: image)}, completionHandler: {
@@ -155,18 +151,12 @@ class CameraViewController: UIViewController {
 extension CameraViewController {
     // MARK: - Setup session and preview
     func setupSession() {
-        // TODO: captureSession 구성하기
-        // - presetSetting 하기
-        // - beginConfiguration
-        // - Add Video Input
-        // - Add Photo Output
-        // - commitConfiguration
-        
+        //해상도 등 프리셋 정하기
         captureSession.sessionPreset = .photo
+        //시스템에게 구성시작한다고 알리기
         captureSession.beginConfiguration()
         
         //add video input
-        
         guard let camera = videoDeviceDiscoverySession.devices.first else {
             captureSession.commitConfiguration()
             return
@@ -192,14 +182,13 @@ extension CameraViewController {
             captureSession.commitConfiguration()
             return
         }
-        
+        // 시스템에게 구성 완료를 알림
         captureSession.commitConfiguration()
     }
     
     
     
     func startSession() {
-        // TODO: session Start
         sessionQueue.async {
             //캡쳐세션이 진행중이냐? 아닌경우에만 러닝
             if !self.captureSession.isRunning {
@@ -209,7 +198,6 @@ extension CameraViewController {
     }
     
     func stopSession() {
-        // TODO: session Stop
         sessionQueue.async {
             if self.captureSession.isRunning{
                 self.captureSession.stopRunning()
@@ -220,7 +208,6 @@ extension CameraViewController {
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        // TODO: capturePhoto delegate method 구현
         guard error == nil else {return}
         guard let imageData = photo.fileDataRepresentation() else {return}
         guard let image = UIImage(data: imageData) else {return}
