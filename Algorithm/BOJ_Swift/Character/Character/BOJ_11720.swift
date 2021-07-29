@@ -3,7 +3,7 @@
 //  Character
 //
 //  Created by 안종표 on 2021/07/23.
-//
+// O
 //반복문이 어떻게 돌아가는지 아는지 묻는문제
 //var num: Int = Int(readLine()!)!
 //

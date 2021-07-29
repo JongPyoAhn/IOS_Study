@@ -3,7 +3,7 @@
 //  Character
 //
 //  Created by 안종표 on 2021/07/28.
-//
+// O
 
 //
 //let word = readLine()!
