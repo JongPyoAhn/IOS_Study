@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		537DFE7F26B4D3E100934351 /* BOJ_10872.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537DFE7E26B4D3E100934351 /* BOJ_10872.swift */; };
+		53DAF74626B771A900EE9DC1 /* BOJ_10870.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAF74526B771A900EE9DC1 /* BOJ_10870.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		537DFE7B26B4D3E100934351 /* recursive_function */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = recursive_function; sourceTree = BUILT_PRODUCTS_DIR; };
 		537DFE7E26B4D3E100934351 /* BOJ_10872.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_10872.swift; sourceTree = "<group>"; };
+		53DAF74526B771A900EE9DC1 /* BOJ_10870.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_10870.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				537DFE7E26B4D3E100934351 /* BOJ_10872.swift */,
+				53DAF74526B771A900EE9DC1 /* BOJ_10870.swift */,
 			);
 			path = recursive_function;
 			sourceTree = "<group>";
@@ -119,6 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53DAF74626B771A900EE9DC1 /* BOJ_10870.swift in Sources */,
 				537DFE7F26B4D3E100934351 /* BOJ_10872.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
