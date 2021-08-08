@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530F2ACB26BF7685007E552F /* Eratosthenes' sift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2ACA26BF7685007E552F /* Eratosthenes' sift.swift */; };
+		530F2ACD26BF7D77007E552F /* BOJ_1929.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2ACC26BF7D77007E552F /* BOJ_1929.swift */; };
+		530F2ACF26BFD791007E552F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2ACE26BFD791007E552F /* main.swift */; };
 		538DAEF926BD4E7B007EC980 /* BOJ_1978.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DAEF826BD4E7B007EC980 /* BOJ_1978.swift */; };
 		53965EEC26BE4DC3005AF575 /* BOJ_2581.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53965EEB26BE4DC3005AF575 /* BOJ_2581.swift */; };
 		53965EEE26BE56EF005AF575 /* BOJ_11653.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53965EED26BE56EF005AF575 /* BOJ_11653.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		530F2ACA26BF7685007E552F /* Eratosthenes' sift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eratosthenes' sift.swift"; sourceTree = "<group>"; };
+		530F2ACC26BF7D77007E552F /* BOJ_1929.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_1929.swift; sourceTree = "<group>"; };
+		530F2ACE26BFD791007E552F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		538DAEF526BD4E7B007EC980 /* math_2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = math_2; sourceTree = BUILT_PRODUCTS_DIR; };
 		538DAEF826BD4E7B007EC980 /* BOJ_1978.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_1978.swift; sourceTree = "<group>"; };
 		53965EEB26BE4DC3005AF575 /* BOJ_2581.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_2581.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 				538DAEF826BD4E7B007EC980 /* BOJ_1978.swift */,
 				53965EEB26BE4DC3005AF575 /* BOJ_2581.swift */,
 				53965EED26BE56EF005AF575 /* BOJ_11653.swift */,
+				530F2ACA26BF7685007E552F /* Eratosthenes' sift.swift */,
+				530F2ACC26BF7D77007E552F /* BOJ_1929.swift */,
+				530F2ACE26BFD791007E552F /* main.swift */,
 			);
 			path = math_2;
 			sourceTree = "<group>";
@@ -126,7 +135,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				53965EEC26BE4DC3005AF575 /* BOJ_2581.swift in Sources */,
+				530F2ACD26BF7D77007E552F /* BOJ_1929.swift in Sources */,
+				530F2ACF26BFD791007E552F /* main.swift in Sources */,
 				538DAEF926BD4E7B007EC980 /* BOJ_1978.swift in Sources */,
+				530F2ACB26BF7685007E552F /* Eratosthenes' sift.swift in Sources */,
 				53965EEE26BE56EF005AF575 /* BOJ_11653.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
