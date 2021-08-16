@@ -18,6 +18,7 @@
 		538DAEF926BD4E7B007EC980 /* BOJ_1978.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DAEF826BD4E7B007EC980 /* BOJ_1978.swift */; };
 		53965EEC26BE4DC3005AF575 /* BOJ_2581.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53965EEB26BE4DC3005AF575 /* BOJ_2581.swift */; };
 		53965EEE26BE56EF005AF575 /* BOJ_11653.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53965EED26BE56EF005AF575 /* BOJ_11653.swift */; };
+		53CBA1C526C9DA8E00E77517 /* BOJ_1002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CBA1C426C9DA8E00E77517 /* BOJ_1002.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		538DAEF826BD4E7B007EC980 /* BOJ_1978.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_1978.swift; sourceTree = "<group>"; };
 		53965EEB26BE4DC3005AF575 /* BOJ_2581.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_2581.swift; sourceTree = "<group>"; };
 		53965EED26BE56EF005AF575 /* BOJ_11653.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_11653.swift; sourceTree = "<group>"; };
+		53CBA1C426C9DA8E00E77517 /* BOJ_1002.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_1002.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				5332461526C89FD100EF8EE8 /* BOJ_3009.swift */,
 				5332461726C8A4E700EF8EE8 /* BOJ_4153.swift */,
 				5332461926C8B15000EF8EE8 /* BOJ_3053.swift */,
+				53CBA1C426C9DA8E00E77517 /* BOJ_1002.swift */,
 			);
 			path = math_2;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				53965EEC26BE4DC3005AF575 /* BOJ_2581.swift in Sources */,
 				530F2AD126BFE501007E552F /* BOJ_9020.swift in Sources */,
+				53CBA1C526C9DA8E00E77517 /* BOJ_1002.swift in Sources */,
 				5332461626C89FD100EF8EE8 /* BOJ_3009.swift in Sources */,
 				5332461426C88DAF00EF8EE8 /* BOJ_1085.swift in Sources */,
 				530F2ACD26BF7D77007E552F /* BOJ_1929.swift in Sources */,
