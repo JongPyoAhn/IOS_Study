@@ -10,6 +10,7 @@
 		531F13BB26D0D4270071162C /* BOJ_1427.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F13BA26D0D4270071162C /* BOJ_1427.swift */; };
 		531F13BD26D36ACC0071162C /* BOJ_11650.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F13BC26D36ACC0071162C /* BOJ_11650.swift */; };
 		531F13BF26D378B10071162C /* BOJ_11651.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F13BE26D378B10071162C /* BOJ_11651.swift */; };
+		531F13C126D383540071162C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F13C026D383540071162C /* main.swift */; };
 		5377A89526D0AB9E00512DCE /* BOJ_2108.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5377A89426D0AB9E00512DCE /* BOJ_2108.swift */; };
 		53BC5A6426CF67CF00C20580 /* BOJ_2750.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5A6326CF67CF00C20580 /* BOJ_2750.swift */; };
 		53BC5A6B26CF768000C20580 /* BOJ_2751.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BC5A6A26CF768000C20580 /* BOJ_2751.swift */; };
@@ -31,6 +32,7 @@
 		531F13BA26D0D4270071162C /* BOJ_1427.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_1427.swift; sourceTree = "<group>"; };
 		531F13BC26D36ACC0071162C /* BOJ_11650.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_11650.swift; sourceTree = "<group>"; };
 		531F13BE26D378B10071162C /* BOJ_11651.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_11651.swift; sourceTree = "<group>"; };
+		531F13C026D383540071162C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5377A89426D0AB9E00512DCE /* BOJ_2108.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_2108.swift; sourceTree = "<group>"; };
 		53BC5A6026CF67CF00C20580 /* ArrayLineup */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ArrayLineup; sourceTree = BUILT_PRODUCTS_DIR; };
 		53BC5A6326CF67CF00C20580 /* BOJ_2750.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_2750.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				531F13BA26D0D4270071162C /* BOJ_1427.swift */,
 				531F13BC26D36ACC0071162C /* BOJ_11650.swift */,
 				531F13BE26D378B10071162C /* BOJ_11651.swift */,
+				531F13C026D383540071162C /* main.swift */,
 			);
 			path = ArrayLineup;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53BC5A6B26CF768000C20580 /* BOJ_2751.swift in Sources */,
+				531F13C126D383540071162C /* main.swift in Sources */,
 				531F13BD26D36ACC0071162C /* BOJ_11650.swift in Sources */,
 				531F13BF26D378B10071162C /* BOJ_11651.swift in Sources */,
 				53BC5A6426CF67CF00C20580 /* BOJ_2750.swift in Sources */,
