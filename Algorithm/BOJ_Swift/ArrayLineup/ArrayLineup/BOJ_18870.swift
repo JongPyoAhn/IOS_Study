@@ -16,5 +16,5 @@
 //        next += 1
 //    }
 //}
-//print("\(arr.map{ String(dict[$0]!) }.joined(separator: " "))")
+//print("\(arr.map{ Stri.ng(dict[$0]!) }.joined(separator: " "))")
 
