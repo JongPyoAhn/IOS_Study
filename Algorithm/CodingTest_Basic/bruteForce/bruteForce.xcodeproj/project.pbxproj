@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		530FBE6A26D6FCEE00CF4F36 /* BOJ_2309.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE6926D6FCEE00CF4F36 /* BOJ_2309.swift */; };
 		530FBE7126D74AE600CF4F36 /* BOJ_3085.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE7026D74AE600CF4F36 /* BOJ_3085.swift */; };
-		530FBE7326D78ED000CF4F36 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE7226D78ED000CF4F36 /* main.swift */; };
+		530FBE7326D78ED000CF4F36 /* BOJ_1476.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE7226D78ED000CF4F36 /* BOJ_1476.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +28,7 @@
 		530FBE6626D6FCEE00CF4F36 /* bruteForce */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bruteForce; sourceTree = BUILT_PRODUCTS_DIR; };
 		530FBE6926D6FCEE00CF4F36 /* BOJ_2309.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_2309.swift; sourceTree = "<group>"; };
 		530FBE7026D74AE600CF4F36 /* BOJ_3085.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_3085.swift; sourceTree = "<group>"; };
-		530FBE7226D78ED000CF4F36 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		530FBE7226D78ED000CF4F36 /* BOJ_1476.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_1476.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 			children = (
 				530FBE6926D6FCEE00CF4F36 /* BOJ_2309.swift */,
 				530FBE7026D74AE600CF4F36 /* BOJ_3085.swift */,
-				530FBE7226D78ED000CF4F36 /* main.swift */,
+				530FBE7226D78ED000CF4F36 /* BOJ_1476.swift */,
 			);
 			path = bruteForce;
 			sourceTree = "<group>";
@@ -127,7 +127,7 @@
 			files = (
 				530FBE7126D74AE600CF4F36 /* BOJ_3085.swift in Sources */,
 				530FBE6A26D6FCEE00CF4F36 /* BOJ_2309.swift in Sources */,
-				530FBE7326D78ED000CF4F36 /* main.swift in Sources */,
+				530FBE7326D78ED000CF4F36 /* BOJ_1476.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
