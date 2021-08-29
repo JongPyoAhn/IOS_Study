@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		530FBE8326D9EB8900CF4F36 /* BOJ_1463.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE8226D9EB8900CF4F36 /* BOJ_1463.swift */; };
 		530FBE8A26D9FDD200CF4F36 /* BOJ_11726.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE8926D9FDD200CF4F36 /* BOJ_11726.swift */; };
+		530FBE8C26DA58E500CF4F36 /* BOJ_11727.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE8B26DA58E500CF4F36 /* BOJ_11727.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		530FBE7F26D9EB8900CF4F36 /* DP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DP; sourceTree = BUILT_PRODUCTS_DIR; };
 		530FBE8226D9EB8900CF4F36 /* BOJ_1463.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_1463.swift; sourceTree = "<group>"; };
 		530FBE8926D9FDD200CF4F36 /* BOJ_11726.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_11726.swift; sourceTree = "<group>"; };
+		530FBE8B26DA58E500CF4F36 /* BOJ_11727.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_11727.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				530FBE8226D9EB8900CF4F36 /* BOJ_1463.swift */,
 				530FBE8926D9FDD200CF4F36 /* BOJ_11726.swift */,
+				530FBE8B26DA58E500CF4F36 /* BOJ_11727.swift */,
 			);
 			path = DP;
 			sourceTree = "<group>";
@@ -124,6 +127,7 @@
 			files = (
 				530FBE8A26D9FDD200CF4F36 /* BOJ_11726.swift in Sources */,
 				530FBE8326D9EB8900CF4F36 /* BOJ_1463.swift in Sources */,
+				530FBE8C26DA58E500CF4F36 /* BOJ_11727.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
