@@ -10,6 +10,7 @@
 		530FBE8326D9EB8900CF4F36 /* BOJ_1463.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE8226D9EB8900CF4F36 /* BOJ_1463.swift */; };
 		530FBE8A26D9FDD200CF4F36 /* BOJ_11726.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE8926D9FDD200CF4F36 /* BOJ_11726.swift */; };
 		530FBE8C26DA58E500CF4F36 /* BOJ_11727.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE8B26DA58E500CF4F36 /* BOJ_11727.swift */; };
+		530FBE8E26DB362100CF4F36 /* BOJ_9095.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE8D26DB362100CF4F36 /* BOJ_9095.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		530FBE8226D9EB8900CF4F36 /* BOJ_1463.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_1463.swift; sourceTree = "<group>"; };
 		530FBE8926D9FDD200CF4F36 /* BOJ_11726.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_11726.swift; sourceTree = "<group>"; };
 		530FBE8B26DA58E500CF4F36 /* BOJ_11727.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_11727.swift; sourceTree = "<group>"; };
+		530FBE8D26DB362100CF4F36 /* BOJ_9095.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_9095.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				530FBE8226D9EB8900CF4F36 /* BOJ_1463.swift */,
 				530FBE8926D9FDD200CF4F36 /* BOJ_11726.swift */,
 				530FBE8B26DA58E500CF4F36 /* BOJ_11727.swift */,
+				530FBE8D26DB362100CF4F36 /* BOJ_9095.swift */,
 			);
 			path = DP;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				530FBE8A26D9FDD200CF4F36 /* BOJ_11726.swift in Sources */,
+				530FBE8E26DB362100CF4F36 /* BOJ_9095.swift in Sources */,
 				530FBE8326D9EB8900CF4F36 /* BOJ_1463.swift in Sources */,
 				530FBE8C26DA58E500CF4F36 /* BOJ_11727.swift in Sources */,
 			);
