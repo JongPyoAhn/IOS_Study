@@ -29,7 +29,7 @@
 //
 //    //우선순위큐 작업
 //    while !priorityQueue.isEmpty() {
-//        guard let popped = priorityQueue.pop() else { break }
+//        guard let popped = priorityQueue.pop() else { break } //우선순위큐에서 꺼낸 큐를 대상으로 인접노드를 찾아서 진행
 //
 //        if distances[popped.node]! < popped.priority {
 //            continue
