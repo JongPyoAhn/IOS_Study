@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		53206A7C26E39AE900CA3F7C /* BOJ_1920(Binary).swift in Sources */ = {isa = PBXBuildFile; fileRef = 53206A7B26E39AE900CA3F7C /* BOJ_1920(Binary).swift */; };
+		53206A8326E3A03100CA3F7C /* BOJ_10816(Binary).swift in Sources */ = {isa = PBXBuildFile; fileRef = 53206A8226E3A03100CA3F7C /* BOJ_10816(Binary).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		53206A7826E39AE900CA3F7C /* Review */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Review; sourceTree = BUILT_PRODUCTS_DIR; };
 		53206A7B26E39AE900CA3F7C /* BOJ_1920(Binary).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_1920(Binary).swift"; sourceTree = "<group>"; };
+		53206A8226E3A03100CA3F7C /* BOJ_10816(Binary).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_10816(Binary).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				53206A7B26E39AE900CA3F7C /* BOJ_1920(Binary).swift */,
+				53206A8226E3A03100CA3F7C /* BOJ_10816(Binary).swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -119,6 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53206A8326E3A03100CA3F7C /* BOJ_10816(Binary).swift in Sources */,
 				53206A7C26E39AE900CA3F7C /* BOJ_1920(Binary).swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
