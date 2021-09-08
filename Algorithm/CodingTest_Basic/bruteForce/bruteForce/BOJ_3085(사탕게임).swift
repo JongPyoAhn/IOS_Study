@@ -20,7 +20,6 @@
 //            let a = 가로()
 //            let b = 세로()
 //            result = max(a, b)
-//
 //            swap2DArray(i, j)
 //
 //        }
@@ -31,11 +30,11 @@
 //for i in 0..<n { //세로 바꾸기
 //    for j in 0..<n{
 //        if j + 1 < n, arr[j][i] != arr[j + 1][i] {
-//            swap2DArray세로(j, i) //arr.swapAt([j][i], [j][i + 1])
+//            swap2DArray세로(j, i)
 //            let a = 가로()
 //            let b = 세로()
 //            result = max(a, b)
-//            swap2DArray세로(j, i) //arr.swapAt([j][i], [j][i + 1])
+//            swap2DArray세로(j, i)
 //        }
 //        realResult = max(result, realResult)
 //    }
@@ -49,7 +48,6 @@
 //    for k in 0..<n {
 //        var sum = 1
 //        for v in 0..<n {
-//
 //            if v + 1 < n, arr[k][v] == arr[k][v + 1] {
 //                sum += 1
 //            }else if v + 1 < n, arr[k][v] != arr[k][v + 1]{
@@ -68,9 +66,9 @@
 //    for k in 0..<n {
 //        var sum = 1
 //        for v in 0..<n {
-//            if v + 1 < n, arr[v][k] == arr[v + 1][k] {
+//            if v + 1 < n, arr[v][k] == arr[v + 1][k] { //실수한 부분
 //                sum += 1
-//            }else if v + 1 < n, arr[v][k] != arr[v + 1][k]{
+//            }else if v + 1 < n, arr[v][k] != arr[v + 1][k]{ //실수한 부분
 //                prev = max(prev, sum) //실수한 부분
 //                sum = 1
 //            }
@@ -88,8 +86,22 @@
 //    arr[a][b] = arr[a][b + 1]
 //    arr[a][b + 1] = temp
 //}
-//func swap2DArray세로(_ a: Int, _ b: Int){
+//func swap2DArray세로(_ a: Int, _ b: Int){ //실수한 부분
 //    let temp = arr[a][b]
 //    arr[a][b] = arr[a + 1][b]
 //    arr[a + 1][b] = temp
 //}
+
+
+// 내가 쓴 반례
+//3
+//ZCY
+//ZCP
+//PYZ
+//답 : 2
+//
+//3
+//CPZ
+//PCP
+//ZZC
+//답: 3
