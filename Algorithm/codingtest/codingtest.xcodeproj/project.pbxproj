@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53206A3B26E0AF3E00CA3F7C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53206A3A26E0AF3E00CA3F7C /* main.swift */; };
+		53C7492526EC689B006BC9AC /* Kakao_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C7492426EC689B006BC9AC /* Kakao_1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		53206A3526E0AF3E00CA3F7C /* CopyFiles */ = {
+		53C7491F26EC689B006BC9AC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		53206A3726E0AF3E00CA3F7C /* BinarySearch */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinarySearch; sourceTree = BUILT_PRODUCTS_DIR; };
-		53206A3A26E0AF3E00CA3F7C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		53C7492126EC689B006BC9AC /* codingtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = codingtest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53C7492426EC689B006BC9AC /* Kakao_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakao_1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		53206A3426E0AF3E00CA3F7C /* Frameworks */ = {
+		53C7491E26EC689B006BC9AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,65 +38,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		53206A2E26E0AF3E00CA3F7C = {
+		53C7491826EC689B006BC9AC = {
 			isa = PBXGroup;
 			children = (
-				53206A3926E0AF3E00CA3F7C /* BinarySearch */,
-				53206A3826E0AF3E00CA3F7C /* Products */,
+				53C7492326EC689B006BC9AC /* codingtest */,
+				53C7492226EC689B006BC9AC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		53206A3826E0AF3E00CA3F7C /* Products */ = {
+		53C7492226EC689B006BC9AC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				53206A3726E0AF3E00CA3F7C /* BinarySearch */,
+				53C7492126EC689B006BC9AC /* codingtest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		53206A3926E0AF3E00CA3F7C /* BinarySearch */ = {
+		53C7492326EC689B006BC9AC /* codingtest */ = {
 			isa = PBXGroup;
 			children = (
-				53206A3A26E0AF3E00CA3F7C /* main.swift */,
+				53C7492426EC689B006BC9AC /* Kakao_1.swift */,
 			);
-			path = BinarySearch;
+			path = codingtest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		53206A3626E0AF3E00CA3F7C /* BinarySearch */ = {
+		53C7492026EC689B006BC9AC /* codingtest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53206A3E26E0AF3E00CA3F7C /* Build configuration list for PBXNativeTarget "BinarySearch" */;
+			buildConfigurationList = 53C7492826EC689B006BC9AC /* Build configuration list for PBXNativeTarget "codingtest" */;
 			buildPhases = (
-				53206A3326E0AF3E00CA3F7C /* Sources */,
-				53206A3426E0AF3E00CA3F7C /* Frameworks */,
-				53206A3526E0AF3E00CA3F7C /* CopyFiles */,
+				53C7491D26EC689B006BC9AC /* Sources */,
+				53C7491E26EC689B006BC9AC /* Frameworks */,
+				53C7491F26EC689B006BC9AC /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BinarySearch;
-			productName = BinarySearch;
-			productReference = 53206A3726E0AF3E00CA3F7C /* BinarySearch */;
+			name = codingtest;
+			productName = codingtest;
+			productReference = 53C7492126EC689B006BC9AC /* codingtest */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		53206A2F26E0AF3E00CA3F7C /* Project object */ = {
+		53C7491926EC689B006BC9AC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					53206A3626E0AF3E00CA3F7C = {
+					53C7492026EC689B006BC9AC = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = 53206A3226E0AF3E00CA3F7C /* Build configuration list for PBXProject "BinarySearch" */;
+			buildConfigurationList = 53C7491C26EC689B006BC9AC /* Build configuration list for PBXProject "codingtest" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,29 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 53206A2E26E0AF3E00CA3F7C;
-			productRefGroup = 53206A3826E0AF3E00CA3F7C /* Products */;
+			mainGroup = 53C7491826EC689B006BC9AC;
+			productRefGroup = 53C7492226EC689B006BC9AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53206A3626E0AF3E00CA3F7C /* BinarySearch */,
+				53C7492026EC689B006BC9AC /* codingtest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		53206A3326E0AF3E00CA3F7C /* Sources */ = {
+		53C7491D26EC689B006BC9AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53206A3B26E0AF3E00CA3F7C /* main.swift in Sources */,
+				53C7492526EC689B006BC9AC /* Kakao_1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		53206A3C26E0AF3E00CA3F7C /* Debug */ = {
+		53C7492626EC689B006BC9AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -187,7 +187,7 @@
 			};
 			name = Debug;
 		};
-		53206A3D26E0AF3E00CA3F7C /* Release */ = {
+		53C7492726EC689B006BC9AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +241,7 @@
 			};
 			name = Release;
 		};
-		53206A3F26E0AF3E00CA3F7C /* Debug */ = {
+		53C7492926EC689B006BC9AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -252,7 +252,7 @@
 			};
 			name = Debug;
 		};
-		53206A4026E0AF3E00CA3F7C /* Release */ = {
+		53C7492A26EC689B006BC9AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -266,25 +266,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		53206A3226E0AF3E00CA3F7C /* Build configuration list for PBXProject "BinarySearch" */ = {
+		53C7491C26EC689B006BC9AC /* Build configuration list for PBXProject "codingtest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				53206A3C26E0AF3E00CA3F7C /* Debug */,
-				53206A3D26E0AF3E00CA3F7C /* Release */,
+				53C7492626EC689B006BC9AC /* Debug */,
+				53C7492726EC689B006BC9AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53206A3E26E0AF3E00CA3F7C /* Build configuration list for PBXNativeTarget "BinarySearch" */ = {
+		53C7492826EC689B006BC9AC /* Build configuration list for PBXNativeTarget "codingtest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				53206A3F26E0AF3E00CA3F7C /* Debug */,
-				53206A4026E0AF3E00CA3F7C /* Release */,
+				53C7492926EC689B006BC9AC /* Debug */,
+				53C7492A26EC689B006BC9AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 53206A2F26E0AF3E00CA3F7C /* Project object */;
+	rootObject = 53C7491926EC689B006BC9AC /* Project object */;
 }
