@@ -24,6 +24,8 @@
 //        for i in 0..<newScore.count{
 //            for j in 0..<newScore.count{
 //                //자기자신이 먹인 점수일 때, 유일한최고점 또는 유일한 최저점일 시 점수 제외
+                  //문제는 내가 채점한점수가 유일한최고점이면 점수를 제외하고 계산하는 것이었다. 내가 채점한 인덱스일 때, i == j , 내가채점한 인덱스와 첫번째 인덱스가 같고, 내가채점한 인덱스와 마지막 인덱스가 같으면 되는 것이다. 그럼 내가 채점한 유일한 최고, 최저점이 탄생한다.
+                  //
 //                if i == j, j == newScore[i].firstIndex(of: newScore[i].max()!) && j == newScore[i].lastIndex(of: newScore[i].max()!){
 //                    continue
 //                }
