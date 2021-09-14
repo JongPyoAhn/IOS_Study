@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 class EnterEmailViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -24,6 +24,8 @@ class EnterEmailViewController: UIViewController{
         
         //처음에 화면에 들어섰을때 커서가 이메일에 자동으로 위치하게함
         emailTextField.becomeFirstResponder()
+        
+        print("들어옴")
     }
     
     @IBOutlet weak var errorMessageLabel: UILabel!
@@ -31,8 +33,53 @@ class EnterEmailViewController: UIViewController{
     @IBOutlet weak var passwordTextField: UITextField!
 
 
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        //Firebase 이메일/비밀번호 인증
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        
+        //신규 사용자 생성
+        Auth.auth().createUser(withEmail: email, password: password) {[weak self] Result, error
+            in
+            guard let self = self else {return}
+            
+            if let error = error {
+                let code = (error as NSError).code
+                switch code {
+                case 17007: //이미 가입한 게정일 때
+                    //로그인 하기
+                    self.showMainViewController()
+                default:
+                    self.errorMessageLabel.text = error.localizedDescription
+                
+                }
+                
+            }
+            
+        }
+        
+    }
     @IBOutlet weak var nextButton: UIButton!
-    @IBAction func nextButtontabbed(_ sender: Any) {
+
+    //
+    private func showMainViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainViewController = storyboard.instantiateViewController(identifier: "MainViewController")
+        mainViewController.modalPresentationStyle = .fullScreen
+        navigationController?.show(mainViewController, sender: nil)
+        
+    }
+    
+    private func loginUser(withEmail email: String, password:String){
+        Auth.auth().signIn(withEmail: email, password: password) {[weak self] result, error in
+            guard let self = self else {return}
+            if let error = error {
+                self.errorMessageLabel.text = error.localizedDescription
+            }else {
+                self.showMainViewController()
+            }
+        }
     }
 }
 extension EnterEmailViewController : UITextFieldDelegate {

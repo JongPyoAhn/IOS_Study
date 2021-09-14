@@ -187,8 +187,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextButton:" destination="mR9-Of-BCg" eventType="touchUpInside" id="Obf-kx-TNk"/>
-                                    <action selector="nextButtontabbed:" destination="mR9-Of-BCg" eventType="touchUpInside" id="6hf-nb-XCL"/>
+                                    <action selector="nextButtonTapped:" destination="mR9-Of-BCg" eventType="touchUpInside" id="uQd-OV-USQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -218,7 +217,7 @@
         <!--Main View Controller-->
         <scene sceneID="wAF-3P-WKi">
             <objects>
-                <viewController id="o0o-h6-9kA" customClass="MainViewController" customModule="Spotify_Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="o0o-h6-9kA" customClass="MainViewController" customModule="Spotify_Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I4G-Nc-iD8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,7 +229,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC9-BL-hA4">
-                                <rect key="frame" x="177" y="488" width="63" height="34"/>
+                                <rect key="frame" x="177" y="538" width="63" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="로그아웃">
                                     <color key="titleColor" systemColor="systemGrayColor"/>
@@ -239,16 +238,26 @@
                                     <action selector="logoutButtonTapped:" destination="o0o-h6-9kA" eventType="touchUpInside" id="K6j-le-QQ8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46s-Xe-QLw">
+                                <rect key="frame" x="166" y="488" width="82" height="30"/>
+                                <state key="normal" title="비밀번호 변경"/>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="o0o-h6-9kA" eventType="touchUpInside" id="E4i-ME-MPL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wSW-4Q-AxI"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hyX-DC-Os9" firstAttribute="centerX" secondItem="wSW-4Q-AxI" secondAttribute="centerX" id="2He-tX-nUQ"/>
-                            <constraint firstItem="eC9-BL-hA4" firstAttribute="top" secondItem="hyX-DC-Os9" secondAttribute="bottom" constant="20" id="s0Q-IP-RdR"/>
+                            <constraint firstItem="eC9-BL-hA4" firstAttribute="top" secondItem="46s-Xe-QLw" secondAttribute="bottom" constant="20" id="HGm-OQ-erc"/>
+                            <constraint firstItem="46s-Xe-QLw" firstAttribute="top" secondItem="hyX-DC-Os9" secondAttribute="bottom" constant="20" id="LSF-NG-8pU"/>
+                            <constraint firstItem="46s-Xe-QLw" firstAttribute="centerX" secondItem="wSW-4Q-AxI" secondAttribute="centerX" id="aTY-ql-cw7"/>
                             <constraint firstItem="hyX-DC-Os9" firstAttribute="centerY" secondItem="wSW-4Q-AxI" secondAttribute="centerY" id="v9M-LP-e89"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetPasswordButton" destination="46s-Xe-QLw" id="rcW-CQ-vYo"/>
                         <outlet property="welcomeLabel" destination="hyX-DC-Os9" id="V6Y-QB-9gY"/>
                     </connections>
                 </viewController>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
@@ -13,6 +14,9 @@ class LoginViewController: UIViewController {
         
         //Navigation Bar 숨기기
         navigationController?.navigationBar.isHidden = true
+        
+        //Google Sign In
+        GIDSignIn.sharedInstance().presentingViewController = self
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +29,13 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailLoginButton: UIButton!
     
-    @IBOutlet weak var googleLoginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
     
     @IBOutlet weak var appleLoginButton: UIButton!
     
     @IBAction func googleLoginButtonTabbed(_ sender: Any) {
         //Firebase인증
+        GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func appleLoginButtonTabbed(_ sender: Any) {
