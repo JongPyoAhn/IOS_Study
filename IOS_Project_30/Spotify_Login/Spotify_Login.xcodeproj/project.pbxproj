@@ -24,6 +24,7 @@
 		53BFDE8626EF68EF00EFEA06 /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 		53BFDE8826EF6FE900EFEA06 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		53C5EA5B26F03439000FE048 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		53C5EA5D26F05E29000FE048 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		53FB038726EF4D9B005DF48C /* Spotify_Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify_Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FB038A26EF4D9B005DF48C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53FB038C26EF4D9B005DF48C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		53FB037E26EF4D9B005DF48C = {
 			isa = PBXGroup;
 			children = (
+				53C5EA5D26F05E29000FE048 /* README.md */,
 				53FB038926EF4D9B005DF48C /* Spotify_Login */,
 				53FB038826EF4D9B005DF48C /* Products */,
 				1F3148A2CA754319B478DC8F /* Pods */,
