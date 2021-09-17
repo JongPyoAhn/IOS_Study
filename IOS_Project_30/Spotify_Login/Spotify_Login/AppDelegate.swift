@@ -10,6 +10,7 @@ import Firebase
 import GoogleSignIn
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error{
             print("\(error.localizedDescription)")
@@ -22,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             Auth.auth().signIn(with: credential) { result, error in
                 self.showMainViewController()
             }
-            
         }
         
     }

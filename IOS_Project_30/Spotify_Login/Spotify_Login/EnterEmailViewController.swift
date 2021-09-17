@@ -8,6 +8,9 @@
 import UIKit
 import Firebase
 class EnterEmailViewController: UIViewController{
+    @IBOutlet weak var errorMessageLabel: UILabel!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -27,11 +30,6 @@ class EnterEmailViewController: UIViewController{
         
         print("들어옴")
     }
-    
-    @IBOutlet weak var errorMessageLabel: UILabel!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-
 
     @IBAction func nextButtonTapped(_ sender: Any) {
         

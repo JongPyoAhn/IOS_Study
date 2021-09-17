@@ -9,6 +9,12 @@ import UIKit
 import GoogleSignIn
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var emailLoginButton: UIButton!
+    
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
+    
+    @IBOutlet weak var appleLoginButton: UIButton!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -27,18 +33,10 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var emailLoginButton: UIButton!
-    
-    @IBOutlet weak var googleLoginButton: GIDSignInButton!
-    
-    @IBOutlet weak var appleLoginButton: UIButton!
+  
     
     @IBAction func googleLoginButtonTabbed(_ sender: Any) {
         //Firebase인증
         GIDSignIn.sharedInstance().signIn()
-    }
-    
-    @IBAction func appleLoginButtonTabbed(_ sender: Any) {
-        //Friebase인증
     }
 }
