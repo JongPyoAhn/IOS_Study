@@ -12,7 +12,7 @@
 - CaseIterable
 - Notification
 - completion handler
-## [Section 1] [Protocol](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/Protocol.md)
+## [Section 1] [Protocol](https://github.com/JongPyoAhn/IOS_Study/blob/main/MiniProject/TodoList/Explanation/Protocol.md)
 - DataSource의 Section, CustomCell, ReusableView와 DelegateFlowLayOut 사용
 ## [Section 2] [Todo](https://github.com/JongPyoAhn/TodoList/blob/main/Explanation/Todo.md)
 - Todo의 구조체 정리
