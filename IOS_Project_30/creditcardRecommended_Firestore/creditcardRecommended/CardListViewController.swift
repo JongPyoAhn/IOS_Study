@@ -8,10 +8,10 @@
 import UIKit
 import Kingfisher
 import FirebaseDatabase
+import FirebaseFirestore
 class CardListViewController: UITableViewController {
-    //33.
-    var ref: DatabaseReference! //Firebase Database
-    
+    //42.
+    var db = Firestore.firestore()
     //2.
     var creditCardList: [CreditCard] = []
     
@@ -21,29 +21,37 @@ class CardListViewController: UITableViewController {
         //1. UITableView Cell Register
         let nibName = UINib(nibName: "CardListCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "CardListCell")
-        //33.
-        ref = Database.database().reference()
-        //34.
-        ref.observe(.value) { snapshot in
-            guard let value = snapshot.value as? [String: [String: Any]] else {return}
-            do{
-                let jsonData = try JSONSerialization.data(withJSONObject: value)
-                
-                let cardData = try JSONDecoder().decode( [String: CreditCard].self, from: jsonData)
-                let cardList = Array(cardData.values)
-                self.creditCardList = cardList.sorted(by: { a, b in
-                    a.rank < b.rank
-                })
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+    
+        //43. Firesotre 읽기
+        db.collection("creditCardList").addSnapshotListener { snapshot, error in
+            guard let document = snapshot?.documents else {
+                print("Error Firestore fetching document \(error?.localizedDescription)")
+                return
+            }
+            //document의 compactmap으로 nil값을 없앨것임.
+            self.creditCardList = document.compactMap{ doc -> CreditCard? in
+                do{
+                    let jsonData = try JSONSerialization.data(withJSONObject: doc.data(), options: [])
+                    let creditCard = try JSONDecoder().decode(CreditCard.self, from:  jsonData)
+                    return creditCard
+                }catch let error {
+                    print("JsonPashing error: \(error.localizedDescription)")
+                    return nil
                 }
-            }catch {
-                print("error: ", error)
+            }.sorted(by: { a, b in
+                a.rank < b.rank
+            })
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
-       
+    
+    
     }
+    
+       
+    
     
     //3.
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,17 +88,20 @@ class CardListViewController: UITableViewController {
         detailViewController.promotionDetail = creditCardList[indexPath.row].promotionDetail
         self.show(detailViewController, sender: nil)
         
-        //35 -1.
+        //44. FireStore쓰기
+        //1) 각 콜렉션과 문서의 id를 알 때
         let cardID = creditCardList[indexPath.row].id
-        ref.child("Item\(cardID)/isSelected").setValue(true)
-        //35 -2.
-        //id를 검색, 이 id값은 cardID와 같은거, 그리고 value검색
-//        ref.queryOrdered(byChild: "id").queryEqual(toValue: cardID).observe(.value) { [weak self] snaphot in
-//            guard let self = self,
-//                  let value = snaphot.value as? [String: [String: Any]],
-//                  let key = value.keys.first else {return}
-//            ref.child("\(key)/isSelected").setValue(true)
-//        }
+//        db.collection("creditCardList").document("card\(cardID)").updateData(["isSelected": true])
+        
+        //2) 각 콜렉션과 문서의 id를 모를 때
+        db.collection("creditCardList").whereField("id", isEqualTo: cardID).getDocuments { snapshot, error in
+            guard let document = snapshot?.documents.first else {
+                print("ERROR FireStore fetching Documnet")
+                return
+            }
+            
+            document.reference.updateData(["isSelected": true])
+        }
         
     }
     //36.
@@ -99,17 +110,19 @@ class CardListViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-             //Option1
+             //45. FireStore 삭제
+            //1) 경로를 알 때
             let cardID = creditCardList[indexPath.row].id
-            ref.child("Item\(cardID)").removeValue()
+            db.collection("creditCardList").document("card\(cardID)").delete()
             
-            //option2
-//            ref.queryOrdered(byChild: "id").queryEqual(toValue: cardID).observe(.value) { [weak self]snapshot in
-//                guard let self = self,
-//                      let value = snapshot.value as? [String: [String: Any]],
-//                      let key = value.keys.first else {return}
-//                self.ref.child(key).removeValue()
-//            }
+            //2) 경로를 모를 때
+            db.collection("creditCardList").whereField("id", isEqualTo: cardID).getDocuments { snapshot, _ in
+                guard let document = snapshot?.documents.first else {
+                    print("ERROR")
+                    return
+                }
+                document.reference.delete()
+            }
         }
     }
     
