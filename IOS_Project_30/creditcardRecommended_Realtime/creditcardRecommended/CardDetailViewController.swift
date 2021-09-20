@@ -21,7 +21,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var benefitDetailLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //20.
         let animationView = AnimationView(name: "money") //파일명
         lottieView.contentMode = .scaleAspectFit //이미지뷰 설정과 비슷
         lottieView.addSubview(animationView) //서브뷰를 추가하는거임
