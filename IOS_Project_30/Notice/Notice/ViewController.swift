@@ -8,6 +8,8 @@
 import UIKit
 //10.
 import FirebaseRemoteConfig
+//29.
+import FirebaseAnalytics
 
 class ViewController: UIViewController {
     //10.
@@ -61,6 +63,9 @@ extension ViewController {
                 
                 noticeVC.noticeContents = (title: title, detail: detail, date: date)
                 self.present(noticeVC, animated: true, completion: nil)
+            }//28.
+            else {
+                self.showEventAlert()
             }
         })
     }
@@ -68,4 +73,38 @@ extension ViewController {
     func isNoticeHidden(_ remoteConfig: RemoteConfig) -> Bool {
         return remoteConfig["isHidden"].boolValue
     }
+}
+
+//MARK: - A/B Testing
+extension ViewController{
+    //28.
+    //A/B테스팅을 원격구성으로 진행되기 때문에 메시지에 표시될 값을 가져오는 것은 앞서 진행된 원격구성 실습과동일
+    func showEventAlert(){
+        guard let remoteConfig = remoteConfig else {return}
+        remoteConfig.fetch { status, _ in
+            if status == .success {
+                remoteConfig.activate(completion: nil)
+            }else {
+                print("Config not fetched")
+            }
+            //remoteConfig에 message라는 키가 발생한걸 string값으로 받아올것임
+            let message = remoteConfig["message"].stringValue ?? ""
+            let confirmAction = UIAlertAction(title: "확인하기", style: .default) {_ in
+                //Google Analytics
+                //30. 이렇게하면 confirmAction이 버튼이 눌렸을 때 마다
+                //이벤트를 파이어베이스에 기록하게된다.
+                Analytics.logEvent("promotion_alert", parameters: nil)
+            }
+            
+            let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+            let alertController = UIAlertController(title: "깜짝이벤트", message: message, preferredStyle: .alert)
+            
+            alertController.addAction(confirmAction)
+            alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+    }
+    
 }
