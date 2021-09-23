@@ -33,6 +33,7 @@
 		5398896B26F8E0B700817C6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5398896D26F8E1E300817C6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5398896F26F8E2F200817C6B /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		53AF500826FC9684005BC91D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		54D5C4722723EE49DE216DC0 /* Pods-Notice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notice.release.xcconfig"; path = "Target Support Files/Pods-Notice/Pods-Notice.release.xcconfig"; sourceTree = "<group>"; };
 		95C872733A73607FD3FA6C2E /* Pods-Notice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notice.debug.xcconfig"; path = "Target Support Files/Pods-Notice/Pods-Notice.debug.xcconfig"; sourceTree = "<group>"; };
 		989142EDE20F3BF6227ED053 /* Pods_Notice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +81,7 @@
 		5398895226F8D8F200817C6B /* Notice */ = {
 			isa = PBXGroup;
 			children = (
+				53AF500826FC9684005BC91D /* README.md */,
 				5398896726F8D92300817C6B /* NoticeViewController.swift */,
 				5398896826F8D92300817C6B /* NoticeViewController.xib */,
 				5398895326F8D8F200817C6B /* AppDelegate.swift */,
