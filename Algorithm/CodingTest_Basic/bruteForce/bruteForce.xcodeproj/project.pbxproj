@@ -12,6 +12,7 @@
 		530FBE7326D78ED000CF4F36 /* BOJ_1476.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE7226D78ED000CF4F36 /* BOJ_1476.swift */; };
 		530FBE7526D796EB00CF4F36 /* BOJ_10972(다음순열).swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FBE7426D796EB00CF4F36 /* BOJ_10972(다음순열).swift */; };
 		53529EA126E70BA200CFA833 /* BOJ_10973(이전순열).swift in Sources */ = {isa = PBXBuildFile; fileRef = 53529EA026E70BA200CFA833 /* BOJ_10973(이전순열).swift */; };
+		53AF4FDF26FB453C005BC91D /* BOJ_15649(N과M(1)).swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AF4FDE26FB453C005BC91D /* BOJ_15649(N과M(1)).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		530FBE7226D78ED000CF4F36 /* BOJ_1476.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_1476.swift; sourceTree = "<group>"; };
 		530FBE7426D796EB00CF4F36 /* BOJ_10972(다음순열).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_10972(다음순열).swift"; sourceTree = "<group>"; };
 		53529EA026E70BA200CFA833 /* BOJ_10973(이전순열).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_10973(이전순열).swift"; sourceTree = "<group>"; };
+		53AF4FDE26FB453C005BC91D /* BOJ_15649(N과M(1)).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_15649(N과M(1)).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				530FBE7226D78ED000CF4F36 /* BOJ_1476.swift */,
 				530FBE7426D796EB00CF4F36 /* BOJ_10972(다음순열).swift */,
 				53529EA026E70BA200CFA833 /* BOJ_10973(이전순열).swift */,
+				53AF4FDE26FB453C005BC91D /* BOJ_15649(N과M(1)).swift */,
 			);
 			path = bruteForce;
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				530FBE7126D74AE600CF4F36 /* BOJ_3085(사탕게임).swift in Sources */,
+				53AF4FDF26FB453C005BC91D /* BOJ_15649(N과M(1)).swift in Sources */,
 				53529EA126E70BA200CFA833 /* BOJ_10973(이전순열).swift in Sources */,
 				530FBE6A26D6FCEE00CF4F36 /* BOJ_2309.swift in Sources */,
 				530FBE7526D796EB00CF4F36 /* BOJ_10972(다음순열).swift in Sources */,
