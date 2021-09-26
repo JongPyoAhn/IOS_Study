@@ -26,11 +26,9 @@
 //    }
 //    visited[now] = true
 //    for i in 0..<friendGraph[now].count {
-//        let friend = friendGraph[now][i]
-//        if !visited[friend] {
-//            visited[friend] = true
-//            dfs(friend,depth + 1)
-//            visited[friend] = false
+//        let next = friendGraph[now][i]
+//        if !visited[next] {
+//            dfs(next,depth + 1)
 //        }
 //    }
 //    visited[now] = false
