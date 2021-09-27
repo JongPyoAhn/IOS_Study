@@ -3,7 +3,7 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2021/09/25.
-//
+// O
 
 
 //let arr = readLine()!.split(separator: " ").map{Int(String($0))!}
