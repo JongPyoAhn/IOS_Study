@@ -1,9 +1,10 @@
 //
-//  main.swift
-//  bruteForce
+//  File.swift
+//  DFS&BFS
 //
-//  Created by 안종표 on 2021/09/26.
+//  Created by 안종표 on 2021/09/27.
 //
+
 //struct Queue{
 //    var que: [Int] = []
 //    mutating func push(_ x: Int) {
@@ -28,7 +29,7 @@
 //func bfs(_ n: Int, _ k: Int) -> Int {
 //    var queue = Queue()
 //    queue.push(n)
-//    
+//
 //    while !queue.empty() {
 //        let data = queue.pop()
 //        if data == k {
@@ -61,6 +62,3 @@
 //var depth: [Int] = Array(repeating: 0, count: 100001)
 //let result = bfs(n, k)
 //print(result)
-
-
-
