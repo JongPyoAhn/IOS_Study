@@ -18,6 +18,7 @@ class AlertListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //7.
         let nibName = UINib(nibName: "AlertListCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "AlertListCell")
@@ -60,8 +61,11 @@ class AlertListViewController: UITableViewController {
     }
     
     //20.
+    //userDefaults에서 값을 가져와서 배열로 만드는 과정
     //alerts라는 것을 프로퍼티리스트형태로 저장이되는데 우리가 이해할수있는 객체로 디코딩할수있음
     //userDefaults는 우리가 임의로 만든 구조체를 이해하지 못하기때문에 json처럼 인코딩,디코딩해서 우리에게 익숙하게 만들수있음.
+    // 1)userDefaults의 alerts키에있는 값을 Data형태로 형변환
+    // 2)data를 [Alert]형태로 디코드함.
     func alertList() -> [Alert] {
         guard let data = UserDefaults.standard.value(forKey: "alerts") as? Data,
               let alerts = try? PropertyListDecoder().decode([Alert].self, from: data) else {return []}

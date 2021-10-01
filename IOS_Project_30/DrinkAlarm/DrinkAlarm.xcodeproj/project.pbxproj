@@ -34,6 +34,7 @@
 		538CF28E26FD6FA700FDE7EA /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		538CF29026FDD2E700FDE7EA /* AddAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
 		538CF29226FDE34500FDE7EA /* UNNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationCenter.swift; sourceTree = "<group>"; };
+		53A447F52706927E000FA3C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 		538CF27326FD6BF100FDE7EA /* DrinkAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				53A447F52706927E000FA3C8 /* README.md */,
 				538CF27426FD6BF100FDE7EA /* AppDelegate.swift */,
 				538CF27626FD6BF100FDE7EA /* SceneDelegate.swift */,
 				538CF27A26FD6BF100FDE7EA /* Main.storyboard */,

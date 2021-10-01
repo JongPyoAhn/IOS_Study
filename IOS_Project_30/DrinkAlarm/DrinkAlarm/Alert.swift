@@ -8,13 +8,13 @@
 import Foundation
 //8.
 struct Alert: Codable {
-    var id: String = UUID().uuidString //이게뭐지?
+    var id: String = UUID().uuidString
     var date: Date
     var isOn: Bool
     
     //사용성이 있도록 데이트값을 받으면 우리가 바로 라벨에 뿌려줄 수 있는 시간값과 오전오후값을 뱉을수있도록만듦
     var time: String {
-        let timeFormatter = DateFormatter() //DateFormatter가뭐지?
+        let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "hh:mm"
         return timeFormatter.string(from: date)
     }

@@ -14,14 +14,14 @@ import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    //27-3
-    let userNotificationCenter = UNUserNotificationCenter.current()//이게뭐지?
+    //27-2
+    let userNotificationCenter = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //25.
         UNUserNotificationCenter.current().delegate = self
-        //27-2. 얼럿, 뱃지, 사운드에 대한 허락을 구할거임.
+        //27-3. 얼럿, 뱃지, 사운드에 대한 허락을 구할거임.
         let authorizationOptions = UNAuthorizationOptions(arrayLiteral: [.alert, .badge, .sound])
         userNotificationCenter.requestAuthorization(options: authorizationOptions) {
             _, error in
@@ -56,6 +56,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         completionHandler([.banner, .list, .badge, .sound])
     }
     
+    //콜해도안해도 상관은없는데 공식문서에서는 항상콜해주라고 적혀있음.
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
     }
