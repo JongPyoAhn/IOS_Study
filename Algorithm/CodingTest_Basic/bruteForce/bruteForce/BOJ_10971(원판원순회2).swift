@@ -29,7 +29,9 @@
 //        if !visited[i] && w[now][i] > 0{
 //            visited[i] = true
 //            sum += w[now][i]
+//            if sum <= result{
 //                dfs(depth + 1, i, start)
+//            }
 //            visited[i] = false
 //            sum -= w[now][i]
 //        }
@@ -39,4 +41,5 @@
 //dfs(0, 0, 0)
 //
 //print(result)
-//
+//BOJ_10971(원판원순회2)
+
