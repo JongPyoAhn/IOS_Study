@@ -16,15 +16,15 @@
 //    var list: [[Int]] = Array(repeating: [], count: v + 1)
 //    list[0].append(0)
 //    var isColor = false
-//    
+//
 //    for _ in 1...e{
 //        let line = readLine()!.split(separator: " ").map{Int(String($0))!}
 //        list[line[0]].append(line[1])
 //        list[line[1]].append(line[0])
 //    }
-//    
+//
 //    func dfs(_ depth: Int) {
-//    
+//
 //        for i in 0..<list[depth].count{
 //            let node = list[depth][i]
 //            if !visited[node]{
@@ -36,16 +36,16 @@
 //                    isColor = true
 //                    return
 //                }
-//                
+//
 //            }
 //        }
 //    }
-//    
+//
 //    for i in 1..<list.count {
 //        dfs(i)
 //    }
-//    
+//
 //    print(isColor ? "NO" : "YES")
-//    
+//
 //}
 
