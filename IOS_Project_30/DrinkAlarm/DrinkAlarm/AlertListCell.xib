@@ -51,7 +51,7 @@
                 <outlet property="meridiemLabel" destination="De0-y5-83J" id="1On-ez-ejW"/>
                 <outlet property="timeLabel" destination="Sg7-GF-TXW" id="vxb-bB-Bmn"/>
             </connections>
-            <point key="canvasLocation" x="132" y="104"/>
+            <point key="canvasLocation" x="131.15942028985509" y="103.79464285714285"/>
         </tableViewCell>
     </objects>
 </document>
