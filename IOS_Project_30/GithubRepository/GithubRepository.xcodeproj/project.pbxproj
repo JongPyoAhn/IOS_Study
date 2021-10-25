@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		530F863E270D5BFA00343BA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F863D270D5BFA00343BA1 /* AppDelegate.swift */; };
 		530F8640270D5BFA00343BA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F863F270D5BFA00343BA1 /* SceneDelegate.swift */; };
-		530F8642270D5BFA00343BA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F8641270D5BFA00343BA1 /* ViewController.swift */; };
-		530F8645270D5BFA00343BA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530F8643270D5BFA00343BA1 /* Main.storyboard */; };
 		530F8647270D5BFB00343BA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530F8646270D5BFB00343BA1 /* Assets.xcassets */; };
 		530F864A270D5BFB00343BA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530F8648270D5BFB00343BA1 /* LaunchScreen.storyboard */; };
+		53EA37F827265F210058EE25 /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA37F727265F200058EE25 /* RepositoryListViewController.swift */; };
+		53EA37FA27265FD20058EE25 /* RepositoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA37F927265FD20058EE25 /* RepositoryListCell.swift */; };
+		53EA37FD2726615B0058EE25 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 53EA37FC2726615B0058EE25 /* SnapKit */; };
+		53EA37FF27267CC60058EE25 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA37FE27267CC60058EE25 /* Repository.swift */; };
 		F3A592BAB6E1228406468F00 /* Pods_GithubRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825193F44E32EE5293AF9996 /* Pods_GithubRepository.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +23,12 @@
 		530F863A270D5BFA00343BA1 /* GithubRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		530F863D270D5BFA00343BA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		530F863F270D5BFA00343BA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		530F8641270D5BFA00343BA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		530F8644270D5BFA00343BA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		530F8646270D5BFB00343BA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		530F8649270D5BFB00343BA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		530F864B270D5BFB00343BA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53EA37F727265F200058EE25 /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
+		53EA37F927265FD20058EE25 /* RepositoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListCell.swift; sourceTree = "<group>"; };
+		53EA37FE27267CC60058EE25 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		825193F44E32EE5293AF9996 /* Pods_GithubRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB54C9B197E0E5CDBA6D7492 /* Pods-GithubRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepository.debug.xcconfig"; path = "Target Support Files/Pods-GithubRepository/Pods-GithubRepository.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3A592BAB6E1228406468F00 /* Pods_GithubRepository.framework in Frameworks */,
+				53EA37FD2726615B0058EE25 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,7 +52,6 @@
 				AB54C9B197E0E5CDBA6D7492 /* Pods-GithubRepository.debug.xcconfig */,
 				2E25FC316EF883DCA56C9A5B /* Pods-GithubRepository.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,8 +78,9 @@
 			children = (
 				530F863D270D5BFA00343BA1 /* AppDelegate.swift */,
 				530F863F270D5BFA00343BA1 /* SceneDelegate.swift */,
-				530F8641270D5BFA00343BA1 /* ViewController.swift */,
-				530F8643270D5BFA00343BA1 /* Main.storyboard */,
+				53EA37F927265FD20058EE25 /* RepositoryListCell.swift */,
+				53EA37F727265F200058EE25 /* RepositoryListViewController.swift */,
+				53EA37FE27267CC60058EE25 /* Repository.swift */,
 				530F8646270D5BFB00343BA1 /* Assets.xcassets */,
 				530F8648270D5BFB00343BA1 /* LaunchScreen.storyboard */,
 				530F864B270D5BFB00343BA1 /* Info.plist */,
@@ -110,6 +114,9 @@
 			dependencies = (
 			);
 			name = GithubRepository;
+			packageProductDependencies = (
+				53EA37FC2726615B0058EE25 /* SnapKit */,
+			);
 			productName = GithubRepository;
 			productReference = 530F863A270D5BFA00343BA1 /* GithubRepository.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 530F8631270D5BFA00343BA1;
+			packageReferences = (
+				53EA37FB2726615B0058EE25 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 530F863B270D5BFA00343BA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,7 +164,6 @@
 			files = (
 				530F864A270D5BFB00343BA1 /* LaunchScreen.storyboard in Resources */,
 				530F8647270D5BFB00343BA1 /* Assets.xcassets in Resources */,
-				530F8645270D5BFA00343BA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,23 +216,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				530F8642270D5BFA00343BA1 /* ViewController.swift in Sources */,
 				530F863E270D5BFA00343BA1 /* AppDelegate.swift in Sources */,
 				530F8640270D5BFA00343BA1 /* SceneDelegate.swift in Sources */,
+				53EA37FF27267CC60058EE25 /* Repository.swift in Sources */,
+				53EA37F827265F210058EE25 /* RepositoryListViewController.swift in Sources */,
+				53EA37FA27265FD20058EE25 /* RepositoryListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		530F8643270D5BFA00343BA1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				530F8644270D5BFA00343BA1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		530F8648270D5BFB00343BA1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -431,6 +434,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		53EA37FB2726615B0058EE25 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		53EA37FC2726615B0058EE25 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53EA37FB2726615B0058EE25 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 530F8632270D5BFA00343BA1 /* Project object */;
 }

@@ -3,7 +3,7 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2021/09/22.
-// 
+// 맞추긴했는데 한번더보는게 좋을듯.
 
 //let input = readLine()!.split(separator: " ").map { Int(String($0))! }
 //let n = input[0]

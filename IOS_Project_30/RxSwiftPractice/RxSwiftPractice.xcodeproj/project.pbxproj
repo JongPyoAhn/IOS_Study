@@ -29,6 +29,7 @@
 		53BABC132723E114008C7F50 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		53BABC1427240724008C7F50 /* Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		53CDF8352724F2C000F8104E /* Filtering.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Filtering.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		53E8C62B272646180018C690 /* transforming.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = transforming.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		67671EB8DC4E14092764928D /* Pods_RxSwiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD15473B255C5DDEBBC99CA1 /* Pods-RxSwiftPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		C8066AD6AB74C0043F4F2F13 /* Pods-RxSwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 				53BABC132723E114008C7F50 /* Traits.playground */,
 				53BABC1427240724008C7F50 /* Subject.playground */,
 				53CDF8352724F2C000F8104E /* Filtering.playground */,
+				53E8C62B272646180018C690 /* transforming.playground */,
 				530F865C270D618900343BA1 /* RxSwiftPractice */,
 				530F865B270D618900343BA1 /* Products */,
 				3F0E414A2E29AA3B00ECA94C /* Pods */,
