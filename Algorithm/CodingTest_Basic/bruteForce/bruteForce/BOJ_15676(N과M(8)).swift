@@ -3,7 +3,7 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2021/09/30.
-//
+// 얄짤없이 다시.
 
 //let nm = readLine()!.split(separator: " ").map{Int(String($0))!}
 //let n = nm[0]

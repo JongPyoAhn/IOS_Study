@@ -3,7 +3,7 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2021/09/30.
-//
+// 로직은맞앗는데 시간초과때매 다시봐야할듯.
 
 //let nm = readLine()!.split(separator: " ").map{Int(String($0))!}
 //let n = nm[0]

@@ -3,7 +3,7 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2021/10/04.
-//
+// 다시풀기
 
 //let n = Int(String(readLine()!))!
 //var w: [[Int]] = Array(repeating: [], count: n)

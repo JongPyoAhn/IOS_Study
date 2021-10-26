@@ -3,7 +3,7 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2021/09/28.
-//
+// 다시풀긴풀었는데 문제이해오래걸림. 다시.
 //import Foundation
 //let n = Int(String(readLine()!))!
 //var arr = readLine()!.split(separator: " ").map{Int(String($0))!}
