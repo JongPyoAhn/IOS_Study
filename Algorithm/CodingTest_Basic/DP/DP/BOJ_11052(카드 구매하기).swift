@@ -3,7 +3,8 @@
 //  DP
 //
 //  Created by 안종표 on 2021/08/30.
-//
+// 다시풀기
+
 
 //let n = Int(readLine()!)! //구매하려고 하는 카드 수
 //let pArr = readLine()!.split(separator: " ").map{Int($0)!} //카드의 가격

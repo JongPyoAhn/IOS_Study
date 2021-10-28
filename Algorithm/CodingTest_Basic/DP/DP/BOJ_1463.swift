@@ -3,7 +3,7 @@
 //  DP
 //
 //  Created by 안종표 on 2021/08/28.
-//
+// O
 
 //var n = Int(readLine()!)!
 //var dp = Array(repeating: 0, count: 1000001) //몇번 움직였는지의 결과를 저장하기위한 배열
