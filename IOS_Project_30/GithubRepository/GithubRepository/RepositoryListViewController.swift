@@ -50,7 +50,7 @@ class RepositoryListViewController: UITableViewController {
     
     //19.
     func fetchRepositories(of organization: String){
-        //애플이라는 아이를 어레이형태로 받을 프롬을 사용
+        //함수에 넣은 애플이라는 아이를 어레이형태로 받을 프롬을 사용
         Observable.from([organization])
             .map{ organization -> URL in //apple이라는 string이 들어오면 url로 바꿔줄거임.
                 //올가니제이션이라는 스트링을 받았지만 리턴값은 유알엘인것.

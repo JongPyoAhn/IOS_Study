@@ -1,6 +1,24 @@
 import Foundation
 import RxSwift
 
+/*
+ 기본개념
+ Observable은 시퀀스와 동일하다.
+ Observable은 다른 클래스에서 만든 값을 시간에 따라서 읽을 수가 있음.
+ 하나 이상의 Observer(관찰자)가 실시간으로 이벤트에 반응
+ next는 최신 데이터를 전달하는 역할
+ 
+ */
+
+/*Observable은 next이벤트를 통해서 각각의 값들을 방출함
+Observable생명주기
+ Observable은 어떤 구성요소를 가지는 next이벤트를 계속해서 방출할 수 있다.
+ Observable은 error이벤트를 방출하여 완전 종료될 수 있다.
+ Observable은 complete 이벤트를 방출하여 완전 종료될 수 있다.
+ 
+ 
+ 
+ */
 //<>를이용해서 next를 통해서 어떠한 형태의 element를 방출할 것인지를 표현
 //<Int> Int를 방출할거임
 //just라는 연산자를 통해서 하나의 엘리멘트만 방출하는 단순한형태의 오퍼레이터
