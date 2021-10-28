@@ -3,7 +3,7 @@
 //  BinarySearch
 //
 //  Created by 안종표 on 2021/09/02.
-//
+// 다시풀기.
 
 //let n = Int(readLine()!)!
 //var nArr = readLine()!.split(separator: " ").map{Int(String($0))!}
