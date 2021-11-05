@@ -3,7 +3,7 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2021/11/03.
-//
+// O
 
 
 //let n = Int(String(readLine()!))!
