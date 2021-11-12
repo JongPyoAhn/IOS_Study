@@ -3,7 +3,7 @@
 //  DFS&BFS
 //
 //  Created by 안종표 on 2021/11/11.
-//
+// 
 
 //let t = Int(String(readLine()!))!
 //var queue: [(Int, Int, Int)] = []
@@ -30,43 +30,43 @@
 //                visited[pop.0 + 1][pop.1 + 2] = true
 //                queue.append((pop.0 + 1, pop.1 + 2, pop.2 + 1))
 //            }
-//            
+//
 //            if pop.0 - 1 >= 0 && !visited[pop.0 - 1][pop.1 + 2]{
 //                visited[pop.0 - 1][pop.1 + 2] = true
 //                queue.append((pop.0 - 1, pop.1 + 2, pop.2 + 1))
 //            }
 //        }
-//        
+//
 //        if pop.1 - 2 >= 0{
 //            if pop.0 + 1 < l && !visited[pop.0 + 1][pop.1 - 2]{
 //                visited[pop.0 + 1][pop.1 - 2] = true
 //                queue.append((pop.0 + 1, pop.1 - 2, pop.2 + 1))
 //            }
-//            
+//
 //            if pop.0 - 1 >= 0 && !visited[pop.0 - 1][pop.1 - 2]{
 //                visited[pop.0 - 1][pop.1 - 2] = true
 //                queue.append((pop.0 - 1, pop.1 - 2, pop.2 + 1))
 //            }
 //        }
-//        
+//
 //        if pop.0 + 2 < l {
 //            if pop.1 + 1 < l && !visited[pop.0 + 2][pop.1 + 1]{
 //                visited[pop.0 + 2][pop.1 + 1] = true
 //                queue.append((pop.0 + 2, pop.1 + 1, pop.2 + 1))
 //            }
-//            
+//
 //            if pop.1 - 1 >= 0 && !visited[pop.0 + 2][pop.1 - 1]{
 //                visited[pop.0 + 2][pop.1 - 1] = true
 //                queue.append((pop.0 + 2, pop.1 - 1, pop.2 + 1))
 //            }
 //        }
-//        
+//
 //        if pop.0 - 2 >= 0 {
 //            if pop.1 + 1 < l && !visited[pop.0 - 2][pop.1 + 1]{
 //                visited[pop.0 - 2][pop.1 + 1] = true
 //                queue.append((pop.0 - 2, pop.1 + 1, pop.2 + 1))
 //            }
-//            
+//
 //            if pop.1 - 1 >= 0 && !visited[pop.0 - 2][pop.1 - 1]{
 //                visited[pop.0 - 2][pop.1 - 1] = true
 //                queue.append((pop.0 - 2, pop.1 - 1, pop.2 + 1))
