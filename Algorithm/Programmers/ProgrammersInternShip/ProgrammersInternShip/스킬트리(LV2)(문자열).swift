@@ -41,12 +41,14 @@
 //        if isSkill{
 //            count += 1
 //        }
-//        
+//
 //        isSkill = true
 //        before = 0
 //        beforeSkill = skillSplit[0]
 //    }
-//    
+//
 //    return count
 //}
 //print(solution("CBD", ["BACDE", "CBADF", "AECB", "BDA"]))
+
+
