@@ -3,7 +3,7 @@
 //  DP
 //
 //  Created by 안종표 on 2021/09/07.
-// 다시풀기
+// O
 
 //let a = Int(readLine()!)!
 //var arr = readLine()!.split(separator: " ").map{Int($0)!}

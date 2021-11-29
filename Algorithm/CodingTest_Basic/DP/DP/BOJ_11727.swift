@@ -3,15 +3,13 @@
 //  DP
 //
 //  Created by 안종표 on 2021/08/28.
-// 다시
+// O
 
-//let n = Int(readLine()!)!
-//var arr = Array(repeating: 0, count: 1001)
-//
-//arr[1] = 1
-//arr[2] = 3
-//
-//for i in stride(from: 3, through: n, by: 1) {
-//    arr[i] = (arr[i - 1] + arr[i - 2] + arr[i - 2]) % 10007
+//let n = Int(String(readLine()!))!
+//var dp: [Int] = Array(repeating: 0, count: 1001)
+//dp[1] = 1
+//dp[2] = 3
+//for i in stride(from: 3, through: n, by: 1){
+//    dp[i] = (dp[i - 1] + dp[i - 2] * 2) % 10007
 //}
-//print("\(arr[n])")
+//print(dp[n] % 10007)
