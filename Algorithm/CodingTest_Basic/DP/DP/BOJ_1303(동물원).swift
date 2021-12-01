@@ -3,7 +3,7 @@
 //  DP
 //
 //  Created by 안종표 on 2021/11/04.
-// 맞았지만 다시풀어보자.
+// O
 
 
 //let n = Int(String(readLine()!))!
