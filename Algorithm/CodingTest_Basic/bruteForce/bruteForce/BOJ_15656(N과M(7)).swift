@@ -3,21 +3,19 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2021/09/30.
-// 로직은맞앗는데 시간초과때매 다시봐야할듯.
+// O
 
 //let nm = readLine()!.split(separator: " ").map{Int(String($0))!}
+//var arr = readLine()!.split(separator: " ").map{Int(String($0))!}
 //let n = nm[0]
 //let m = nm[1]
-//
-//var arr = readLine()!.split(separator: " ").map{Int(String($0))!}
-//arr.sort()
-//var depth = 0
+//var result = [String]()
 //var resultStr = ""
-//var result: [String] = []
-//
+//arr.sort()
 //func dfs(_ depth: Int){
 //    if depth == m {
-//        resultStr += result.joined(separator: " ") + "\n"
+//        resultStr += result.joined(separator: " ")
+//        resultStr += "\n"
 //        return
 //    }
 //    for i in 0..<n{
@@ -25,8 +23,6 @@
 //        dfs(depth + 1)
 //        result.removeLast()
 //    }
-//
 //}
-//
-//dfs(depth)
+//dfs(0)
 //print(resultStr)
