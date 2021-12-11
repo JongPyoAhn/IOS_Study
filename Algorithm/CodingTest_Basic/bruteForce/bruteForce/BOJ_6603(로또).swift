@@ -3,7 +3,7 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2021/11/02.
-// 맞았지만 다시풀어도 얼마안걸리기에 다시풀어봐야지
+// O
 
 //var input: [Int] = []
 //var sum = 1

@@ -3,7 +3,7 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2021/11/05.
-//
+// 다시
 
 //let n = Int(String(readLine()!))!
 //var arr: [[Int]] = [[]]
