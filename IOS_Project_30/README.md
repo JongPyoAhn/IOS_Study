@@ -1,3 +1,17 @@
+### 헷갈리거나 몰랐거나 중요한 내용들 정리
+
+### 종강 후 스터디
+# Week1 2021/12/13(월) ~ 2021/12/17(금)
+## 명언 생성기 앱 만들기
+- Cocoa touch Framework
+- MVC
+- UIView 정의
+- ViewController 정의
+- Resolve AutoLayout Issues
+- Outlet변수의 Storage옵션(strong, weak의 차이)
+- Content hugging priority, Content Compression Resistance
+
+
 ### 이 전에 한것
 ## Spotify_Login
 - 로그인 관련 기능
@@ -9,8 +23,3 @@
 ## DrinkAlarm
 - UNNotification
 - userDefault
-
-
-### 종강 후 스터디
-# Week1 2021/12/13(월) ~ 2021/12/17(금)
-## 명언 생성기 앱 만들기
