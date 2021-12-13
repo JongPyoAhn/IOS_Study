@@ -12,7 +12,7 @@
 - Content hugging priority, Content Compression Resistance
 
 
-### 이 전에 한것
+# 이 전에 한것
 ## Spotify_Login
 - 로그인 관련 기능
 - Firebase를 이용한 기초 로그인과 구글, 애플로그인을 다룸
