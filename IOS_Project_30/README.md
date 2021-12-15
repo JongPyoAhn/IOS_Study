@@ -8,6 +8,11 @@
 - Outlet변수의 Storage옵션(strong, weak의 차이)
 - Content hugging priority, Content Compression Resistance
 
+### LED전광판 앱 만들기
+- ContentViewController, ContainerViewController 개념
+- 화면 전환방법 개념
+- ViewController Life Cycle
+- 화면 간 데이터 전달(Delegate패턴, prepare메소드(segue.destination이용))
 
 ## 이 전에 한것
 ### Spotify_Login
