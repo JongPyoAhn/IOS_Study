@@ -18,6 +18,7 @@
 - StackView(Distribution : Fill, Fill Propotionally)
 - IBInspectable
 - IBDesignable
+- didSet
 
 ## 이 전에 한것
 ### Spotify_Login
