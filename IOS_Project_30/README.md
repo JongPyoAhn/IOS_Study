@@ -14,6 +14,11 @@
 - ViewController Life Cycle
 - 화면 간 데이터 전달(Delegate패턴, prepare메소드(segue.destination이용))
 
+### 계산기 앱 만들기
+- StackView(Distribution : Fill, Fill Propotionally)
+- IBInspectable
+- IBDesignable
+
 ## 이 전에 한것
 ### Spotify_Login
 - 로그인 관련 기능
