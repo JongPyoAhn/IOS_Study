@@ -20,6 +20,11 @@
 - IBDesignable
 - didSet
 
+## Week2 2021/12/20(월) ~ 2021/12/24(금)
+
+### To-do List 만들기
+
+
 ## 이 전에 한것
 ### Spotify_Login
 - 로그인 관련 기능
