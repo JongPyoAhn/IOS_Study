@@ -23,7 +23,9 @@
 ## Week2 2021/12/20(월) ~ 2021/12/24(금)
 
 ### To-do List 만들기
-
+- UITableViewDataSource, UITableViewDelegate
+- cell을 재사용하는 이유, 원리
+- UserDefaults개념
 
 ## 이 전에 한것
 ### Spotify_Login
