@@ -3,7 +3,7 @@
 //  CodingTest_Practice
 //
 //  Created by 안종표 on 2021/12/30.
-// 다시
+// 질문올렸으니까 보고 다시풀기
 //
 //import Foundation
 //let abc = readLine()!.split(separator: " ").map{Int(String($0))!}
