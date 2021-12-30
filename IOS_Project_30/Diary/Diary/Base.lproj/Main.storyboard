@@ -233,7 +233,7 @@
         <!--View Controller-->
         <scene sceneID="QRQ-Rd-b0Z">
             <objects>
-                <viewController id="ZYs-Tk-VDu" sceneMemberID="viewController">
+                <viewController id="ZYs-Tk-VDu" customClass="ViewController" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oHf-ns-i6F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,10 +248,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiaryCell" id="Byc-h0-iXr" customClass="DiaryCell" customModule="Diary" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7aP-Zl-icL" customClass="DiaryCell" customModule="Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bis-Y6-o3a">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6gc-8V-R3S">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -269,16 +269,20 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Eew-ZO-kwB" secondAttribute="bottom" constant="12" id="0Os-xE-bx2"/>
-                                                <constraint firstItem="Z4R-54-CKT" firstAttribute="leading" secondItem="bis-Y6-o3a" secondAttribute="leading" constant="12" id="9EA-Rn-Owv"/>
-                                                <constraint firstAttribute="trailing" secondItem="Eew-ZO-kwB" secondAttribute="trailing" constant="12" id="A8Z-og-zIH"/>
-                                                <constraint firstItem="Eew-ZO-kwB" firstAttribute="top" secondItem="Z4R-54-CKT" secondAttribute="bottom" constant="12" id="GZ2-oq-LpI"/>
-                                                <constraint firstItem="Eew-ZO-kwB" firstAttribute="leading" secondItem="bis-Y6-o3a" secondAttribute="leading" constant="12" id="WYe-8F-RCI"/>
-                                                <constraint firstItem="Z4R-54-CKT" firstAttribute="top" secondItem="bis-Y6-o3a" secondAttribute="top" constant="12" id="XGp-TI-EUg"/>
-                                                <constraint firstAttribute="trailing" secondItem="Z4R-54-CKT" secondAttribute="trailing" constant="12" id="sqB-H5-rEQ"/>
+                                                <constraint firstItem="Eew-ZO-kwB" firstAttribute="leading" secondItem="6gc-8V-R3S" secondAttribute="leading" constant="12" id="7Kp-lN-duK"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z4R-54-CKT" secondAttribute="trailing" constant="12" id="BJ8-Fn-v06"/>
+                                                <constraint firstAttribute="trailing" secondItem="Eew-ZO-kwB" secondAttribute="trailing" constant="12" id="Dh6-n0-0wA"/>
+                                                <constraint firstAttribute="bottom" secondItem="Eew-ZO-kwB" secondAttribute="bottom" constant="12" id="N0Y-m8-BsN"/>
+                                                <constraint firstItem="Z4R-54-CKT" firstAttribute="top" secondItem="6gc-8V-R3S" secondAttribute="top" constant="12" id="d10-Fx-aC2"/>
+                                                <constraint firstItem="Eew-ZO-kwB" firstAttribute="top" secondItem="Z4R-54-CKT" secondAttribute="bottom" constant="12" id="e3o-ri-xnu"/>
+                                                <constraint firstItem="Z4R-54-CKT" firstAttribute="leading" secondItem="6gc-8V-R3S" secondAttribute="leading" constant="12" id="pPF-Oi-iVU"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Eew-ZO-kwB" id="JOA-WE-lOT"/>
+                                            <outlet property="titleLabel" destination="Z4R-54-CKT" id="Y3C-ZM-Ehj"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -299,6 +303,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="SV2-4t-11R" id="a49-4m-3uI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2C-JL-oKd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -375,8 +382,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기 작성" id="K4n-nq-Zsf">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="5KQ-Jw-Zca"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="5KQ-Jw-Zca">
+                            <connections>
+                                <action selector="tapConfirmButton:" destination="Rve-pD-ova" id="j3z-YC-LKw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="5KQ-Jw-Zca" id="Vq0-HD-UP4"/>
+                        <outlet property="contentsTextView" destination="8kj-k5-eD5" id="4aB-9q-tDs"/>
+                        <outlet property="dateTextField" destination="yls-je-qeQ" id="qzq-Km-Ekr"/>
+                        <outlet property="titleTextField" destination="K1k-nL-Y4B" id="FV9-LT-UbQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gN-2N-haL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
