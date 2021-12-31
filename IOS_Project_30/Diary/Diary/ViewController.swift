@@ -22,19 +22,58 @@ class ViewController: UIViewController {
         self.configureCollectionView()
         self.loadDiaryList()
         collectionView.reloadData()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(editDiaryNotification(_:)),
+            name: NSNotification.Name("editDiary"),
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(starDiaryNotification(_:)),
+            name: NSNotification.Name("starDiary"),
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(deleteDiaryNotification(_:)),
+            name: NSNotification.Name("deleteDiary"),
+            object: nil)
     }
     //콜렉션뷰의 속성을정의
     private func configureCollectionView(){
-        self.collectionView.collectionViewLayout = UICollectionViewLayout()
+        self.collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        
+
     }
     
+    @objc func editDiaryNotification(_ notification: Notification){
+        guard let diary = notification.object as? Diary else {return}
+        guard let row = notification.userInfo?["indexPath.row"] as? Int else {return}
+        self.diaryList[row] = diary
+        
+        self.diaryList = self.diaryList.sorted{
+            $0.date.compare($1.date) == .orderedDescending
+        }
+        self.collectionView.reloadData()
+    }
     
+    @objc func starDiaryNotification(_ notification: Notification){
+        guard let starDiary = notification.object as? [String: Any] else{return}
+        guard let isStar = starDiary["isStar"] as? Bool else {return}
+        guard let indexPath = starDiary["indexPath"] as? IndexPath else {return}
+        //스타다이어리노티피케이션메소드가호출되면 즉, 즐겨찾기 토글이일어나면 didSelectStar메소드와 똑같이 실행되야함.
+        self.diaryList[indexPath.row].isStart = isStar
+    }
     
-    
+    @objc func deleteDiaryNotification(_ notification: Notification){
+        guard let indexPath = notification.object as? IndexPath else {return}
+        
+        //didSelectDelete메소드와 똑같이 작동하게 구현
+            self.diaryList.remove(at: indexPath.row)
+            //컬렉션뷰의 일기가 삭제되게
+            self.collectionView.deleteItems(at: [indexPath])
+    }
     
     //delegate를 통해 작성된 다이어리가 전달될 준비가 되었으면 뷰컨트롤러로 이동해서 받을준비를 하겠음.
     //세그웨이를 통해서 이동하기 때문에 prepare메소드를 오버라이드
@@ -83,18 +122,6 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: WriteDiaryViewDelegate{
-    //WriteDiaryViewController에 일기가 작성이되면 didSelectRegister 파라미터를 통해 작성된 일기의 내용이 담겨져있는 다이어리객체가 전달이 될텐데 그걸 diaryList에 추가
-    func didSelectRegister(diary: Diary) {
-        self.diaryList.append(diary)
-        self.diaryList = self.diaryList.sorted{
-            $0.date.compare($1.date) == .orderedDescending
-        }
-        print(diary)
-        self.collectionView.reloadData()
-    }
-}
-
 
 extension ViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -118,3 +145,40 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
         return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 200)
     }
 }
+extension ViewController: UICollectionViewDelegate{
+    //일기가 선택됬을 때 일기 상세화면으로 넘기기위함.
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "DiaryDetailViewController") as? DiaryDetailViewController else{return}
+        let diary = self.diaryList[indexPath.row]
+        viewController.diary = diary
+        viewController.indexPath = indexPath
+//        viewController.deleagte = self
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+    }
+}
+
+
+
+extension ViewController: WriteDiaryViewDelegate{
+    //WriteDiaryViewController에 일기가 작성이되면 didSelectRegister 파라미터를 통해 작성된 일기의 내용이 담겨져있는 다이어리객체가 전달이 될텐데 그걸 diaryList에 추가
+    func didSelectRegister(diary: Diary) {
+        self.diaryList.append(diary)
+        self.diaryList = self.diaryList.sorted{
+            $0.date.compare($1.date) == .orderedDescending
+        }
+        print(diary)
+        self.collectionView.reloadData()
+    }
+}
+
+//extension ViewController: DiaryDetailViewDelegate{
+//    func didSelectDelete(indexPath: IndexPath) {
+//        self.diaryList.remove(at: indexPath.row)
+//        //컬렉션뷰의 일기가 삭제되게
+//        self.collectionView.deleteItems(at: [indexPath])
+//    }
+////    func didSelectStar(indexPath: IndexPath, isStar: Bool) {
+////        self.diaryList[indexPath.row].isStart = isStar
+////    }
+//}
