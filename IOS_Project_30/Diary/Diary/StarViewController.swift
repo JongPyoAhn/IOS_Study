@@ -50,11 +50,17 @@ class StarViewController: UIViewController {
         guard let data = userDefaults.object(forKey: "diaryList") as? [[String: Any]] else {return}
         print(data)
         self.diaryList = data.compactMap{
+            guard let uuidString = $0["uuidString"] as? String else {return nil}
             guard let title = $0["title"] as? String else{return nil}
             guard let contents = $0["contents"] as? String else{return nil}
             guard let date = $0["date"] as? Date else {return nil}
             guard let isStar = $0["isStart"] as? Bool else {return nil}
-            return Diary(title: title, contents: contents, date: date, isStart: isStar)
+            return Diary(
+                uuidString: uuidString,
+                title: title,
+                contents: contents,
+                date: date,
+                isStart: isStar)
         }.filter({
             $0.isStart == true
         }).sorted(by: {
@@ -65,8 +71,8 @@ class StarViewController: UIViewController {
     //수정이일어났을때호출하는 셀렉터메소드
     @objc func editDiaryNotification(_ notification: Notification){
         guard let diary = notification.object as? Diary else {return}
-        guard let row = notification.userInfo?["indexPath.row"] as? Int else {return}
-        self.diaryList[row] = diary
+        guard let index = self.diaryList.firstIndex(where: {$0.uuidString == diary.uuidString}) else {return}
+        self.diaryList[index] = diary
         self.diaryList = self.diaryList.sorted(by: {
             $0.date.compare($1.date) == .orderedDescending
         })
@@ -77,9 +83,10 @@ class StarViewController: UIViewController {
     @objc func starDiaryNotification(_ notification: Notification){
         guard let starDiary = notification.object as? [String: Any] else {return}
         guard let isStar = starDiary["isStar"] as? Bool else {return}
-        guard let indexPath = starDiary["indexPath"] as? IndexPath else {return}
+        guard let uuidString = starDiary["uuidString"] as? String else {return}
         //즐겨찾기한 다이어리객체를 가져온다음에 아래 if문에서 다이어리객체 추가
         guard let diary = starDiary["diary"] as? Diary else {return}
+       
         if isStar {
             //즐겨찾기가 된 일기를 추가
             self.diaryList.append(diary)
@@ -87,19 +94,25 @@ class StarViewController: UIViewController {
                 $0.date.compare($1.date) == .orderedDescending
             })
             self.collectionView.reloadData()
-        }else{ //즐겨찾기가 해제되면 삭제되게 만듦
-            self.diaryList.remove(at: indexPath.row)
-            self.collectionView.deleteItems(at: [indexPath])
+        }else{
+            //이게 딴데있으면 즐겨찾기 화면에 일기가 추가안됨. 해당하는 일기가없으면 리턴을 통해서 함수가 조기종료되기때문에 즐겨찾기가 해제될때만 사용하도록.
+            guard let index = self.diaryList.firstIndex(where: {$0.uuidString == uuidString}) else {return}
+            
+            //즐겨찾기가 해제되면 삭제되게 만듦
+            self.diaryList.remove(at: index)
+            self.collectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
         }
     }
     
     @objc func deleteDiaryNotification(_ notification: Notification){
-        guard let indexPath = notification.object as? IndexPath else {return}
+        guard let uuidString = notification.object as? String else {return}
+        guard let index = self.diaryList.firstIndex(where: {$0.uuidString == uuidString}) else {return}
         //일기장즐겨찾기에는 일기가 1개있고 리스트에는 2개가있을때 리스트에있는 두번째일기를 삭제하면 여기서 에러가남.
         //즐겨찾기 수정삭제 노티피케이션에 인덱스패스를 보내줘서 일기장화면과 즐겨찾기 화면에 전달되게되면 일기장화면과 즐겨찾기화면의 일기개수가 다를경우 이렇게 인덱스 아웃오브렌지가 발생함.
         //예를들어 즐겨찾기화면에는 일기가 1개추가됫는데 일기장화면에서 2번째일기를 지우면 즐겨찾기 화면에서도 노티피케이션에서 전달받은 인덱스패스값으로 배열을 삭제하기때문에 즐겨찾기화면에는 일기가 한개밖에없는데 두번째 일기를 삭제하라고하니 인덱스아웃오브렌지 이 에러를 해결하기위해서는 일기를 추가할때마다 다이어리객체에 일기의 고유한 값 이 일기를 특정할 수 있는 고유한 값을 저장할 수 있게 만들어야하고 즐겨찾기 수정 삭제 노티피케이션도 인덱스패스대신 이 일기를 특정할 수 있는 고유한값을 전달하게만들어주고 전달받은쪽에서 배열에 이 고유한값의 일기가 있는지 확인하고 이 고유한값에 해당되는 일기의 인덱스로 수정삭제즐겨찾기 상태업데이트가 되게 구현해줘야한다.
-        self.diaryList.remove(at: indexPath.row)
-        self.collectionView.deleteItems(at: [indexPath])
+        
+        self.diaryList.remove(at: index)
+        self.collectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
         
     }
     

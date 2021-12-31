@@ -8,6 +8,7 @@
 import UIKit
 
 struct Diary {
+    var uuidString: String //일기를 생성할때마다 고유한 uuid값 넣을거.
     var title: String
     var contents: String
     var date: Date

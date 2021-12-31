@@ -120,19 +120,27 @@ class WriteDiaryViewController: UIViewController {
         switch self.diaryEditorMode{
         case .new:
             //처음만들떄는 즐겨찾기 false
-            let diary = Diary(title: title, contents: contents, date: date, isStart: false)
+            let diary = Diary(
+                uuidString: UUID().uuidString, //일기를 생성할 때마다 고유한 uuid값생성
+                title: title,
+                contents: contents,
+                date: date,
+                isStart: false)
             self.delegate?.didSelectRegister(diary: diary)
         //연관값은 인덱스패스만 필요할거같아서
         //post메소드의 네임파라미터에는 노티피케이션의 이름을적어주면되는데 이 이름을가지고 옵저버에서 설정한이름의 노티피케이션이벤트가 발생하였는지 관찰하게된다.object에는 전달할객체, userInfo파라미터에는 노티피케이션과 관련된값을 넘겨줄 수 있는데 수정이 일어나면 컬렉션뷰리스트에도 수정이일어나야하기때문에 indexPath.row전달
         case let .edit(indexPath, diary):
             //일기를 수정하면 현재상태의 즐겨찾기 상태를 넘겨줌(해준이유 : 기존에는 즐겨찾기상태에서 수정하면 즐겨찾기가 풀렸음.
-            let diary = Diary(title: title, contents: contents, date: date, isStart: diary.isStart)
+            let diary = Diary(
+                uuidString: UUID().uuidString, //일기를 생성할 때마다 고유한 uuid값생성
+                title: title,
+                contents: contents,
+                date: date,
+                isStart: diary.isStart)
             NotificationCenter.default.post(
                 name: NSNotification.Name("editDiary"),
                 object: diary,
-                userInfo: [
-                    "indexPath.row" : indexPath.row
-                    ])
+                userInfo: nil)
         }
         
         self.navigationController?.popViewController(animated: true)

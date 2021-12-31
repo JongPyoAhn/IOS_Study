@@ -35,8 +35,15 @@ class DiaryDetailViewController: UIViewController {
         super.viewDidLoad()
         //이렇게되면 일기장리스트화면에서 일기장을 선택했을때 다이어리 프로퍼티에 다이어리객체를 넘겨주게되면 일기장 상세화면에 일기장 제목과 내용, 날짜가 표시되게된다.
         self.configureView()
+        //즐겨찾기 토글이 일어날때
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(starDiaryNotification(_:)),
+            name: NSNotification.Name("starDiary"),
+            object: nil)
       
     }
+    
     
     //프로퍼티를 통해 전달받은 객체를 뷰에 초기화시켜줌
     private func configureView(){
@@ -61,9 +68,20 @@ class DiaryDetailViewController: UIViewController {
     //수정된 다이어리객체를 전달받아서 뷰에 업데이트되도록 코드를 작성 포스트에서보낸 수정된 다이어리객체를 가져오는 작업
     @objc func editDiaryNotification(_ notification: Notification){
         guard let diary = notification.object as? Diary else {return}
-        guard let row = notification.userInfo?["indexPath.row"] as? Int else {return}
+       
         self.diary = diary
         self.configureView()
+    }
+    //맨마지막강의에 있음. 모르겟으면참고
+    @objc func starDiaryNotification(_ notification: Notification){
+        guard let starDiary = notification.object as? [String : Any] else {return}
+        guard let isStar = starDiary["isStar"] as? Bool else {return}
+        guard let uuidString = starDiary["uuidString"] as? String else {return}
+        guard let diary = self.diary else {return}
+        if diary.uuidString == uuidString{
+            self.diary?.isStart = isStar
+            self.configureView()
+        }
     }
     
     @IBAction func tapEditButton(_ sender: UIButton) {
@@ -87,17 +105,17 @@ class DiaryDetailViewController: UIViewController {
     }
     
     @IBAction func tapDeleteButton(_ sender: UIButton) {
-        guard let indexPath = self.indexPath else {return}
+        guard let uuidString = self.diary?.uuidString else {return}
         NotificationCenter.default.post(
             name: NSNotification.Name("deleteDiary"),
-            object: indexPath)
+            object: uuidString)
 //        self.deleagte?.didSelectDelete(indexPath: indexPath)
         self.navigationController?.popViewController(animated: true)
     }
     
     @objc func tapStartButton(){
         guard let isStar = self.diary?.isStart else {return}
-        guard let indexPath = self.indexPath else {return}
+//        guard let indexPath = self.indexPath else {return}
         
 
         if isStar {
@@ -113,7 +131,7 @@ class DiaryDetailViewController: UIViewController {
                 //즐겨찾기가 됬을때 즐겨찾기 화면에 추가되도록 만들기위해 diary dict추가.
                     "diary" : self.diary,
                 "isStar" : self.diary?.isStart ?? false,
-                "indexPath": indexPath
+                    "uuidString": diary?.uuidString
         ],
             userInfo: nil)
 //        self.deleagte?.didSelectStar(indexPath: indexPath, isStar: self.diary?.isStart ?? false)
