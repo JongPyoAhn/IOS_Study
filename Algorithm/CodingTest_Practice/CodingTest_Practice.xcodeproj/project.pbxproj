@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5301B70027901FCA00CC850F /* BOJ_16198(에너지 모으기).swift in Sources */ = {isa = PBXBuildFile; fileRef = 5301B6FF27901FCA00CC850F /* BOJ_16198(에너지 모으기).swift */; };
 		5326CEF6277D3B6900EBB651 /* BOJ_12886(돌그룹).swift in Sources */ = {isa = PBXBuildFile; fileRef = 5326CEF5277D3B6900EBB651 /* BOJ_12886(돌그룹).swift */; };
 		5326CEF8277D560500EBB651 /* BOJ_16929(Two Dots).swift in Sources */ = {isa = PBXBuildFile; fileRef = 5326CEF7277D560500EBB651 /* BOJ_16929(Two Dots).swift */; };
 		532BE2A427793935006D7D9A /* BOJ_15658(연산자 끼워넣기2).swift in Sources */ = {isa = PBXBuildFile; fileRef = 532BE2A327793935006D7D9A /* BOJ_15658(연산자 끼워넣기2).swift */; };
@@ -43,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5301B6FF27901FCA00CC850F /* BOJ_16198(에너지 모으기).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_16198(에너지 모으기).swift"; sourceTree = "<group>"; };
 		5326CEF5277D3B6900EBB651 /* BOJ_12886(돌그룹).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_12886(돌그룹).swift"; sourceTree = "<group>"; };
 		5326CEF7277D560500EBB651 /* BOJ_16929(Two Dots).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_16929(Two Dots).swift"; sourceTree = "<group>"; };
 		532BE2A327793935006D7D9A /* BOJ_15658(연산자 끼워넣기2).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_15658(연산자 끼워넣기2).swift"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				5354092B278D25EC007B3F6B /* BOJ_14225(부분수열의합).swift */,
 				5354092D278E8637007B3F6B /* 보류(테트로미노).swift */,
 				5391BA27278FB14B0052726D /* BOJ_16197(두 동전).swift */,
+				5301B6FF27901FCA00CC850F /* BOJ_16198(에너지 모으기).swift */,
 			);
 			path = BruteForce;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				539146DD2766D7A4004F37F9 /* BOJ_1182(부분수열의 합).swift in Sources */,
 				5326CEF8277D560500EBB651 /* BOJ_16929(Two Dots).swift in Sources */,
 				5354092C278D25EC007B3F6B /* BOJ_14225(부분수열의합).swift in Sources */,
+				5301B70027901FCA00CC850F /* BOJ_16198(에너지 모으기).swift in Sources */,
 				532BE2A6277A93A1006D7D9A /* BOJ_2003(수들의 합2).swift in Sources */,
 				53F173F22769765C002EBCE0 /* BOJ_11048(이동하기).swift in Sources */,
 				5357E7522768476F008EB915 /* BOJ_16948(데스 나이트).swift in Sources */,
