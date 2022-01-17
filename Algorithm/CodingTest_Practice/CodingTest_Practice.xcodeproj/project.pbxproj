@@ -29,6 +29,7 @@
 		53E0C99B277E73F6003026D7 /* BOJ_2206(벽 부수고 이동하기).swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E0C99A277E73F6003026D7 /* BOJ_2206(벽 부수고 이동하기).swift */; };
 		53F173F22769765C002EBCE0 /* BOJ_11048(이동하기).swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F173F12769765C002EBCE0 /* BOJ_11048(이동하기).swift */; };
 		53F173F42769904A002EBCE0 /* BOJ_11060(점프 점프).swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F173F32769904A002EBCE0 /* BOJ_11060(점프 점프).swift */; };
+		53F9C8172791331D00264C46 /* BOJ_12869(뮤탈리스크).swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9C8162791331D00264C46 /* BOJ_12869(뮤탈리스크).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 		53E0C99A277E73F6003026D7 /* BOJ_2206(벽 부수고 이동하기).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_2206(벽 부수고 이동하기).swift"; sourceTree = "<group>"; };
 		53F173F12769765C002EBCE0 /* BOJ_11048(이동하기).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_11048(이동하기).swift"; sourceTree = "<group>"; };
 		53F173F32769904A002EBCE0 /* BOJ_11060(점프 점프).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_11060(점프 점프).swift"; sourceTree = "<group>"; };
+		53F9C8162791331D00264C46 /* BOJ_12869(뮤탈리스크).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ_12869(뮤탈리스크).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				5398DCA72775564700C6AAFC /* 보류(파일합치기).swift */,
 				532BE2A7277A9817006D7D9A /* BOJ_12865(평범한배낭).swift */,
 				53540929278D0E78007B3F6B /* BOJ_1495(기타리스트).swift */,
+				53F9C8162791331D00264C46 /* BOJ_12869(뮤탈리스크).swift */,
 			);
 			path = DP;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			files = (
 				539146E627670593004F37F9 /* BOJ_16928(뱀과 사다리 게임).swift in Sources */,
 				532BE2A8277A9817006D7D9A /* BOJ_12865(평범한배낭).swift in Sources */,
+				53F9C8172791331D00264C46 /* BOJ_12869(뮤탈리스크).swift in Sources */,
 				5354092A278D0E78007B3F6B /* BOJ_1495(기타리스트).swift in Sources */,
 				53540928278BE41E007B3F6B /* BOJ_14442(벽 부수고 이동하기2).swift.swift in Sources */,
 				53862A78276AEAD200C101AB /* BOJ_1339(단어 수학).swift in Sources */,
