@@ -5,7 +5,7 @@
 //  Created by 안종표 on 2022/01/17.
 //
 
-import Foundation
+//import Foundation
 //var arr = [[Character]]()
 //let column: [Character] = [".",".",".",".",".",".",".","."]
 //let dx = [-1, 1, 0, 0]
