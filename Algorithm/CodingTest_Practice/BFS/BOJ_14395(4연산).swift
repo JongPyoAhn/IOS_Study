@@ -3,7 +3,7 @@
 //  CodingTest_Practice
 //
 //  Created by 안종표 on 2022/01/26.
-//
+// O
 
 //let st = readLine()!.split(separator: " ").map{Int(String($0))!}
 //let s = st[0]
