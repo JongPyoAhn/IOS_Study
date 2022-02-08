@@ -24,17 +24,16 @@
 //}
 //
 //var visitedDFS = Array(repeating: false, count: virusLocation.count)
-//func dfs(_ depth: Int){
-//
+//func dfs(_ depth: Int, _ start: Int){
 //    if depth == m{
 //        printValue = min(printValue, bfs(storeVirusLocation))
 //        return
 //    }
-//    for i in 0..<virusLocation.count{
+//    for i in start..<virusLocation.count{
 //        if !visitedDFS[i]{
 //            visitedDFS[i] = true
 //            storeVirusLocation.append(virusLocation[i])
-//            dfs(depth + 1)
+//            dfs(depth + 1, i)
 //            visitedDFS[i] = false
 //            storeVirusLocation.removeLast()
 //        }
@@ -92,10 +91,10 @@
 //    return true
 //}
 //
-//dfs(0)
+//dfs(0, 0)
 //if printValue == Int.max{
 //    print(-1)
 //}else{
 //    print(printValue)
 //}
-
+//
