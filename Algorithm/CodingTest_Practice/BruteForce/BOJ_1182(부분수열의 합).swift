@@ -3,7 +3,7 @@
 //  CodingTest_Practice
 //
 //  Created by 안종표 on 2021/12/13.
-// 16%에서 틀림
+// 다시
 
 //let ns = readLine()!.split(separator: " ").map{Int(String($0))!}
 //let n = ns[0]
