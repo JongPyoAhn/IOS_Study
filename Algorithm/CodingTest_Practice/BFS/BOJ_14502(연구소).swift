@@ -3,7 +3,7 @@
 //  CodingTest_Practice
 //
 //  Created by 안종표 on 2021/12/16.
-// 반드시 다시풀기
+// O
 
 //import Foundation
 
