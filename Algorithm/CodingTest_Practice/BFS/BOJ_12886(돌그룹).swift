@@ -3,48 +3,72 @@
 //  CodingTest_Practice
 //
 //  Created by 안종표 on 2021/12/30.
-// 질문올렸으니까 보고 다시풀기
+// O
 //
 //import Foundation
 //let abc = readLine()!.split(separator: " ").map{Int(String($0))!}
-//let a = abc[0]
-//let b = abc[1]
-//let c = abc[2]
-//let sum = a + b + c
-//var result = 0
-//var queue = [(Int, Int)]()
-//var visited = Array(repeating: Array(repeating: false, count: 10000), count: 10000)
+//let readA = abc[0]
+//let readB = abc[1]
+//let readC = abc[2]
 //
-//func bfs(_ a: Int, _ b: Int){
-//    queue.append((a,b))
-//    visited[a][b] = true
-//    while !queue.isEmpty{
-//        let pop = queue.removeFirst()
-//        let z = sum - pop.0 - pop.1
-//        let temp = [pop.0, pop.1, z]
-//        if temp[0] == temp[1] && temp[1] == temp[2]{
-//            result = 1
+//var equlStone = 0
+//var sum = readA + readB + readC
+//func bfs(){
+//    var queue = [(Int, Int, Int)]()
+//    var visited = Set<String>()
+//    queue.append((readA, readB, readC))
+//    visited.insert("\(readA), \(readB), \(readC)")
+//    var idx = 0
+//    while queue.count > idx{
+//        let pop = queue[idx]
+//        idx += 1
+//        let a = pop.0
+//        let b = pop.1
+//        let c = pop.2
+//
+//        if a == b && b == c {
+//            equlStone = 1
 //            break
 //        }
 //
-//        if temp[0] < temp[1] && !visited[temp[0] + temp[0]][temp[1] - temp[0]] {
-//            visited[temp[0] + temp[0]][temp[1] - temp[0]] = true
-//            queue.append((temp[0] + temp[0], temp[1] - temp[0]))
-//        }else if temp[0] > temp[1] && !visited[temp[1] + temp[1]][temp[0] - temp[1]] {
-//            visited[temp[1] + temp[1]][temp[0] - temp[1]] = true
-//            queue.append((temp[1] + temp[1],temp[0] - temp[1]))
-//        }
+//        if (a + b + c) % 3 == 0{
+//            if a != b {
+//                if a < b && !visited.contains("\(a + a), \(b - a), \(c)"){
+//                    queue.append((a + a, b - a, c))
+//                    visited.insert("\(a + a), \(b - a), \(c)")
 //
-//        if temp[1] < temp[2] && !visited[temp[1] + temp[1]][temp[2] - temp[1]] {
-//            visited[temp[1] + temp[1]][temp[2] - temp[1]] = true
-//            queue.append((temp[1] + temp[1], temp[2] - temp[1]))
-//        }else if temp[2] < temp[1] && !visited[temp[2] + temp[2]][temp[1] - temp[2]] {
-//            visited[temp[2] + temp[2]][temp[1] - temp[2]] = true
-//            queue.append((temp[2] + temp[2], temp[1] - temp[2]))
-//        }
+//                }
+//                if a > b && !visited.contains("\(a - b), \(b + b), \(c)"){
+//                    queue.append((a - b, b + b, c))
+//                    visited.insert("\(a - b), \(b + b), \(c)")
+//                }
+//            }
 //
+//            if b != c {
+//                if b < c && !visited.contains("\(a), \(b + b), \(c - b)"){
+//                    queue.append((a, b + b, c - b))
+//                    visited.insert("\(a), \(b + b), \(c - b)")
+//                }
+//                if b > c && !visited.contains("\(a), \(b - c), \(c + c)"){
+//                    queue.append((a, b - c, c + c))
+//                    visited.insert("\(a), \(b - c), \(c + c)")
+//                }
+//            }
+//            if a != c{
+//                if a < c && !visited.contains("\(a + a), \(b), \(c - a)"){
+//                    queue.append((a + a, b, c - a))
+//                    visited.insert("\(a + a), \(b), \(c - a)")
+//                }
+//                if a > c && !visited.contains("\(a - c), \(b), \(c + c)"){
+//                    queue.append((a - c, b, c + c))
+//                    visited.insert("\(a - c), \(b), \(c + c)")
+//                }
+//
+//            }
+//
+//        }
 //    }
-//
 //}
-//bfs(a, b)
-//print(result)
+//
+//bfs()
+//print(equlStone)
