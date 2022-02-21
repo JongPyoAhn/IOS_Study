@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		539146BB2766D246004F37F9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539146BA2766D246004F37F9 /* main.swift */; };
+		53AB95AE27C12E5A00A99176 /* 신고결과받기(Dictionary).swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB95AD27C12E5A00A99176 /* 신고결과받기(Dictionary).swift */; };
 		53C5EA5526EF74A4000FE048 /* 2주차_상호평가.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C5EA5426EF74A4000FE048 /* 2주차_상호평가.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		539146BA2766D246004F37F9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		53AB95AD27C12E5A00A99176 /* 신고결과받기(Dictionary).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "신고결과받기(Dictionary).swift"; sourceTree = "<group>"; };
 		53C5EA5126EF74A4000FE048 /* Programmers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Programmers; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C5EA5426EF74A4000FE048 /* 2주차_상호평가.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2주차_상호평가.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,10 +50,19 @@
 			path = hash;
 			sourceTree = "<group>";
 		};
+		53AB95AC27C12E4000A99176 /* kakao */ = {
+			isa = PBXGroup;
+			children = (
+				53AB95AD27C12E5A00A99176 /* 신고결과받기(Dictionary).swift */,
+			);
+			path = kakao;
+			sourceTree = "<group>";
+		};
 		53C5EA4826EF74A4000FE048 = {
 			isa = PBXGroup;
 			children = (
 				539146BC2766D255004F37F9 /* hash */,
+				53AB95AC27C12E4000A99176 /* kakao */,
 				53C5EA5326EF74A4000FE048 /* Programmers */,
 				53C5EA5226EF74A4000FE048 /* Products */,
 			);
@@ -132,6 +143,7 @@
 			files = (
 				539146BB2766D246004F37F9 /* main.swift in Sources */,
 				53C5EA5526EF74A4000FE048 /* 2주차_상호평가.swift in Sources */,
+				53AB95AE27C12E5A00A99176 /* 신고결과받기(Dictionary).swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

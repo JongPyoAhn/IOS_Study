@@ -46,6 +46,7 @@
 //        }
 //        for j in 0..<Location.count{
 //            resultArr[i][j] = dist[Location[j].0][Location[j].1]
+//            resultArr[j][i] = dist[Location[j].0][Location[j].1]
 //        }
 //
 //    }
