@@ -34,7 +34,7 @@
 //    let resultArrString = String(resultArr)
 //    let a = resultArrString.split(separator: " ").map{Int(String($0))!}
 //    var count = 0
-//    
+//
 //    for i in a{
 //        if i != 1{
 //            if isPrime(i){
@@ -42,6 +42,6 @@
 //            }
 //        }
 //    }
-//    
+//
 //    return count
 //}
