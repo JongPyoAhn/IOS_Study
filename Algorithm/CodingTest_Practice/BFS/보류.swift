@@ -3,13 +3,13 @@
 //  CodingTest_Practice
 //
 //  Created by 안종표 on 2022/03/15.
-//
+//로봇청소기(거의다왔다 중복만제거하면된다..)
 
 //import Foundation
 //
 //let dx = [-1, 1, 0, 0]
 //let dy = [0, 0, -1, 1]
-//
+////recursiveFunction 보다 next_permutation이 더빠르다.
 //while true{
 //    let wh = readLine()!.split(separator: " ").map{Int(String($0))!}
 //    let w = wh[0]
@@ -38,9 +38,10 @@
 //        queue.append((startX, startY))
 //        var visited = Array(repeating: Array(repeating: -1, count: w), count: h)
 //        visited[startX][startY] = 0
-//        
-//        while !queue.isEmpty{
-//            let pop = queue.removeFirst()
+//        var idx = 0
+//        while queue.count > idx{
+//            let pop = queue[idx]
+//            idx += 1
 //            let x = pop.0
 //            let y = pop.1
 //            
@@ -70,27 +71,48 @@
 //    }
 //    var result = Int.max
 //    var dfsVisit = Array(repeating: false, count: 11)
-//    func dfs(_ depth: Int, _ curLocation: Int, _ sum: Int){
+//    var sum = 0
+//    func dfs(_ depth: Int, _ curLocation: Int){
 //        if depth == location.count{
+//            print(sum)
 //            result = min(result, sum)
 //            return
 //        }
-//        
-//        for i in 0..<location.count{
-////            if i < curLocation {continue}
+//
+//        for i in depth..<location.count{
+//            //
 //            if !dfsVisit[i]{
 //                dfsVisit[i] = true
-//                dfs(depth + 1, i, sum + dist[curLocation][i])
+//                print("curLocation : \(curLocation) i : \(i)")
+//                sum += dist[curLocation][i]
+//                dfs(depth + 1, i)
+//                sum -= dist[curLocation][i]
+//                print("i : \(i)")
 //                dfsVisit[i] = false
 //            }
 //        }
-//        
+//
 //    }
-//    dfs(0, 0, 0)
+//    
+////    func permutation(_ left: Int, _ right: Int){
+////        if left == right{
+////            result = min(result, sum)
+////            return
+////        }
+////        for idx in left...right{
+////            location.swapAt(left, idx)
+////            sum += dist[left][idx]
+////            permutation(left + 1, right)
+////            sum -= dist[left][idx]
+////            location.swapAt(left, idx)
+////        }
+////
+////    }
+////    permutation(0, location.count)
+//    dfs(1, 0)
 //    if notContinue{
 //        print(-1)
 //    }else{
 //        print(result)
 //    }
-//    
 //}
