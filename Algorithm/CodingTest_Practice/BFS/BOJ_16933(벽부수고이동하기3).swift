@@ -3,8 +3,29 @@
 //  CodingTest_Practice
 //
 //  Created by 안종표 on 2022/03/14.
-//
+// 큐 구현하는 부분때매 다시
 
+//struct Queue<T>{
+//    var enqueue: [T] = []
+//    var dequeue: [T] = []
+//
+//    mutating func push(_ element: T){
+//        enqueue.append(element)
+//    }
+//    mutating func pop() -> T?{
+//        if dequeue.isEmpty{
+//            dequeue = enqueue.reversed()
+//            enqueue.removeAll()
+//        }
+//        return dequeue.popLast()
+//    }
+//    func empty() -> Bool{
+//        return enqueue.isEmpty && dequeue.isEmpty
+//
+//    }
+//
+//}
+//
 //import Foundation
 //let nmk = readLine()!.split(separator: " ").map{Int(String($0))!}
 //let n = nmk[0]
@@ -19,15 +40,15 @@
 //let dy = [0, 0, -1, 1]
 //var result = Int.max
 //func bfs(){
-//    var queue = [((Int, Int), Int, Int)]() //좌표, 이동횟수, 벽부순개수
+//    var queue = Queue<((Int, Int), Int, Int)>()
+//
 //    var visited = Array(repeating: Array(repeating: Int.max, count: m), count: n)
 //
-//    queue.append(((0,0), 1, 0))
+//    queue.push(((0, 0), 1, 0))
 //    visited[0][0] = 0
-//    var idx = 0
-//    while queue.count > idx{
-//        let pop = queue[idx]
-//        idx += 1
+//
+//    while !queue.empty(){
+//        let pop = queue.pop()!
 //
 //        let x = pop.0.0
 //        let y = pop.0.1
@@ -50,14 +71,15 @@
 //
 //            if arr[nx][ny] == 1 && pop.1 % 2 != 0{
 //                if crushed < k{
-//                    queue.append(((nx, ny), pop.1 + 1, crushed + 1))
+//
+//                    queue.push(((nx, ny), pop.1 + 1, crushed + 1))
 //                    visited[nx][ny] = crushed + 1
 //                }
 //
 //            }else if arr[nx][ny] == 1 && pop.1 % 2 == 0{ //다음에 방문해야하는 곳이 벽이고 현재 밤일떄
-//                queue.append(((x, y), pop.1 + 1, crushed))
+//                queue.push(((x, y), pop.1 + 1, crushed))
 //            }else if arr[nx][ny] == 0{
-//                queue.append(((nx, ny), pop.1 + 1, crushed))
+//                queue.push(((nx, ny), pop.1 + 1, crushed))
 //                visited[nx][ny] = crushed
 //            }
 //         }
@@ -71,5 +93,3 @@
 //}else{
 //    print(result)
 //}
-
-
