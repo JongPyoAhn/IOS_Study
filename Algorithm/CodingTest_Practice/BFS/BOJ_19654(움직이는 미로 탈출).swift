@@ -4,41 +4,53 @@
 //
 //  Created by 안종표 on 2022/03/22.
 //
-//import Foundation
 //var arr = [[String]]()
 //for _ in 0..<8{
 //    arr.append(readLine()!.map{String($0)})
 //}
-////가장 왼쪽아래칸 7,0
-////인접한 한칸,대각선 인접한 한칸 가능
-////
-//let dx = [-1, 1, 0, 0, 1, 1, -1, -1, 0]
-//let dy = [0, 0, -1, 1, 1, -1, 1, -1, 0]
-//var visited = Array(repeating: Array(repeating: Array(repeating: false, count: 8), count: 8), count: 9)
-//var queue = [(Int, Int, Int)]()
-//queue.append((0, 7, 0))
-//visited[0][7][0] = true
+//let dx = [1, -1, 0, 0, -1, -1, 1, 1, 0]
+//let dy = [0, 0, -1, 1, -1, 1, 1, -1, 0]
+//
+//func down(_ arr: [[String]]) -> [[String]]{
+//    var temp = Array(arr.reversed()).dropFirst()
+//    temp.append([".",".",".",".",".",".",".","."])
+//    return Array(temp.reversed())
+//}
 //var result = false
+//func bfs(){
+//    var queue = [(Int, Int, Int, [[String]])]()
+//    var visited = Array(repeating: Array(repeating: Array(repeating: false, count: 8), count: 8), count: 9)
+//    let copiedArr = arr
+//    queue.append((0, 7, 0, copiedArr))
+//    visited[0][7][0] = true
 //
-//while !queue.isEmpty{
-//    let (t,x,y) = queue.removeFirst()
-//    if x == 0 && y == 7 {result = true}
-//    for i in 0..<9{
-//        let nx = x + dx[i]
-//        let ny = y + dy[i]
-//        let nt = min(t + 1, 8)
+//    var idx = 0
+//    while queue.count > idx {
+//        let (t, x, y, tempArr) = queue[idx]
+//        idx += 1
 //
-//        if nx < 0 || nx >= 8 || ny < 0 || ny >= 8 {continue}
-//        if nx - t >= 0 && arr[nx - t][ny] == "#" {continue}
-//        if nx - t - 1 >= 0 && arr[nx - t - 1][ny] == "#" {continue}
-//        if !visited[nt][nx][ny]{
+//        if x == 0 && y == 7{
+//            result = true
+//        }
+//
+//        for i in 0..<9{
+//            let nx = x + dx[i]
+//            let ny = y + dy[i]
+//            let nt = min(t + 1, 8)
+//            let nArr = down(tempArr)
+//            if nx < 0 || nx >= 8 || ny < 0 || ny >= 8 || visited[nt][nx][ny] {continue}
+//            if tempArr[nx][ny] == "#" {continue}
+//            if nArr[nx][ny] == "#" {continue}
+//
+//            queue.append((nt, nx, ny, nArr))
 //            visited[nt][nx][ny] = true
-//            queue.append((nt, nx, ny))
 //        }
 //    }
+//
 //}
+//bfs()
 //if result{
-//    print (1)
+//    print(1)
 //}else{
 //    print(0)
 //}
