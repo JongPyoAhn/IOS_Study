@@ -3,10 +3,7 @@
 //  bruteForce
 //
 //  Created by 안종표 on 2022/04/11.
-//
-
-
-
+// 다시
 
 //var t = Int(String(readLine()!))!
 //for _ in 0..<t {

@@ -42,6 +42,6 @@
 //
 //    return count
 //}
-var n = 3
-var computers = [[1, 1, 0], [1, 1, 1], [0, 1, 1]]
-print(solution(n, computers))
+//var n = 3
+//var computers = [[1, 1, 0], [1, 1, 1], [0, 1, 1]]
+//print(solution(n, computers))
