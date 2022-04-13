@@ -20,7 +20,7 @@
 //        }
 //        return dequeue.popLast()
 //    }
-//    
+//
 //}
 //func solution(_ bridge_length:Int, _ weight:Int, _ truck_weights:[Int]) -> Int {
 //    //지나는중인트럭
@@ -39,11 +39,11 @@
 //            idx += 1
 //            sum += pop
 //            contiQueue.push(pop)
-//            
+//
 //        }else{
 //            contiQueue.push(0)
 //        }
-//        
+//
 //    }
 //    //마지막 트럭이 다리를 건너는시간
 //    second += bridge_length
