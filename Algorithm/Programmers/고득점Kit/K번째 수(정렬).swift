@@ -12,13 +12,13 @@
 //        let i = commands[v][0] - 1
 //        let j = commands[v][1] - 1
 //        let k = commands[v][2] - 1
-//        
+//
 //        var arr = Array(array[i...j])
 //        arr.sort()
 //        result.append(arr[k])
-//        
+//
 //    }
-//    
-//    
+//
+//
 //    return result
 //}
