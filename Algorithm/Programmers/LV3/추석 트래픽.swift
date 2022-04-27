@@ -15,16 +15,16 @@
 //        let time = sp[1].split(separator: ":") //시간 문자열 분해
 //        let hour = Int(time[0])! * 3600 //시간 -> 초
 //        let min = Int(time[1])! * 60 //분 -> 초
-//        
+//
 //        let secTime = time[2].split(separator: ".").map{Int(String($0))!} //초와 밀리초 분해
 //        let sec = secTime[0] //초
 //        let miliSec = secTime[1] //밀리초
-//        
+//
 //        let obtain = (hour + min + sec) * 1000 + miliSec //밀리초로 변경한 시간값
-//        
+//
 //        endTime.append(obtain)
 //        sp[2].removeLast() //2.0s와 같이 되어있어서 s를 제거.
-//        
+//
 //        let duration = Int(Double(sp[2])! * 1000) //시작 시간을 구하기위해 지속시간을 구함
 //        startTime.append(obtain - duration + 1) //끝시간 - 지속시간 + 1
 //    }
