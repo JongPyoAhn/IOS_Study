@@ -3,7 +3,7 @@
 //  Programmers
 //
 //  Created by 안종표 on 2022/05/03.
-//
+// 다시
 
 
 //import Foundation
@@ -24,10 +24,10 @@
 //        }
 //        return true
 //    }
-//    func seperateUV(_ p: String) -> (String, String){
+//    func seperate(_ p: String) -> (String, String){
+//        var leftCount = 0
+//        var rightCount = 0
 //        let pArr = Array(p)
-//        var leftCount = 0//"("
-//        var rightCount = 0//")"
 //        var u = ""
 //        var v = ""
 //        for i in 0..<pArr.count{
@@ -47,35 +47,35 @@
 //    func recursive(_ p: String) -> String{
 //        var result = ""
 //        if p.count == 0 {return ""}
-//        var (u, v) = seperateUV(p)
+//        var (u,v) = seperate(p)
 //        let uArr = Array(u)
-//        
+//        var temp = ""
 //        if isCorrect(u){
 //            result = u + recursive(v)
 //        }else{
-//            var temp = ""
 //            temp += "("
 //            temp += recursive(v)
 //            temp += ")"
-//            u = String(uArr[1..<u.count-1])
+//            
+//            u = String(uArr[1..<uArr.count-1])
 //            for i in u{
 //                if i == "("{
 //                    temp += ")"
 //                }else{
 //                    temp += "("
 //                }
-//                    
 //            }
-//            result += temp
+//            result = temp
 //        }
+//        
 //        return result
 //    }
+//    
 //    var answer = ""
 //    if isCorrect(p){
 //        return p
 //    }
 //    answer = recursive(p)
-//    
 //    return answer
 //}
 //print(solution("()))((()"))
