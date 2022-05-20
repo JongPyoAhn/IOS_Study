@@ -82,17 +82,17 @@
 //        temp[(idx + 1) % length] = arr[startX + g][j]
 //        idx += 1
 //    }
-//    
+//
 //    for i in (startX + g + 1)...(endX-g){
 //        temp[(idx + 1) % length] = arr[i][endY-g]
 //        idx += 1
 //    }
-//    
+//
 //    for j in stride(from: endY-g-1, through: startY+g, by: -1){
 //        temp[(idx + 1) % length] = arr[endX-g][j]
 //        idx += 1
 //    }
-//    
+//
 //    for i in stride(from: endX-g-1, through: startX+g+1, by: -1){
 //        temp[(idx + 1) % length] = arr[i][startY + g]
 //        idx += 1

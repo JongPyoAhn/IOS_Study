@@ -3,7 +3,7 @@
 //  CodingTest_Practice
 //
 //  Created by 안종표 on 2022/04/26.
-// O
+// 다시
 
 //let nm = readLine()!.split(separator: " ").map{Int(String($0))!}
 //let n = nm[0]

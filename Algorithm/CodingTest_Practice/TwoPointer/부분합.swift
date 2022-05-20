@@ -3,7 +3,7 @@
 //  CodingTest_Practice
 //
 //  Created by 안종표 on 2022/05/09.
-// 투포인터 한번더해보자.
+// O
 
 //import Foundation
 //let ns = readLine()!.split(separator: " ").map{Int(String($0))!}
