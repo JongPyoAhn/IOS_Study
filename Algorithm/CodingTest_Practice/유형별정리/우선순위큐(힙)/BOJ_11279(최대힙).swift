@@ -16,7 +16,7 @@
 //    var isEmpty: Bool {
 //        return self.elements.count == 1
 //    }
-//
+//    
 //    func leftChild(of index: Int) -> Int {
 //        return index * 2
 //    }
@@ -30,7 +30,7 @@
 //        var higherPriority = index
 //        let leftIndex = self.leftChild(of: index)
 //        let rightIndex = self.rightChild(of: index)
-//
+//        
 //        if leftIndex < self.elements.endIndex && self.sortFunction(self.elements[leftIndex], self.elements[higherPriority]) {
 //            higherPriority = leftIndex
 //        }
@@ -50,7 +50,7 @@
 //        }
 //    }
 //    mutating func insert(node: T) {
-//        if self.elements.isEmpty {
+//        if self.isEmpty {
 //            self.elements.append(node)
 //            return
 //        }
@@ -62,11 +62,11 @@
 //        self.elements.swapAt(1, elements.endIndex - 1)
 //        let deleted = elements.removeLast()
 //        self.diveDown(from: 1)
-//
+//        
 //        return deleted
 //    }
 //}
-//var heap = Heap<Int>(sortFunction: <)
+//var heap = Heap<Int>(sortFunction: >)
 //heap.insert(node: 0)
 //var str = ""
 //let n = Int(String(readLine()!))!
