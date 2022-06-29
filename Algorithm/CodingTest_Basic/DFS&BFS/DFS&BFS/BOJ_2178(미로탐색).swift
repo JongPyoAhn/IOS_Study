@@ -3,30 +3,40 @@
 //  DFS&BFS
 //
 //  Created by 안종표 on 2021/10/08.
-//
+// O
 
 //let nm = readLine()!.split(separator: " ").map{Int(String($0))!}
-//let (n, m) = (nm[0], nm[1])
-//
+//let n = nm[0]
+//let m = nm[1]
 //var arr = [[Int]]()
-//for _ in 0..<n {
+//let dx = [-1, 1, 0, 0]
+//let dy = [0, 0, -1, 1]
+//for _ in 0..<n{
 //    arr.append(readLine()!.map{Int(String($0))!})
 //}
-//var queue = [(0, 0)]
-//let (dx, dy) = ([-1, 1, 0, 0], [0,0,1,-1])
+//func bfs(){
+//    var visited = Array(repeating: Array(repeating: false, count: m), count: n)
+//    var queue = [((Int, Int), Int)]()
 //
-//while !queue.isEmpty {
-//    let (x, y) = queue.removeFirst()
+//    visited[0][0] = true
+//    queue.append(((0, 0), 1))
 //
-//    for i in 0..<4 {
-//        let nx = x + dx[i], ny = y + dy[i]
-//        if nx < 0 || ny < 0 || nx >= n || ny >= m {continue}
-//        if arr[nx][ny] == 0 {continue}
-//        if arr[nx][ny] == 1 {
-//            arr[nx][ny] = arr[x][y] + 1
-//            queue.append((nx, ny))
-//            }
-//
+//    while !queue.isEmpty{
+//        let ((x, y), cnt) = queue.removeFirst()
+//        if x == n - 1 && y == m - 1 {
+//            print(cnt)
+//            break
 //        }
+//        for i in 0...3{
+//            let nx = x + dx[i]
+//            let ny = y + dy[i]
+//
+//            if nx < 0 || nx >= n || ny < 0 || ny >= m || visited[nx][ny] {continue}
+//            if arr[nx][ny] == 0 {continue}
+//            queue.append(((nx, ny), cnt + 1))
+//            visited[nx][ny] = true
+//        }
+//
+//    }
 //}
-//print(arr[n - 1][m - 1])
+//bfs()

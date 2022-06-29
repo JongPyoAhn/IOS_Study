@@ -12,22 +12,22 @@
 //nArr.sort()
 //var result = ""
 //for i in 0..<m{
-//    var isOK = false
 //    var start = 0
 //    var end = n - 1
+//    var isOk = false
+//
 //    while start <= end{
 //        let mid = (start + end) / 2
 //        if mArr[i] == nArr[mid]{
-//            isOK = true
+//            isOk = true
 //            break
-//        }
-//        if mArr[i] > nArr[mid]{
-//            start = mid + 1
 //        }else if mArr[i] < nArr[mid]{
 //            end = mid - 1
+//        }else{
+//            start = mid + 1
 //        }
 //    }
-//    if isOK{
+//    if isOk{
 //        result += "1\n"
 //    }else{
 //        result += "0\n"

@@ -7,45 +7,61 @@
 
 
 //let k = Int(String(readLine()!))!
-//for _ in 1...k {
+//for _ in 0..<k{
 //    let ve = readLine()!.split(separator: " ").map{Int(String($0))!}
 //    let v = ve[0]
 //    let e = ve[1]
-//    var visited: [Bool] = Array(repeating: false, count: v + 1)
-//    var color = Array(repeating: false, count: v + 1)
-//    var list: [[Int]] = Array(repeating: [], count: v + 1)
-//    list[0].append(0)
-//    var isColor = false
+//    var graph = Array(repeating: [Int](), count: v + 1)
+//    for _ in 0..<e{
+//        let uv = readLine()!.split(separator: " ").map{Int(String($0))!}
+//        let u = uv[0]
+//        let v = uv[1]
 //
-//    for _ in 1...e{
-//        let line = readLine()!.split(separator: " ").map{Int(String($0))!}
-//        list[line[0]].append(line[1])
-//        list[line[1]].append(line[0])
+//        graph[u].append(v)
+//        graph[v].append(u)
 //    }
-//
-//    func dfs(_ depth: Int) {
-//
-//        for i in 0..<list[depth].count{
-//            let node = list[depth][i]
-//            if !visited[node]{
-//                visited[node] = true
-//                color[node] = !color[depth]
-//                dfs(node)
-//            }else {
-//                if color[node] == color[depth]{
-//                    isColor = true
-//                    return
-//                }
-//
+//    var isSwitch = true
+//    var visited = Array(repeating: -1, count: v + 1)
+//    for i in 1...v{
+//        if visited[i] == -1{
+//            if !bfs(i, graph, v){
+//                isSwitch = false
 //            }
 //        }
+//
 //    }
-//
-//    for i in 1..<list.count {
-//        dfs(i)
+//    if isSwitch{
+//        print("YES")
+//    }else{
+//        print("NO")
 //    }
+//    func bfs(_ v: Int, _ graph: [[Int]], _ cnt: Int) -> Bool{
 //
-//    print(isColor ? "NO" : "YES")
+//        var queue = [Int]()
 //
+//        visited[v] = 0
+//        queue.append(v)
+//        var idx = 0
+//        while idx < queue.count{
+//            let pop = queue[idx]
+//            idx += 1
+//
+//            for i in graph[pop]{
+//                if visited[i] == -1{ //방문한적이 없다면
+//                    if visited[pop] == 0{
+//                        visited[i] = 1
+//                    }else{
+//                        visited[i] = 0
+//                    }
+//                    queue.append(i)
+//                }else{// 방문한적이 있다면
+//                    if visited[i] == visited[pop]{
+//                        return false
+//                    }
+//                }
+//            }
+//        }
+//        return true
+//    }
 //}
 
