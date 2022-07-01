@@ -14,7 +14,7 @@
 //
 //var visited = Array(repeating: false, count: 21)
 //var ans = Int.max
-//for team in 1..<n{
+//for team in 1...n/2{
 //    dfs(0, 0, team)
 //}
 //func dfs(_ depth: Int, _ start: Int, _ team: Int){
@@ -38,15 +38,16 @@
 //        }
 //        return
 //    }
-//    
+//
 //    for i in start..<n{
 //        if !visited[i]{
 //            visited[i] = true
 //            dfs(depth + 1, i + 1, team)
 //            visited[i] = false
 //        }
-//        
+//
 //    }
 //}
 //
 //print(ans)
+
